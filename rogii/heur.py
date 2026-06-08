@@ -106,6 +106,26 @@ def run_particle_filter(hw, tw, n_particles=500, seed=42,
     return out_vals, log_lik
 
 
+def run_pf_raw(hw, tw, n_particles=500, n_seeds=128, pf_kw=None):
+    """跑 n_seeds 个 PF, 返回 (pred_arr[seeds×n_full], liks)。供缓存分歧度/各scale复用。"""
+    pf_kw = pf_kw or {}
+    preds = []; liks = []
+    for s in range(n_seeds):
+        p, ll = run_particle_filter(hw, tw, n_particles=n_particles, seed=s, **pf_kw)
+        preds.append(p); liks.append(ll)
+    return np.stack(preds, 0), np.array(liks)
+
+
+def pf_by_scale_from_raw(pred_arr, liks, scales=SELECTOR_SCALES):
+    liks_n = liks - liks.max()
+    out = {}
+    for scale in scales:
+        w = np.exp(liks_n / float(scale)); w /= w.sum()
+        out[f'pf_scale_{scale:g}'] = (w[:, None] * pred_arr).sum(0)
+    out['pf_mean'] = pred_arr.mean(0)
+    return out
+
+
 def run_pf_lik_ensemble_scales(hw, tw, scales=SELECTOR_SCALES, n_particles=500, n_seeds=128, pf_kw=None):
     pf_kw = pf_kw or {}
     preds = []; liks = []
