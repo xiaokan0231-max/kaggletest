@@ -1,0 +1,23 @@
+# 大数据 / 不该进 git 的东西
+rogii/data/
+rogii/*.pkl
+rogii/selcache.pkl
+rogii/lb/*.zip
+rogii/**/__pycache__/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Kaggle 凭证(绝不提交)
+**/kaggle.json
+**/access_token
+.kaggle/
+
+# 运行产物(可重生成, 体积大)
+rogii/sub_*.csv
+rogii/fork/submission.csv
+rogii/kernel/submission.csv
+
+# 预训练产物/外部数据集(从 Kaggle 拉, 不入库)
+rogii/artifacts/
+rogii/koolbox-offline/
