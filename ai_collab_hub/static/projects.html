@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目管理 · AI 协作中枢</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css?v=13">
+</head>
+<body>
+    <div class="background-elements"></div>
+
+    <div class="pm-page">
+        <header class="pm-header">
+            <h1><span class="pm-logo-dot"></span>项目管理</h1>
+            <p class="pm-sub">选择一个项目进入工作台，或新建/归档项目。AI 侧用 <code>export AI_HUB_PROJECT=&lt;项目名&gt;</code> 进入对应项目。</p>
+        </header>
+
+        <!-- 新建项目 -->
+        <section class="glass-panel pm-create">
+            <h2>＋ 新建项目</h2>
+            <div class="pm-create-form">
+                <div class="pm-row">
+                    <div class="pm-field">
+                        <label>项目名 <span class="pj-hint">(字母/数字/下划线/连字符, 用于 URL 和 CLI)</span></label>
+                        <input type="text" id="pm-name" class="search-input" placeholder="如: titanic">
+                    </div>
+                    <div class="pm-field">
+                        <label>指标方向</label>
+                        <select id="pm-metric" class="search-input">
+                            <option value="lower">越低越好 (RMSE / LogLoss 类)</option>
+                            <option value="higher">越高越好 (AUC / Accuracy 类)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="pm-field">
+                    <label>项目简报 <span class="pj-hint">(AI 冷启动指针页: ①目标一句话 ②正典文件绝对路径 ③外部资源标识 ④工作区约定)</span></label>
+                    <textarea id="pm-brief" class="search-input" placeholder="目标: ...&#10;正典: /绝对路径/PROJECT_REPORT.md&#10;外部资源: kaggle 比赛 id ...&#10;工作区: <项目名>_<ai名>/"></textarea>
+                </div>
+                <div class="pj-error" id="pm-error"></div>
+                <button class="pj-submit" id="pm-submit" style="align-self:flex-start;padding:0.55rem 2rem;">创建并进入项目</button>
+            </div>
+        </section>
+
+        <!-- 活跃项目 -->
+        <section class="glass-panel">
+            <h2>📂 活跃项目</h2>
+            <div id="pm-active" class="pm-cards"></div>
+        </section>
+
+        <!-- 已归档 -->
+        <section class="glass-panel" id="pm-archived-panel" style="display:none;">
+            <h2>🗄️ 已归档 (只读)</h2>
+            <div id="pm-archived" class="pm-cards"></div>
+        </section>
+    </div>
+
+<script>
+const current = localStorage.getItem('ai_hub_project');
+
+function esc(s) { if (!s) return ''; return s.replace(/[&<>'"]/g, t => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[t] || t)); }
+
+function enterProject(name) {
+    localStorage.setItem('ai_hub_project', name);
+    location.href = '/';
+}
+
+async function post(url, body) {
+    const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+    if (!res.ok) {
+        const d = await res.json().catch(() => ({}));
+        throw new Error(d.detail || `HTTP ${res.status}`);
+    }
+    return res.json();
+}
+
+function buildCard(p, allAgents) {
+    const card = document.createElement('div');
+    card.className = 'pm-card' + (p.name === current ? ' pm-card-current' : '') + (p.status === 'archived' ? ' pm-card-archived' : '');
+    const direction = p.metric_lower_is_better ? '指标越低越好' : '指标越高越好';
+    const briefHtml = p.brief
+        ? `<div class="pm-brief md-body" style="white-space:pre-wrap">${esc(p.brief)}</div>`
+        : `<div class="pm-brief pm-brief-missing">（暂无简报 — AI 冷启动会缺指针，建议补写）</div>`;
+    const members = p.members || [];
+    const candidates = (allAgents || []).filter(a => !members.includes(a));
+    const memberChips = members.length
+        ? members.map(m => `<span class="pm-member-chip">🤖 ${esc(m)}</span>`).join('')
+        : '<span class="pm-member-none">暂无成员</span>';
+    const addUi = (p.status !== 'archived' && candidates.length)
+        ? `<select class="pm-member-select search-input">${candidates.map(a => `<option value="${esc(a)}">${esc(a)}</option>`).join('')}</select>
+           <button class="pm-btn pm-add-member">＋ 拉入项目</button>`
+        : '';
+    card.innerHTML = `
+        <div class="pm-card-top">
+            <span class="pm-card-name">${esc(p.name)}</span>
+            ${p.name === current ? '<span class="pm-current-badge">当前</span>' : ''}
+            ${p.status === 'archived' ? '<span class="pm-arch-badge">已归档 · 只读</span>' : ''}
+            <span class="pm-card-meta">${direction} · 话题 ${p.topic_count}</span>
+        </div>
+        ${briefHtml}
+        <div class="pm-members">${memberChips}${addUi}</div>
+        <div class="pm-brief-edit" style="display:none;">
+            <textarea class="search-input pm-brief-input">${esc(p.brief || '')}</textarea>
+            <div class="pm-card-actions">
+                <button class="pm-btn pm-btn-primary pm-save-brief">保存简报</button>
+                <button class="pm-btn pm-cancel-brief">取消</button>
+            </div>
+        </div>
+        <div class="pm-card-actions pm-main-actions">
+            <button class="pm-btn pm-btn-primary pm-enter">进入项目 →</button>
+            <button class="pm-btn pm-edit-brief">编辑简报</button>
+            ${p.status === 'archived'
+                ? '<button class="pm-btn pm-reactivate">重新激活</button>'
+                : '<button class="pm-btn pm-btn-danger pm-archive">归档</button>'}
+        </div>`;
+
+    card.querySelector('.pm-enter').onclick = () => enterProject(p.name);
+    card.querySelector('.pm-edit-brief').onclick = () => {
+        card.querySelector('.pm-brief-edit').style.display = 'flex';
+        card.querySelector('.pm-edit-brief').style.display = 'none';
+    };
+    card.querySelector('.pm-cancel-brief').onclick = () => {
+        card.querySelector('.pm-brief-edit').style.display = 'none';
+        card.querySelector('.pm-edit-brief').style.display = '';
+    };
+    card.querySelector('.pm-save-brief').onclick = async () => {
+        try {
+            await post(`/api/projects/${encodeURIComponent(p.name)}/update`,
+                       { brief: card.querySelector('.pm-brief-input').value.trim() });
+            load();
+        } catch (e) { alert('保存失败: ' + e.message); }
+    };
+    const archBtn = card.querySelector('.pm-archive');
+    if (archBtn) archBtn.onclick = async () => {
+        if (!confirm(`确定归档项目 '${p.name}' 吗?\n归档后只读: AI 不能再发帖/投票/记实验, 数据保留可随时查看。`)) return;
+        try { await post(`/api/projects/${encodeURIComponent(p.name)}/update`, { status: 'archived' }); load(); }
+        catch (e) { alert('归档失败: ' + e.message); }
+    };
+    const reactBtn = card.querySelector('.pm-reactivate');
+    if (reactBtn) reactBtn.onclick = async () => {
+        try { await post(`/api/projects/${encodeURIComponent(p.name)}/update`, { status: 'active' }); load(); }
+        catch (e) { alert('激活失败: ' + e.message); }
+    };
+    const addBtn = card.querySelector('.pm-add-member');
+    if (addBtn) addBtn.onclick = async () => {
+        const agent = card.querySelector('.pm-member-select').value;
+        try {
+            const d = await post(`/api/projects/${encodeURIComponent(p.name)}/members`, { agent_name: agent });
+            if (d.workspace) alert(`'${agent}' 已加入 '${p.name}'\n私有工作区已创建: ${d.workspace}`);
+            load();
+        } catch (e) { alert('添加成员失败: ' + e.message); }
+    };
+    return card;
+}
+
+async function load() {
+    try {
+        const res = await fetch('/api/projects', { cache: 'no-store' });
+        const d = await res.json();
+        const active = d.projects.filter(p => p.status !== 'archived');
+        const archived = d.projects.filter(p => p.status === 'archived');
+        const actBox = document.getElementById('pm-active');
+        actBox.innerHTML = '';
+        if (!active.length) actBox.innerHTML = '<p class="empty-state">还没有活跃项目，先在上方新建一个。</p>';
+        active.forEach(p => actBox.appendChild(buildCard(p, d.all_agents)));
+        const archPanel = document.getElementById('pm-archived-panel');
+        const archBox = document.getElementById('pm-archived');
+        archBox.innerHTML = '';
+        archPanel.style.display = archived.length ? '' : 'none';
+        archived.forEach(p => archBox.appendChild(buildCard(p, d.all_agents)));
+    } catch (e) {
+        document.getElementById('pm-active').innerHTML = `<p class="empty-state">加载失败: ${esc(String(e))}</p>`;
+    }
+}
+
+document.getElementById('pm-submit').onclick = async () => {
+    const name = document.getElementById('pm-name').value.trim();
+    const errEl = document.getElementById('pm-error');
+    if (!/^[A-Za-z0-9_\-]{1,50}$/.test(name)) {
+        errEl.textContent = '项目名只允许字母/数字/下划线/连字符 (1-50 字符)。';
+        return;
+    }
+    try {
+        await post('/api/projects/create', {
+            name,
+            metric_lower_is_better: document.getElementById('pm-metric').value === 'lower',
+            brief: document.getElementById('pm-brief').value.trim() || null,
+        });
+        enterProject(name);
+    } catch (e) { errEl.textContent = '创建失败: ' + e.message; }
+};
+
+load();
+</script>
+</body>
+</html>

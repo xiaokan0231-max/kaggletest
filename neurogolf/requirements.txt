@@ -1,0 +1,7 @@
+kaggle
+numpy
+onnx
+onnxruntime
+onnx-tool
+ipython
+matplotlib
