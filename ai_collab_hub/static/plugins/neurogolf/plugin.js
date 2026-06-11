@@ -244,8 +244,27 @@ function renderNeuroTasks() {
     const solvedTasks = kpiBase.filter(t => t.status === 'solved');
     const solvedCount = solvedTasks.length;
     const unledgered = solvedTasks.filter(t => !t.ledger_verified).length;
-    const claimedCount = kpiBase.filter(t => t.status === 'claimed').length;
+    const claimedTasks = kpiBase.filter(t => t.status === 'claimed');
+    const claimedCount = claimedTasks.length;
     const openCount = kpiBase.filter(t => t.status === 'open').length;
+
+    // 各 AI 分项：已完成按作者(created_by 回退 forum.creator)，进行中按认领人。
+    // 全部基于 kpiBase，所以自动跟随家族过滤。
+    const byAgent = (tasks, getAgent) => {
+        const m = {};
+        tasks.forEach(t => { const a = getAgent(t); if (a) m[a] = (m[a] || 0) + 1; });
+        return Object.entries(m).sort((a, b) => b[1] - a[1]);
+    };
+    const solvedByAgent = byAgent(solvedTasks, t => t.created_by || t.forum?.creator);
+    const claimedByAgent = byAgent(claimedTasks, t => t.claim?.agent);
+    const agentBreakdownHtml = (entries, accent) => entries.length ? `
+        <div style="display:flex;flex-direction:column;gap:0.2rem;font-size:0.72rem;
+                    border-left:1px solid var(--border-color);padding-left:0.7rem;align-self:stretch;justify-content:center;">
+            ${entries.map(([a, n]) => `<div style="display:flex;justify-content:space-between;gap:0.7rem;white-space:nowrap;">
+                <span style="color:var(--text-muted);max-width:90px;overflow:hidden;text-overflow:ellipsis;">${a}</span>
+                <span style="font-weight:700;color:${accent};font-family:var(--mono);">${n}</span>
+            </div>`).join('')}
+        </div>` : '';
 
     const unledgeredTasks = solvedTasks.filter(t => !t.ledger_verified);
     const unledgeredRows = unledgeredTasks.map(t => {
@@ -268,12 +287,20 @@ function renderNeuroTasks() {
     document.getElementById('neuro-kpis').innerHTML = `
         <div class="kpi-card" style="--accent: #10b981;">
             <span class="kpi-title">✅ 已完成</span>
-            <span class="kpi-value">${solvedCount} / ${kpiBase.length}</span>
-            ${unledgeredHtml}
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:0.6rem;flex-wrap:wrap;">
+                <div style="display:flex;flex-direction:column;">
+                    <span class="kpi-value">${solvedCount} / ${kpiBase.length}</span>
+                    ${unledgeredHtml}
+                </div>
+                ${agentBreakdownHtml(solvedByAgent, '#10b981')}
+            </div>
         </div>
         <div class="kpi-card" style="--accent: #f59e0b;">
             <span class="kpi-title">🔧 进行中 (已认领)</span>
-            <span class="kpi-value">${claimedCount}</span>
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:0.6rem;flex-wrap:wrap;">
+                <span class="kpi-value">${claimedCount}</span>
+                ${agentBreakdownHtml(claimedByAgent, '#f59e0b')}
+            </div>
         </div>
         <div class="kpi-card" style="--accent: #6b7280;">
             <span class="kpi-title">⬜ 未完成</span>
