@@ -1,5 +1,8 @@
 import os
 import re
+import json
+import fastapi
+from datetime import datetime, timedelta
 from pathlib import Path
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.staticfiles import StaticFiles
@@ -8,7 +11,6 @@ from sqlalchemy import func, or_
 from sqlalchemy.orm import Session
 from pydantic import BaseModel
 from typing import Optional, List
-from datetime import datetime, timedelta
 try:
     from . import database
     from .config import load_config, public_config
@@ -329,7 +331,8 @@ def build_knowledge(p: Project, agents_count: int, names: dict, db: Session) -> 
             "title": t.title,
             "tag": t.tag,
             "outcome": outcome,
-            "conclusion": t.conclusion,
+            # 摘要而非全文: 完整结论用 GET /api/topics/{id}
+            "conclusion": snippet(t.conclusion, 200),
             "closed_by": names.get(t.closed_by_id) if t.closed_by_id else None,
         })
     return items
@@ -572,6 +575,9 @@ def create_topic(req: TopicCreateReq, db: Session = Depends(get_db)):
     if not creator:
         raise HTTPException(status_code=404, detail=f"Agent '{req.creator_name}' not found. 请先用 update 命令注册。")
     require_member(db, creator, p)
+    if not (req.tag and req.tag.strip()):
+        raise HTTPException(status_code=400,
+                            detail="发帖必须带分类标签 (--tag), 常用: 实验报告 / BUG修复 / 特征工程 / 模型融合 / 数据泄漏 / 日常交流。")
     topic = Topic(project_id=p.id, creator_id=creator.id, title=req.title, tag=req.tag, content=req.content)
     db.add(topic)
     db.flush()  # to get topic.id before commit
@@ -591,7 +597,8 @@ def reply_to_topic(req: ReplyCreateReq, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail=f"Agent '{req.author_name}' not found. 请先用 update 命令注册。")
     topic = db.query(Topic).get(req.topic_id)
     if not topic:
-        raise HTTPException(status_code=404, detail="Topic not found.")
+        raise HTTPException(status_code=404,
+                            detail=f"主题 #{req.topic_id} 不存在: ID 可能写错或把回复编号当成了主题编号, 以 digest/read 输出的 #编号 为准。")
     p = project_of_topic(db, topic)
     if p.status == "archived":
         raise HTTPException(status_code=409, detail=f"项目 '{p.name}' 已归档, 只读不可写。")
@@ -612,7 +619,8 @@ def evaluate_reply(req: EvaluationReq, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail=f"Agent '{req.evaluator_name}' not found. 请先用 update 命令注册。")
     reply = db.query(Reply).get(req.reply_id)
     if not reply:
-        raise HTTPException(status_code=404, detail="Reply not found.")
+        raise HTTPException(status_code=404,
+                            detail=f"回复 #{req.reply_id} 不存在: reply_id 是回复编号(read 输出里的 💬 回复 #N), 不是主题编号; 待评分回复的编号见 read 的'待评分的回复'列表。")
     topic = db.query(Topic).get(reply.topic_id)
     p = project_of_topic(db, topic)
     if p.status == "archived":
@@ -634,9 +642,11 @@ def vote_on_topic(req: TopicVoteReq, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail=f"Agent '{req.agent_name}' not found. 请先用 update 命令注册。")
     topic = db.query(Topic).get(req.topic_id)
     if not topic:
-        raise HTTPException(status_code=404, detail="Topic not found.")
+        raise HTTPException(status_code=404,
+                            detail=f"主题 #{req.topic_id} 不存在: 以 digest/read 输出的 #编号 为准。")
     if req.vote not in ("agree", "disagree", "verify"):
-        raise HTTPException(status_code=400, detail="Vote must be 'agree', 'disagree', or 'verify'.")
+        raise HTTPException(status_code=400,
+                            detail="vote 只能是 agree(赞成) / disagree(反对) / verify(逻辑成立, 但需要实验验证)。")
     p = project_of_topic(db, topic)
     if p.status == "archived":
         raise HTTPException(status_code=409, detail=f"项目 '{p.name}' 已归档, 只读不可写。")
@@ -683,7 +693,8 @@ def log_experiment(req: ExperimentLogReq, db: Session = Depends(get_db)):
                                    "确实与任何话题无关的独立实验, 请显式加 --standalone。")
     topic = db.query(Topic).get(req.topic_id) if req.topic_id is not None else None
     if req.topic_id is not None and not topic:
-        raise HTTPException(status_code=404, detail="Topic not found.")
+        raise HTTPException(status_code=404,
+                            detail=f"主题 #{req.topic_id} 不存在: 实验要挂载到已存在的讨论帖; 确实与任何话题无关时去掉 --topic_id 并加 --standalone。")
     # 项目作用域: 带 topic 从话题推导(忽略传入值, 杜绝不一致); standalone 用显式/默认项目
     p = project_of_topic(db, topic) if topic is not None else resolve_project(db, req.project, for_write=True)
     if p.status == "archived":
@@ -715,7 +726,8 @@ def claim_topic(req: TopicClaimReq, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail=f"Agent '{req.agent_name}' not found. 请先用 update 命令注册。")
     topic = db.query(Topic).get(req.topic_id)
     if not topic:
-        raise HTTPException(status_code=404, detail="Topic not found.")
+        raise HTTPException(status_code=404,
+                            detail=f"主题 #{req.topic_id} 不存在: 可认领的待执行任务以 read 待办 / digest 列出的 #编号 为准。")
     p = project_of_topic(db, topic)
     if p.status == "archived":
         raise HTTPException(status_code=409, detail=f"项目 '{p.name}' 已归档, 只读不可写。")
@@ -739,7 +751,8 @@ def resolve_topic(topic_id: int, req: TopicResolveReq, db: Session = Depends(get
         raise HTTPException(status_code=404, detail=f"Agent '{req.agent_name}' not found. 请先用 update 命令注册。")
     topic = db.query(Topic).get(topic_id)
     if not topic:
-        raise HTTPException(status_code=404, detail="Topic not found.")
+        raise HTTPException(status_code=404,
+                            detail=f"主题 #{topic_id} 不存在: 以 digest/read 输出的 #编号 为准。")
     p = project_of_topic(db, topic)
     if p.status == "archived":
         raise HTTPException(status_code=409, detail=f"项目 '{p.name}' 已归档, 只读不可写。")
@@ -788,22 +801,52 @@ def read_updates(agent_name: str, mark_read: bool = True, project: Optional[str]
     reply_ids = {r.reply_id for r in rows if r.reply_id}
     replies = {rp.id: rp for rp in db.query(Reply).filter(Reply.id.in_(reply_ids)).all()} if reply_ids else {}
 
+    # 读取时已完结的话题: 其过程动态(发帖/回复/投票/结案)折叠为每话题一行,
+    # 过程细节已无行动价值(评分义务在 todo 里单独带摘要), 需要回看用 get
+    closed_now = {tid: compute_topic_status(t, agents_count, names)["status"] == "已完结"
+                  for tid, t in topics.items()}
+    action_labels = {"create_topic": "发帖", "reply_topic": "回复", "vote_topic": "投票",
+                     "evaluate_reply": "评分", "log_experiment": "实验", "claim_topic": "认领",
+                     "topic_resolved": "票决完结", "topic_resolved_manual": "人工结案",
+                     "topic_todo": "转待执行", "topic_experiment_done": "交付广播",
+                     "status_change": "状态更新", "join_project": "加入项目"}
+
     events = []
+    bundles = {}  # topic_id -> 折叠事件 (保持首次出现的时间序位置)
     for r in rows:
+        actor = names.get(r.agent_id, "Unknown") if r.agent_id else "System"
+        if r.topic_id and closed_now.get(r.topic_id):
+            b = bundles.get(r.topic_id)
+            if b is None:
+                t = topics[r.topic_id]
+                b = {"type": "closed_topic_bundle",
+                     "topic": {"id": t.id, "title": t.title, "tag": t.tag},
+                     "count": 0, "actions": {}, "actors": [], "timestamp": iso(r.created_at)}
+                bundles[r.topic_id] = b
+                events.append(b)
+            b["count"] += 1
+            label = action_labels.get(r.action_type, r.action_type)
+            b["actions"][label] = b["actions"].get(label, 0) + 1
+            if actor not in b["actors"]:
+                b["actors"].append(actor)
+            b["timestamp"] = iso(r.created_at)
+            continue
         ev = {
             "id": r.id,
             "type": r.action_type,
-            "actor": names.get(r.agent_id, "Unknown") if r.agent_id else "System",
+            "actor": actor,
             "description": r.description,
             "timestamp": iso(r.created_at),
         }
         if r.topic_id and r.topic_id in topics:
             t = topics[r.topic_id]
             ev["topic"] = {"id": t.id, "title": t.title, "tag": t.tag}
-        if r.reply_id and r.reply_id in replies:
+        if r.reply_id and r.reply_id in replies and r.action_type == "reply_topic":
             rp = replies[r.reply_id]
+            # 摘要而非全文(全文用 GET /api/topics/{id}); 评分等事件不重复附带回复原文——
+            # 该回复创建时已作为独立事件出现过, description 里自带评分理由
             ev["reply"] = {"id": rp.id, "author": names.get(rp.author_id, "Unknown"),
-                           "content": rp.content, "score": rp.score}
+                           "content": snippet(rp.content, 200), "score": rp.score}
         events.append(ev)
 
     # 推进游标: 未截断时可越过自己的事件直达本项目最新; 截断时只推进到已返回的位置, 不丢事件
@@ -817,14 +860,13 @@ def read_updates(agent_name: str, mark_read: bool = True, project: Optional[str]
         db.commit()
 
     todo = build_todo_items(agent, p, agents_count, names, db)
-    knowledge = build_knowledge(p, agents_count, names, db)
 
     return {
         "agent": agent.name,
         "project": p.name,
         "unread": {"count": len(events), "truncated": truncated, "events": events},
         "todo": todo,
-        "knowledge": knowledge,
+        # knowledge(已结案结论)只随 digest 下发, read 不再重复携带 (省 AI 上下文)
         "cursor": new_cursor,
         # 兼容旧客户端字段
         "action_items": todo,
@@ -846,7 +888,8 @@ def get_digest(agent_name: str, project: Optional[str] = None, db: Session = Dep
     now = datetime.utcnow()
     day_ago = now - timedelta(hours=24)
 
-    recent_topics = []       # 近 24h 新建
+    recent_topics = []       # 近 24h 新建且仍未完结 (已完结的合并进 recent_closed_24h, 结论看知识库)
+    recent_closed_ids = []   # 近 24h 新建且已完结
     near_consensus = []      # 差 1 票即达成共识
     missing_conclusions = [] # 已完结但缺结论, 等发起人 resolve 补写
     open_count = 0
@@ -854,8 +897,11 @@ def get_digest(agent_name: str, project: Optional[str] = None, db: Session = Dep
         status_info = compute_topic_status(t, agents_count, names)
         status = status_info["status"]
         if t.created_at >= day_ago:
-            recent_topics.append({"topic_id": t.id, "title": t.title, "tag": t.tag,
-                                  "status": status, "creator": names.get(t.creator_id, "Unknown")})
+            if status == "已完结":
+                recent_closed_ids.append(t.id)
+            else:
+                recent_topics.append({"topic_id": t.id, "title": t.title, "tag": t.tag,
+                                      "status": status, "creator": names.get(t.creator_id, "Unknown")})
         if status == "已完结":
             if t.closed_at is None:
                 missing_conclusions.append({"topic_id": t.id, "title": t.title,
@@ -878,7 +924,7 @@ def get_digest(agent_name: str, project: Optional[str] = None, db: Session = Dep
                             "method": exp.method, "cv_score": exp.cv_score, "lb_score": exp.lb_score,
                             "notes": snippet(exp.notes, 120), "timestamp": iso(exp.created_at)})
 
-    agents_data = [{"name": a.name, "status": st.current_status,
+    agents_data = [{"name": a.name, "status": snippet(st.current_status, 200),
                     "cv_score": st.best_cv_score, "lb_score": st.best_lb_score,
                     "updated_at": iso(st.updated_at) if st.updated_at else None}
                    for st, a in members]
@@ -907,6 +953,7 @@ def get_digest(agent_name: str, project: Optional[str] = None, db: Session = Dep
         "agents": agents_data,
         "open_topics": open_count,
         "recent_topics_24h": recent_topics,
+        "recent_closed_24h": {"count": len(recent_closed_ids), "ids": recent_closed_ids},
         "near_consensus": near_consensus,
         "recent_experiments": recent_exps,
         "knowledge": build_knowledge(p, agents_count, names, db),
@@ -1004,7 +1051,8 @@ def agent_drilldown(agent_name: str, metric: str, project: Optional[str] = None,
 def get_topic_detail(topic_id: int, db: Session = Depends(get_db)):
     topic = db.query(Topic).get(topic_id)
     if not topic:
-        raise HTTPException(status_code=404, detail="Topic not found.")
+        raise HTTPException(status_code=404,
+                            detail=f"主题 #{topic_id} 不存在: 以 digest/read 输出的 #编号 为准。")
     p = project_of_topic(db, topic)
     names = agent_name_map(db)
     return serialize_topic(topic, member_count(db, p), names, db)
@@ -1156,3 +1204,29 @@ def get_dashboard_data(project: Optional[str] = None, db: Session = Depends(get_
         "activity_feed": activity_feed,
         "metric_lower_is_better": p.metric_lower_is_better
     }
+
+@app.get("/api/project_plugin/{project}/{action}")
+def project_plugin_action(project: str, action: str, req: fastapi.Request, db: Session = Depends(get_db)):
+    import importlib.util
+    import sys
+    import os
+    plugin_dir = HUB_DIR / "plugins" / project
+    api_file = plugin_dir / "api.py"
+    if not api_file.exists():
+        raise HTTPException(status_code=404, detail=f"Plugin API not found for project '{project}'")
+    
+    module_name = f"plugins.{project}.api"
+    spec = importlib.util.spec_from_file_location(module_name, str(api_file))
+    if spec is None or spec.loader is None:
+        raise HTTPException(status_code=500, detail="Failed to load plugin spec")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[module_name] = module
+    try:
+        spec.loader.exec_module(module)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error executing plugin: {e}")
+    
+    if not hasattr(module, "handle_request"):
+        raise HTTPException(status_code=500, detail="Plugin API must define 'handle_request(action, request, db)'")
+    
+    return module.handle_request(action, req, db)

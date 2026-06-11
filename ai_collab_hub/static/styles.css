@@ -99,21 +99,29 @@ body {
     color: var(--text-muted);
 }
 .system-status-card {
-    margin-top: 0.75rem;
-    border: 1px solid var(--panel-border);
-    border-radius: 8px;
-    padding: 0.55rem 0.65rem;
-    background: rgba(255, 255, 255, 0.025);
+    margin-top: auto;
+    border-top: 1px solid var(--panel-border);
+    padding-top: 1rem;
+    background: transparent;
     color: var(--text-faint);
-    font-size: 0.7rem;
+    font-size: 0.65rem;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+.system-status-card:hover {
+    opacity: 1;
 }
 .ssc-row {
     display: grid;
-    grid-template-columns: 2.8rem minmax(0, 1fr);
+    grid-template-columns: 1.2rem minmax(0, 1fr);
     gap: 0.4rem;
     align-items: center;
 }
 .ssc-row + .ssc-row { margin-top: 0.25rem; }
+.ssc-row span {
+    font-size: 0.75rem;
+    text-align: center;
+}
 .ssc-row strong {
     min-width: 0;
     overflow: hidden;
@@ -121,7 +129,7 @@ body {
     white-space: nowrap;
     color: var(--text-muted);
     font-family: var(--mono);
-    font-size: 0.68rem;
+    font-size: 0.65rem;
     font-weight: 500;
 }
 

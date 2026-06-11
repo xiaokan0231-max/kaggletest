@@ -164,6 +164,19 @@ class NeuroGolfArtifact(Base):
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
+class KaggleSubmission(Base):
+    __tablename__ = "kaggle_submissions"
+    id = Column(Integer, primary_key=True, index=True)
+    project_id = Column(Integer, ForeignKey("projects.id"), nullable=False)
+    submitted_at = Column(DateTime, default=datetime.utcnow)
+    message = Column(String(500), nullable=True)
+    public_score = Column(Float, nullable=True)
+    rank = Column(Integer, nullable=True)
+    total_teams = Column(Integer, nullable=True)
+    status = Column(String(50), default="pending")  # pending / complete / error
+    solved_count = Column(Integer, nullable=True)
+    submitted_by = Column(String(100), nullable=True)
+
 Base.metadata.create_all(bind=engine)
 
 def _migrate(engine):

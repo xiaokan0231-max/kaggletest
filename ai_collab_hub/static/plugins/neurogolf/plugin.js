@@ -1,0 +1,336 @@
+const neurogolfHtml = `
+<div class="topics-header-bar">
+    <h2>⛳ NeuroGolf 400 任务追踪大盘</h2>
+    <div style="display:flex;gap:0.5rem;align-items:center;">
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="setNeuroStatus('all', this)">全部</button>
+            <button class="filter-btn" onclick="setNeuroStatus('solved', this)">✅ 已完成</button>
+            <button class="filter-btn" onclick="setNeuroStatus('claimed', this)">🔧 进行中</button>
+            <button class="filter-btn" onclick="setNeuroStatus('open', this)">⬜ 未完成</button>
+        </div>
+        <button onclick="refreshNeuroGolf(this)" style="padding:0.35rem 0.8rem;border:1px solid var(--border-color);border-radius:6px;background:var(--bg-card);color:var(--text-primary);cursor:pointer;font-size:0.85rem;">🔄 刷新</button>
+    </div>
+</div>
+<div id="neuro-family-bar" style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1rem;"></div>
+<p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:1.5rem;">状态以工作区模型与认领台账为准（已完成 = 非 dummy ONNX 在库；进行中 = 有效认领），论坛帖仅作跳转链接。</p>
+
+<div class="kpi-cards" id="neuro-kpis" style="margin-bottom: 2rem;"></div>
+
+<div id="neuro-kaggle-section" style="margin-bottom:2rem;padding:1rem;border:1px solid var(--border-color);border-radius:8px;background:var(--bg-card);">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+        <div style="display:flex;align-items:center;gap:0.5rem;">
+            <strong>🏆 Kaggle 提交</strong>
+            <button onclick="refreshKaggleSection(this)" title="刷新榜单" style="padding:0.2rem 0.5rem;border:1px solid var(--border-color);border-radius:5px;background:var(--bg-card-hover);color:var(--text-muted);cursor:pointer;font-size:0.8rem;">🔄</button>
+        </div>
+        <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;">
+            <input type="text" id="kaggle-message" value="Hub auto submit"
+                   style="padding:0.3rem 0.6rem;border:1px solid var(--border-color);border-radius:6px;background:var(--bg-input,var(--bg-card-hover));color:var(--text-primary);font-size:0.85rem;width:200px;">
+            <button id="kaggle-submit-btn" onclick="submitToKaggle()"
+                    style="padding:0.35rem 0.9rem;border:none;border-radius:6px;background:#2563eb;color:#fff;cursor:pointer;font-size:0.85rem;font-weight:600;">
+                🚀 提交算分
+            </button>
+        </div>
+    </div>
+    <div id="kaggle-submit-status" style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.75rem;"></div>
+    <div id="kaggle-history"></div>
+</div>
+
+<div id="neuro-tasks-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem;">
+</div>
+`;
+
+let allNeuroTasks = [];
+let kaggleSubmissions = [];
+let kagglePollTimer = null;
+let activeStatus = 'all';
+let activeFamily = 'all';
+
+function refreshNeuroGolf(btn) {
+    if (btn) { btn.textContent = '⏳'; btn.disabled = true; }
+    fetchNeuroGolfTasks(() => {
+        if (btn) { btn.textContent = '🔄 刷新'; btn.disabled = false; }
+    });
+    refreshKaggleSection();
+}
+
+function refreshKaggleSection(btn) {
+    if (btn) { btn.textContent = '⏳'; btn.disabled = true; }
+    // 总是刷新：pending 的补分，complete 的补排名
+    const toRefresh = kaggleSubmissions.filter(s => s.status === 'pending' || s.rank == null);
+    // 若全都有分有排名，也至少刷新最新一条（用户主动点了就应该查）
+    const targets = toRefresh.length > 0 ? toRefresh : kaggleSubmissions.slice(0, 1);
+    if (targets.length === 0) { fetchKaggleSubmissions(); if (btn) { btn.textContent = '🔄'; btn.disabled = false; } return; }
+    let done = 0;
+    targets.forEach(sub => {
+        fetch(`/api/project_plugin/neurogolf/kaggle_submissions/${sub.id}/refresh`, {method: 'POST'})
+            .then(r => r.json())
+            .then(d => { const idx = kaggleSubmissions.findIndex(s => s.id === sub.id); if (idx >= 0) Object.assign(kaggleSubmissions[idx], d); })
+            .catch(() => {})
+            .finally(() => { if (++done === targets.length) { fetchKaggleSubmissions(); if (btn) { btn.textContent = '🔄'; btn.disabled = false; } } });
+    });
+}
+
+function fetchNeuroGolfTasks(cb) {
+    fetch('/api/project_plugin/neurogolf/status')
+        .then(res => res.json())
+        .then(data => {
+            allNeuroTasks = data.tasks;
+            renderFamilyBar();
+            renderNeuroTasks();
+            if (cb) cb();
+        })
+        .catch(err => { console.error("Error fetching neurogolf tasks:", err); if (cb) cb(); });
+    fetchKaggleSubmissions();
+}
+
+function renderFamilyBar() {
+    const bar = document.getElementById('neuro-family-bar');
+    if (!bar) return;
+    const counts = {}, agentSolved = {};
+    allNeuroTasks.forEach(t => {
+        counts[t.rule_family] = (counts[t.rule_family] || 0) + 1;
+        if (t.status === 'solved' && t.created_by) {
+            if (!agentSolved[t.rule_family]) agentSolved[t.rule_family] = {};
+            agentSolved[t.rule_family][t.created_by] = (agentSolved[t.rule_family][t.created_by] || 0) + 1;
+        }
+    });
+    const topAgent = (f) => {
+        const m = agentSolved[f];
+        if (!m) return null;
+        const [agent, n] = Object.entries(m).sort((a, b) => b[1] - a[1])[0];
+        return {agent, n};
+    };
+    const families = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+    const activeStyle = 'background:#2563eb;color:#fff;border-color:#2563eb;';
+    const inactiveStyle = 'background:var(--bg-card);color:var(--text-primary);';
+    const btnWrap = (f, label) => {
+        const top = topAgent(f);
+        const sub = top ? `<div style="font-size:0.7rem;opacity:0.75;margin-top:1px;">${top.agent} ×${top.n}</div>` : '';
+        return `<button style="padding:0.3rem 0.7rem;border-radius:8px;font-size:0.8rem;cursor:pointer;border:1px solid var(--border-color);text-align:center;line-height:1.3;${activeFamily === f ? activeStyle : inactiveStyle}" onclick="setNeuroFamily('${f}')">${label}${sub}</button>`;
+    };
+    bar.innerHTML = btnWrap('all', '全部家族') +
+        families.map(([f, n]) => btnWrap(f, `${f} <span style="opacity:0.7">(${n})</span>`)).join('');
+}
+
+function setNeuroStatus(status, btnEl) {
+    activeStatus = status;
+    document.querySelectorAll('#view-neurogolf-tasks .filter-btn').forEach(b => b.classList.remove('active'));
+    if (btnEl) btnEl.classList.add('active');
+    renderNeuroTasks();
+}
+
+function setNeuroFamily(family) {
+    activeFamily = family;
+    renderFamilyBar();
+    renderNeuroTasks();
+}
+
+function fetchKaggleSubmissions() {
+    fetch('/api/project_plugin/neurogolf/kaggle_submissions')
+        .then(r => r.json())
+        .then(d => {
+            kaggleSubmissions = d.submissions || [];
+            renderKaggleHistory();
+            // Auto-poll if latest is pending
+            const latest = kaggleSubmissions[0];
+            if (latest && latest.status === 'pending') {
+                scheduleKagglePoll(latest.id);
+            }
+        })
+        .catch(() => {});
+}
+
+function scheduleKagglePoll(subId) {
+    if (kagglePollTimer) clearTimeout(kagglePollTimer);
+    kagglePollTimer = setTimeout(() => {
+        fetch(`/api/project_plugin/neurogolf/kaggle_submissions/${subId}/refresh`, {method: 'POST'})
+            .then(r => r.json())
+            .then(d => {
+                // Update in-memory list
+                const idx = kaggleSubmissions.findIndex(s => s.id === subId);
+                if (idx >= 0) Object.assign(kaggleSubmissions[idx], d);
+                renderKaggleHistory();
+                if (d.status === 'pending') scheduleKagglePoll(subId);
+            })
+            .catch(() => {});
+    }, 30000); // 30s
+}
+
+function submitToKaggle() {
+    const btn = document.getElementById('kaggle-submit-btn');
+    const msg = (document.getElementById('kaggle-message')?.value || '').trim() || 'Hub auto submit';
+    const statusEl = document.getElementById('kaggle-submit-status');
+    btn.disabled = true;
+    btn.textContent = '⏳ 提交中...';
+    statusEl.textContent = '正在上传 submission.zip 到 Kaggle，请稍候…';
+
+    const fd = new FormData();
+    fd.append('message', msg);
+    fd.append('submitted_by', 'human');
+
+    fetch('/api/project_plugin/neurogolf/submit', {method: 'POST', body: fd})
+        .then(r => r.json().then(d => ({ok: r.ok, d})))
+        .then(({ok, d}) => {
+            btn.disabled = false;
+            btn.textContent = '🚀 提交算分';
+            if (!ok) {
+                statusEl.innerHTML = `<span style="color:var(--danger,#ef4444)">❌ 提交失败: ${d.detail || JSON.stringify(d)}</span>`;
+                return;
+            }
+            statusEl.innerHTML = `<span style="color:#10b981">✅ 提交成功，已解 ${d.solved_count} 个任务</span>` +
+                (d.public_score ? ` — 公榜分: <strong>${d.public_score}</strong>` : ' — 评分中，30s 后自动刷新…');
+            fetchKaggleSubmissions();
+            if (d.status === 'pending') scheduleKagglePoll(d.id);
+        })
+        .catch(err => {
+            btn.disabled = false;
+            btn.textContent = '🚀 提交算分';
+            statusEl.innerHTML = `<span style="color:var(--danger,#ef4444)">❌ 网络错误: ${err}</span>`;
+        });
+}
+
+function renderKaggleHistory() {
+    const el = document.getElementById('kaggle-history');
+    if (!el) return;
+    if (!kaggleSubmissions.length) {
+        el.innerHTML = '<div style="color:var(--text-muted);font-size:0.8rem;">暂无历史提交记录</div>';
+        return;
+    }
+    const rows = kaggleSubmissions.map(s => {
+        const scoreCell = s.public_score != null
+            ? `<strong>${s.public_score.toFixed(3)}</strong>`
+            : (s.status === 'pending' ? '<span style="color:var(--text-muted)">评分中…</span>' : '—');
+        const rankCell = s.rank ? `#${s.rank}${s.total_teams ? ' / ' + s.total_teams : ''}` : '—';
+        const statusBadge = s.status === 'complete'
+            ? `<span style="color:#10b981">●</span>`
+            : s.status === 'pending'
+            ? `<span style="color:#f59e0b">●</span>`
+            : `<span style="color:#ef4444">●</span>`;
+        const dt = s.submitted_at ? s.submitted_at.replace('T',' ').slice(0,16) : '—';
+        return `<tr style="border-top:1px solid var(--border-color);">
+            <td style="padding:0.4rem 0.6rem;white-space:nowrap;">${statusBadge} ${dt}</td>
+            <td style="padding:0.4rem 0.6rem;">${s.message || '—'}</td>
+            <td style="padding:0.4rem 0.6rem;text-align:center;">${s.solved_count ?? '—'}</td>
+            <td style="padding:0.4rem 0.6rem;text-align:center;">${scoreCell}</td>
+            <td style="padding:0.4rem 0.6rem;text-align:center;">${rankCell}</td>
+            <td style="padding:0.4rem 0.6rem;text-align:center;">${s.submitted_by || '—'}</td>
+        </tr>`;
+    }).join('');
+    el.innerHTML = `<table style="width:100%;font-size:0.8rem;border-collapse:collapse;">
+        <thead><tr style="color:var(--text-muted);">
+            <th style="padding:0.3rem 0.6rem;text-align:left;font-weight:500;">时间</th>
+            <th style="padding:0.3rem 0.6rem;text-align:left;font-weight:500;">备注</th>
+            <th style="padding:0.3rem 0.6rem;text-align:center;font-weight:500;">已解</th>
+            <th style="padding:0.3rem 0.6rem;text-align:center;font-weight:500;">公榜分</th>
+            <th style="padding:0.3rem 0.6rem;text-align:center;font-weight:500;">排名</th>
+            <th style="padding:0.3rem 0.6rem;text-align:center;font-weight:500;">提交人</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+    </table>`;
+}
+
+function renderNeuroTasks() {
+    const grid = document.getElementById('neuro-tasks-grid');
+    if (!grid) return;
+
+    let filtered = allNeuroTasks;
+    if (activeStatus !== 'all') filtered = filtered.filter(t => t.status === activeStatus);
+    if (activeFamily !== 'all') filtered = filtered.filter(t => t.rule_family === activeFamily);
+
+    // KPI 跟随家族过滤（状态过滤不影响 KPI 数字）
+    const kpiBase = activeFamily === 'all' ? allNeuroTasks : allNeuroTasks.filter(t => t.rule_family === activeFamily);
+    const solvedTasks = kpiBase.filter(t => t.status === 'solved');
+    const solvedCount = solvedTasks.length;
+    const unledgered = solvedTasks.filter(t => !t.ledger_verified).length;
+    const claimedCount = kpiBase.filter(t => t.status === 'claimed').length;
+    const openCount = kpiBase.filter(t => t.status === 'open').length;
+
+    document.getElementById('neuro-kpis').innerHTML = `
+        <div class="kpi-card" style="--accent: #10b981;">
+            <span class="kpi-title">✅ 已完成</span>
+            <span class="kpi-value">${solvedCount} / 400</span>
+            ${unledgered ? `<span style="font-size:0.75rem;color:var(--text-muted);">其中 ${unledgered} 个未过账</span>` : ''}
+        </div>
+        <div class="kpi-card" style="--accent: #f59e0b;">
+            <span class="kpi-title">🔧 进行中 (已认领)</span>
+            <span class="kpi-value">${claimedCount}</span>
+        </div>
+        <div class="kpi-card" style="--accent: #6b7280;">
+            <span class="kpi-title">⬜ 未完成</span>
+            <span class="kpi-value">${openCount}</span>
+        </div>
+    `;
+
+    grid.innerHTML = '';
+    filtered.forEach(t => {
+        const card = document.createElement('div');
+        let statusColor = 'var(--bg-card-hover)';
+        let statusBorder = '1px solid var(--border-color)';
+        let icon = '⬜';
+        let statusText = '未完成';
+
+        if (t.status === 'solved') {
+            statusBorder = '1px solid #10b981';
+            statusColor = 'rgba(16, 185, 129, 0.05)';
+            icon = '✅';
+            statusText = t.ledger_verified ? '已完成' : '已完成 (未过账)';
+        } else if (t.status === 'claimed') {
+            statusBorder = '1px solid #f59e0b';
+            statusColor = 'rgba(245, 158, 11, 0.05)';
+            icon = '🔧';
+            statusText = '进行中';
+        }
+
+        card.style.cssText = `
+            background: ${statusColor};
+            border: ${statusBorder};
+            border-radius: 8px;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            cursor: ${t.forum ? 'pointer' : 'default'};
+            transition: transform 0.2s;
+        `;
+
+        if (t.forum) {
+            card.onmouseover = () => card.style.transform = 'translateY(-2px)';
+            card.onmouseout = () => card.style.transform = 'none';
+            card.onclick = () => expandTopic(t.forum.topic_id);
+        }
+
+        const lines = [];
+        // 最高分和制作人：所有卡片都显示
+        if (t.best_score != null) {
+            const by = t.created_by ? ` · ${t.created_by}` : '';
+            lines.push(`<div style="color:#f59e0b;font-weight:600;">🏆 ${t.best_score.toFixed(3)}${by}</div>`);
+        } else if (t.status === 'solved') {
+            const by = t.created_by ? ` by ${t.created_by}` : '';
+            lines.push(`<div style="color:var(--text-muted)">📒 未过账${by}</div>`);
+        }
+        if (t.status === 'claimed' && t.claim) {
+            lines.push(`<div>🔧 认领: ${t.claim.agent}</div>`);
+            if (t.claim.expires_at) lines.push(`<div>⏳ 有效至: ${t.claim.expires_at.replace('T', ' ').slice(0, 16)}</div>`);
+            if (t.claim.note) lines.push(`<div style="color:var(--text-muted)">📝 ${t.claim.note}</div>`);
+        }
+        if (t.forum) lines.push(`<div style="color:var(--text-muted)">💬 相关帖: #${t.forum.topic_id} (点卡片跳转)</div>`);
+
+        const details = lines.length
+            ? `<div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">${lines.join('')}</div>`
+            : '';
+
+        card.innerHTML = `
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <strong style="font-size: 1.1rem;">${t.id}</strong>
+                <span title="${statusText}">${icon} ${statusText}</span>
+            </div>
+            <div style="font-size: 0.8rem; color: var(--text-muted);">
+                <span class="topic-tag">${t.rule_family}</span>
+            </div>
+            ${details}
+        `;
+        grid.appendChild(card);
+    });
+}
+
+window.registerPluginView('view-neurogolf-tasks', '⛳', '400 任务追踪', neurogolfHtml, fetchNeuroGolfTasks);

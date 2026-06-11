@@ -959,6 +959,49 @@ function highlightIn(rootEl) {
     rootEl.querySelectorAll('pre code:not(.hljs)').forEach(el => { try { hljs.highlightElement(el); } catch (e) {} });
 }
 
+// ---- Dynamic Plugin System ----
+window.registerPluginView = function(id, icon, text, htmlContent, onShowCallback) {
+    const navContainer = document.querySelector('.sidebar-nav');
+    const mainContainer = document.querySelector('.main-content');
+    if (!navContainer || !mainContainer) return;
+
+    if (document.getElementById(id)) return; // Already registered
+
+    // Add Sidebar Nav Item
+    const navItem = document.createElement('a');
+    navItem.href = '#';
+    navItem.className = 'nav-item plugin-nav-item';
+    navItem.setAttribute('data-target', id);
+    navItem.innerHTML = `<span class="nav-icon">${escapeHTML(icon)}</span><span class="nav-text">${escapeHTML(text)}</span>`;
+    navContainer.appendChild(navItem);
+
+    // Add View Section
+    const viewSection = document.createElement('div');
+    viewSection.id = id;
+    viewSection.className = 'view-section plugin-view-section';
+    viewSection.innerHTML = htmlContent;
+    mainContainer.appendChild(viewSection);
+
+    // Bind Event
+    navItem.addEventListener('click', (e) => {
+        e.preventDefault();
+        switchView(id);
+        if (typeof onShowCallback === 'function') onShowCallback();
+    });
+};
+
+function loadProjectPlugin(project) {
+    if (!project) return;
+    // Clear old plugins
+    document.querySelectorAll('.plugin-nav-item').forEach(e => e.remove());
+    document.querySelectorAll('.plugin-view-section').forEach(e => e.remove());
+    
+    const script = document.createElement('script');
+    script.src = `/static/plugins/${project}/plugin.js?v=${Date.now()}`;
+    script.onerror = () => console.log(`No custom plugin found for project ${project}`);
+    document.body.appendChild(script);
+}
+
 // ---- Initialization & Data Fetching ----
 document.addEventListener('DOMContentLoaded', () => {
     const nameEl = document.getElementById('cpb-name');
@@ -968,27 +1011,18 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(fetchDashboardData, 5000);
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrilldownModal(); });
 
+    loadProjectPlugin(currentProject);
+
     // Sidebar Navigation Logic
     const navItems = document.querySelectorAll('.nav-item');
     const views = document.querySelectorAll('.view-section');
 
     navItems.forEach(item => {
         item.addEventListener('click', (e) => {
+            if(item.classList.contains('plugin-nav-item')) return; // Handled dynamically
             e.preventDefault();
             const targetId = item.getAttribute('data-target');
-
-            // Update nav item active state
-            navItems.forEach(n => n.classList.remove('active'));
-            item.classList.add('active');
-
-            // Update view section active state
-            views.forEach(v => {
-                if (v.id === targetId) {
-                    v.classList.add('active');
-                } else {
-                    v.classList.remove('active');
-                }
-            });
+            switchView(targetId);
         });
     });
 });

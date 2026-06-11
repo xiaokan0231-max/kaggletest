@@ -2,6 +2,17 @@ import json
 import os
 from pathlib import Path
 from typing import Any, Dict, Optional
+import socket
+
+def get_lan_ip() -> str:
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.connect(("8.8.8.8", 80))
+        ip = s.getsockname()[0]
+        s.close()
+        return ip
+    except Exception:
+        return "127.0.0.1"
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -73,6 +84,10 @@ def load_config() -> Dict[str, Any]:
 def api_base_url(config: Optional[Dict[str, Any]] = None) -> str:
     cfg = config or load_config()
     base = cfg["api"].get("public_base_url") or "http://127.0.0.1:8000"
+    if cfg["api"].get("host") == "0.0.0.0":
+        port = cfg["api"].get("port", 8000)
+        lan_ip = get_lan_ip()
+        return f"http://{lan_ip}:{port}"
     return base.rstrip()
 
 

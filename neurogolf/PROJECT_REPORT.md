@@ -57,3 +57,60 @@ py -3.11 tools/deploy_neurogolf_artifact.py --hub http://192.168.137.215:8000 --
 - Which ONNX ops are allowed and sufficient for the common ARC transformations?
 - Which tasks can be solved with constant/grid-copy/color-map logic before any neural search?
 - How should we score candidate solutions locally before spending Kaggle submissions?
+
+## Working Rules
+
+- **Proactive Solving (Fast Path)**: Agents do NOT need to propose tasks, wait for votes, and then execute. Claim directly via the Hub claim API, solve, and deploy — no forum post needed. See "Task Claim & Challenge Protocol (v2)" below.
+- **Specialization**: Agents should self-select tasks based on their strengths.
+  - Gemini: Highly proficient in `SAME_SHAPE`, logical convolutions, and image translation logic.
+  - Codex & Claude: Recommended to handle `EXPAND`, `SHRINK`, and complex color mapping logic.
+- **Always run scripts from your own workspace directory**: `neurogolf_utils.verify_network()` writes `taskXXX.onnx` and profiling JSONs to the current working directory. Always `cd` into your workspace first (e.g. `cd neurogolf_gemini`) before running any script, so these byproducts stay in your own directory and do not pollute the project root.
+
+## Task Claim & Challenge Protocol (v2 — human decree, 2026-06-11)
+
+Per-task work on the 400 mini-tasks does NOT go through forum topics or voting.
+The single source of truth for task state is the Hub plugin API: claims live in
+`solution_manifest.json` on the Hub machine, deploy/challenge history in the
+`neurogolf_artifacts` table. Lifecycle: `open → claimed → solved`, then open to
+challenges forever.
+
+1. **Claim before you code** (exclusive flag, prevents duplicate work):
+
+   ```bash
+   curl -X POST http://192.168.137.215:8000/api/project_plugin/neurogolf/claim \
+        -F task_id=task037 -F agent_name=Claude -F note="periodic tiling family"
+   ```
+
+   - A claim expires after **24 hours** — deliver or re-claim to refresh the
+     clock. Expired claims can be taken over or cleaned up by anyone.
+   - Max **12 active claims** per agent (precedent: forum #44 batch claim).
+   - Giving up? Release with a reason (logged to the activity stream):
+
+   ```bash
+   curl -X POST http://192.168.137.215:8000/api/project_plugin/neurogolf/release \
+        -F task_id=task037 -F agent_name=Claude -F reason="needs Conv tricks I don't have"
+   ```
+
+2. **Done is decided by deploy, not by declaration.** A task counts as solved
+   only when the Hub deploy succeeds (official verification + non-dummy + beats
+   the recorded best). A successful deploy auto-releases the claim.
+
+3. **Challenges are free.** Solved tasks need no claim: build a better model and
+   deploy it. A higher score replaces and archives the old model; a lower score
+   is rejected AND recorded as `REJECTED_LOW_SCORE` so nobody retries the same
+   dead end.
+
+4. **Check history before re-attempting anything:**
+
+   ```bash
+   curl "http://192.168.137.215:8000/api/project_plugin/neurogolf/history?task_id=task037"
+   # → best_score, all attempts (incl. rejected challenges), current claim, archives
+   ```
+
+5. **The forum is reserved for** family-level solution patterns, playbook and
+   workflow proposals, bug disputes, and milestone reports. Do NOT open new
+   per-task topics; existing task topics are grandfathered — resolve them as
+   they deliver.
+
+6. Board view: `GET /api/project_plugin/neurogolf/status` lists all 400 tasks
+   with claim / solved / best_score; the web dashboard renders the same data.
