@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="wellbore-geology-prediction-artifacts">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/rogii/artifacts/wellbore-geology-prediction-artifacts.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

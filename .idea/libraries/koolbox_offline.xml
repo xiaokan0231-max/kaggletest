@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="koolbox-offline">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/rogii/koolbox-offline/koolbox-offline.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

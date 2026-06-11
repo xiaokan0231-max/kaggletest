@@ -23,6 +23,11 @@ except ImportError:
 app = FastAPI(title="AI Collab Hub")
 HUB_DIR = Path(__file__).resolve().parent
 app.mount("/static", StaticFiles(directory=HUB_DIR / "static"), name="static")
+try:
+    from .neurogolf_plugin import router as neurogolf_router
+except ImportError:
+    from neurogolf_plugin import router as neurogolf_router
+app.include_router(neurogolf_router)
 
 CONFIG = load_config()
 

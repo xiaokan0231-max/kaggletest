@@ -43,3 +43,19 @@ The model is not size-optimal. It uses flatten + constant-index Gather + mask ar
 ### Attempted: task003
 
 Initial visible examples suggested a 6x3 to 9x3 vertical extension plus recolor `1 -> 2`. A fixed row-map/gather model failed ARC-GEN, so the rule is not a simple periodic or fixed-row append. Do not submit the current `task003.onnx`; treat it as a failed diagnostic until the transformation is re-derived.
+
+## 2026-06-11 — Deployment Guard
+
+Added `neurogolf_codex/tools/deploy_guard.py` after forum #47 exposed low-score overwrite regressions for solved tasks.
+
+Purpose:
+
+- Refuse deployment when a candidate score is below the manifest's recorded best score unless `--allow-regression` is explicit.
+- Archive the previous deployed `.onnx` before replacement.
+- Reject `.onnx.data` sidecars by default so deployed models are single-file unless explicitly overridden.
+
+Verification:
+
+```powershell
+py -3.11 -m unittest neurogolf_codex.tests.test_deploy_guard
+```

@@ -147,6 +147,23 @@ class Leaderboard(Base):
     score_type = Column(String(10), default="cv")  # "cv" or "lb"
     created_at = Column(DateTime, default=datetime.utcnow)
 
+class NeuroGolfArtifact(Base):
+    __tablename__ = "neurogolf_artifacts"
+    id = Column(Integer, primary_key=True, index=True)
+    project_id = Column(Integer, ForeignKey("projects.id"), nullable=False)
+    task_id = Column(String(20), nullable=False, index=True)
+    score = Column(Float, nullable=True)
+    verified_status = Column(String(40), nullable=False, default="UNKNOWN")
+    sha256 = Column(String(64), nullable=False)
+    bytes = Column(Integer, nullable=False, default=0)
+    forum_topic_id = Column(Integer, ForeignKey("topics.id"), nullable=True)
+    created_by = Column(String(50), nullable=True)
+    artifact_path = Column(String(512), nullable=False)
+    is_deployed = Column(Boolean, nullable=False, default=False)
+    is_dummy = Column(Boolean, nullable=False, default=False)
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
 Base.metadata.create_all(bind=engine)
 
 def _migrate(engine):
@@ -195,5 +212,28 @@ def _migrate(engine):
                 "SELECT id, :pid, current_status, best_cv_score, best_lb_score, "
                 "COALESCE(last_read_log_id, 0), workspace_dir, updated_at FROM agents"),
                 {"pid": default_pid})
+
+        artifact_cols = {c["name"] for c in insp.get_columns("neurogolf_artifacts")} \
+            if "neurogolf_artifacts" in insp.get_table_names() else set()
+        # create_all creates the table for fresh databases. These guards keep older
+        # partially migrated central hubs compatible if a column is added later.
+        expected_cols = {
+            "project_id": "INT NOT NULL",
+            "task_id": "VARCHAR(20) NOT NULL",
+            "score": "FLOAT NULL",
+            "verified_status": "VARCHAR(40) NOT NULL DEFAULT 'UNKNOWN'",
+            "sha256": "VARCHAR(64) NOT NULL",
+            "bytes": "INT NOT NULL DEFAULT 0",
+            "forum_topic_id": "INT NULL",
+            "created_by": "VARCHAR(50) NULL",
+            "artifact_path": "VARCHAR(512) NOT NULL",
+            "is_deployed": "BOOL NOT NULL DEFAULT 0",
+            "is_dummy": "BOOL NOT NULL DEFAULT 0",
+            "created_at": "DATETIME NULL",
+            "updated_at": "DATETIME NULL",
+        }
+        for col, ddl in expected_cols.items():
+            if artifact_cols and col not in artifact_cols:
+                conn.execute(text(f"ALTER TABLE neurogolf_artifacts ADD COLUMN {col} {ddl}"))
 
 _migrate(engine)

@@ -7,7 +7,7 @@ import onnx
 from onnx import TensorProto, helper, numpy_helper
 
 
-ROOT = Path("/Users/kanxiao/IdeaProjects/kaggletest")
+ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "neurogolf_codex" / "solutions" / "task003.onnx"
 
 
