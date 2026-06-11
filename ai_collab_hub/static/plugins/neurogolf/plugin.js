@@ -90,9 +90,10 @@ function renderFamilyBar() {
     const counts = {}, agentSolved = {};
     allNeuroTasks.forEach(t => {
         counts[t.rule_family] = (counts[t.rule_family] || 0) + 1;
-        if (t.status === 'solved' && t.created_by) {
+        const author = t.created_by || t.forum?.creator;   // created_by 为空时退回论坛作者
+        if (t.status === 'solved' && author) {
             if (!agentSolved[t.rule_family]) agentSolved[t.rule_family] = {};
-            agentSolved[t.rule_family][t.created_by] = (agentSolved[t.rule_family][t.created_by] || 0) + 1;
+            agentSolved[t.rule_family][author] = (agentSolved[t.rule_family][author] || 0) + 1;
         }
     });
     const topAgent = (f) => {
@@ -255,9 +256,9 @@ function renderNeuroTasks() {
         <span style="position:relative;display:inline-block;">
             <span style="font-size:0.75rem;color:var(--text-muted);cursor:default;border-bottom:1px dotted var(--text-muted);"
                   class="unledgered-trigger">其中 ${unledgered} 个未过账</span>
-            <div style="display:none;position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);
+            <div style="display:none;position:fixed;
                         background:#1e2130;border:1px solid #374151;border-radius:8px;padding:0.5rem;
-                        min-width:220px;z-index:999;box-shadow:0 4px 16px rgba(0,0,0,0.4);font-size:0.78rem;"
+                        min-width:220px;z-index:9999;box-shadow:0 4px 16px rgba(0,0,0,0.4);font-size:0.78rem;"
                  class="unledgered-popup">
                 <div style="color:#9ca3af;margin-bottom:0.3rem;font-size:0.72rem;">task · 家族 · 负责 AI</div>
                 <table style="border-collapse:collapse;width:100%;">${unledgeredRows}</table>
@@ -267,7 +268,7 @@ function renderNeuroTasks() {
     document.getElementById('neuro-kpis').innerHTML = `
         <div class="kpi-card" style="--accent: #10b981;">
             <span class="kpi-title">✅ 已完成</span>
-            <span class="kpi-value">${solvedCount} / 400</span>
+            <span class="kpi-value">${solvedCount} / ${kpiBase.length}</span>
             ${unledgeredHtml}
         </div>
         <div class="kpi-card" style="--accent: #f59e0b;">
@@ -355,8 +356,19 @@ function renderNeuroTasks() {
     document.querySelectorAll('.unledgered-trigger').forEach(trigger => {
         const popup = trigger.parentElement.querySelector('.unledgered-popup');
         if (!popup) return;
-        trigger.addEventListener('mouseenter', () => { popup.style.display = 'block'; });
-        trigger.parentElement.addEventListener('mouseleave', () => { popup.style.display = 'none'; });
+        // position:fixed + 动态定位, 才能逃出 .kpi-card 的 overflow:hidden 裁切
+        trigger.addEventListener('mouseenter', () => {
+            popup.style.display = 'block';            // 先显示才能量到尺寸
+            const r = trigger.getBoundingClientRect();
+            const pw = popup.offsetWidth, ph = popup.offsetHeight;
+            let left = r.left + r.width / 2 - pw / 2;
+            left = Math.max(8, Math.min(left, window.innerWidth - pw - 8));
+            let top = r.top - ph - 6;                 // 默认放上方
+            if (top < 8) top = r.bottom + 6;          // 上方放不下就放下方
+            popup.style.left = left + 'px';
+            popup.style.top = top + 'px';
+        });
+        trigger.addEventListener('mouseleave', () => { popup.style.display = 'none'; });
     });
 }
 
