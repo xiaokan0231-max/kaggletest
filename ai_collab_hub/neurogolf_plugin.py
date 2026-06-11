@@ -352,22 +352,52 @@ def archive_current(project: str, task_id: str, current: Path, deployed: Optiona
     return target
 
 
-def grader_inference_error(blob: bytes) -> str:
+_GATE_UTILS_CACHE = {}
+
+
+def _gate_real_input(project: Optional[str], task_num: Optional[int]):
+    """A REAL grader-style input tensor for the task (what Kaggle actually feeds),
+    or None. The all-background synthetic probe falsely fails models that
+    divide-by-zero on an empty grid (e.g. task137) yet work on every real input."""
+    if project is None or task_num is None:
+        return None
+    try:
+        import importlib.util
+        if project not in _GATE_UTILS_CACHE:
+            utils = raw_dir(project) / "neurogolf_utils" / "neurogolf_utils.py"
+            if not utils.exists():
+                _GATE_UTILS_CACHE[project] = None
+            else:
+                spec = importlib.util.spec_from_file_location(f"ng_gate_{project}", str(utils))
+                mod = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(mod)
+                mod._NEUROGOLF_DIR = str(raw_dir(project)) + os.sep
+                _GATE_UTILS_CACHE[project] = mod
+        ng = _GATE_UTILS_CACHE[project]
+        if ng is None:
+            return None
+        ex = ng.load_examples(task_num)
+        for split in ("arc-gen", "train", "test"):
+            for e in ex.get(split, []):
+                bench = ng.convert_to_numpy(e)
+                if bench:
+                    return bench["input"]
+    except Exception:  # noqa: BLE001
+        return None
+    return None
+
+
+def grader_inference_error(blob: bytes, task_num: Optional[int] = None,
+                           project: Optional[str] = None) -> str:
     """Return '' if the model survives the Kaggle grader's call, else why it fails.
 
     The grader (neurogolf_utils.convert_to_numpy/run_network) feeds a batch=1
-    one-hot float32 tensor [1,10,30,30] and thresholds a float output at 0 then
-    decodes it channel-wise. onnx.load / onnx.checker passing is NOT enough --
-    task034/059 deserialized fine yet errored the entire 2026-06-11 submission
-    (1-channel int32 output, hardcoded 11x11 input).
-
-    The output grid may be ANY H x W (SHRINK/EXPAND tasks resize the grid), so
-    we only require: runs at batch=1, rank-4 output, channel dim == 10, float
-    dtype. Scoring is all-or-nothing, so any violation poisons the whole zip.
-
-    Caveat: a model that works at batch=1 but throws at batch>1 (task017/060) is
-    indistinguishable here from the ~380 batch=1 dummies the grader accepts, so
-    that class is caught only by Kaggle's own error report, not this gate.
+    one-hot float32 tensor [1,10,30,30] of a REAL example and thresholds a float
+    output at 0. We replicate that with the task's real first example when
+    available (falling back to a synthetic probe) — a synthetic ALL-BACKGROUND
+    grid is unrepresentative and falsely fails legit models that choke on empty
+    input. We require: runs, rank-4 output, channel dim == 10, numeric/bool
+    dtype. Scoring is all-or-nothing, so any real violation poisons the zip.
     """
     try:
         import numpy as np  # type: ignore
@@ -383,8 +413,11 @@ def grader_inference_error(blob: bytes) -> str:
     inp = sess.get_inputs()[0]
     if inp.type != "tensor(float)":
         return f"input dtype {inp.type} (grader feeds float32)"
-    x = np.zeros((1, 10, 30, 30), dtype=np.float32)
-    x[0, 0] = 1.0
+    x = _gate_real_input(project, task_num)
+    if x is None:
+        x = np.zeros((1, 10, 30, 30), dtype=np.float32)
+        x[0, 0] = 1.0
+    x = np.asarray(x, dtype=np.float32)
     try:
         out = sess.run(["output"], {inp.name: x})[0]
     except Exception as exc:  # noqa: BLE001
@@ -419,7 +452,7 @@ def rebuild_submission_zip(project: str) -> dict:
     poisoned: list[str] = []
     for i in range(1, 401):
         name = f"task{i:03d}.onnx"
-        err = grader_inference_error((wd / name).read_bytes())
+        err = grader_inference_error((wd / name).read_bytes(), task_num=i, project=project)
         if err.startswith("deps:"):
             raise HTTPException(status_code=503, detail=f"缺少 onnxruntime，无法做推理校验: {err}")
         if err:
