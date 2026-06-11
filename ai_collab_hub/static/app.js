@@ -125,6 +125,34 @@ async function fetchDashboardData() {
     }
 }
 
+async function fetchSystemStatus() {
+    try {
+        const res = await fetch('/api/system/status', { cache: "no-store" });
+        if (!res.ok) return;
+        const data = await res.json();
+        const cfg = data.config || {};
+        const api = cfg.api || {};
+        const db = cfg.database || {};
+        const workspace = cfg.workspace || {};
+        const apiEl = document.getElementById('ssc-api');
+        const dbEl = document.getElementById('ssc-db');
+        const projectEl = document.getElementById('ssc-project');
+        if (apiEl) {
+            apiEl.textContent = api.public_base_url || location.origin;
+            apiEl.title = api.public_base_url || location.origin;
+        }
+        if (dbEl) {
+            dbEl.textContent = db.url_masked || 'connected';
+            dbEl.title = db.url_masked || 'connected';
+        }
+        if (projectEl) {
+            projectEl.textContent = workspace.default_project || 'rogii';
+        }
+    } catch (e) {
+        console.error("获取系统状态失败:", e);
+    }
+}
+
 // ---- Agents ----
 function updateAgents(agents) {
     const c = document.getElementById('agents-container');
@@ -935,6 +963,7 @@ function highlightIn(rootEl) {
 document.addEventListener('DOMContentLoaded', () => {
     const nameEl = document.getElementById('cpb-name');
     if (nameEl) nameEl.textContent = currentProject;
+    fetchSystemStatus();
     fetchDashboardData();
     setInterval(fetchDashboardData, 5000);
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrilldownModal(); });

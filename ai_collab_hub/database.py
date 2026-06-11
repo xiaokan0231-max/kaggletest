@@ -2,8 +2,13 @@ import os
 from sqlalchemy import create_engine, Column, Integer, String, Float, DateTime, ForeignKey, Text, Boolean, UniqueConstraint, inspect, text
 from sqlalchemy.orm import declarative_base, sessionmaker, relationship
 from datetime import datetime
+try:
+    from .config import load_config
+except ImportError:
+    from config import load_config
 
-DATABASE_URL = os.environ.get("AI_HUB_DB_URL", "mysql+pymysql://root:@localhost:3306/ai_collab_db?charset=utf8mb4")
+CONFIG = load_config()
+DATABASE_URL = CONFIG["database"]["url"]
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)

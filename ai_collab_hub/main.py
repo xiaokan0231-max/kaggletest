@@ -9,19 +9,28 @@ from sqlalchemy.orm import Session
 from pydantic import BaseModel
 from typing import Optional, List
 from datetime import datetime, timedelta
-import database
-from database import (SessionLocal, Agent, Topic, Reply, ReplyEvaluation, TopicVote,
-                      Leaderboard, Experiment, ActivityLog, Project, AgentProjectState)
+try:
+    from . import database
+    from .config import load_config, public_config
+    from .database import (SessionLocal, Agent, Topic, Reply, ReplyEvaluation, TopicVote,
+                           Leaderboard, Experiment, ActivityLog, Project, AgentProjectState)
+except ImportError:
+    import database
+    from config import load_config, public_config
+    from database import (SessionLocal, Agent, Topic, Reply, ReplyEvaluation, TopicVote,
+                          Leaderboard, Experiment, ActivityLog, Project, AgentProjectState)
 
 app = FastAPI(title="AI Collab Hub")
-app.mount("/static", StaticFiles(directory="static"), name="static")
+HUB_DIR = Path(__file__).resolve().parent
+app.mount("/static", StaticFiles(directory=HUB_DIR / "static"), name="static")
+
+CONFIG = load_config()
 
 # 不带 project 参数的调用(老客户端/老脚本)落到的默认项目
-DEFAULT_PROJECT = os.environ.get("AI_HUB_DEFAULT_PROJECT", "rogii")
+DEFAULT_PROJECT = CONFIG["workspace"]["default_project"]
 
 # 工作区根目录: 项目共享层 <root>/<project>/ 与 AI 私有区 <root>/<project>_<ai>/ 都建在这下面
-WORKSPACE_ROOT = Path(os.environ.get("AI_HUB_WORKSPACE_ROOT",
-                                     Path(__file__).resolve().parent.parent)).resolve()
+WORKSPACE_ROOT = Path(CONFIG["workspace"]["root"]).resolve()
 
 def _safe_dirname(s: str) -> str:
     return re.sub(r"[^A-Za-z0-9_\-]", "_", s.strip().lower())
@@ -404,11 +413,11 @@ def build_todo_items(agent: Agent, p: Project, agents_count: int, names: dict, d
 
 @app.get("/")
 def read_root():
-    return FileResponse("static/index.html")
+    return FileResponse(HUB_DIR / "static" / "index.html")
 
 @app.get("/projects")
 def projects_page():
-    return FileResponse("static/projects.html")
+    return FileResponse(HUB_DIR / "static" / "projects.html")
 
 @app.get("/api/projects")
 def list_projects(db: Session = Depends(get_db)):
@@ -426,6 +435,23 @@ def list_projects(db: Session = Depends(get_db)):
         })
     all_agents = [a.name for a in db.query(Agent).order_by(Agent.name.asc()).all()]
     return {"projects": out, "default_project": DEFAULT_PROJECT, "all_agents": all_agents}
+
+@app.get("/api/system/status")
+def system_status(db: Session = Depends(get_db)):
+    projects = db.query(Project).count()
+    agents = db.query(Agent).count()
+    latest_log = db.query(func.max(ActivityLog.id)).scalar() or 0
+    return {
+        "status": "ok",
+        "server_time": iso(datetime.utcnow()),
+        "config": public_config(CONFIG),
+        "database": {
+            "connected": True,
+            "projects": projects,
+            "agents": agents,
+            "latest_activity_id": latest_log,
+        },
+    }
 
 @app.post("/api/projects/create")
 def create_project(req: ProjectCreateReq, db: Session = Depends(get_db)):

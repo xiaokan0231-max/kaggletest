@@ -2,8 +2,13 @@ import argparse
 import os
 import requests
 import json
+try:
+    from .config import api_url, load_config, public_config
+except ImportError:
+    from config import api_url, load_config, public_config
 
-BASE_URL = os.environ.get("AI_HUB_URL", "http://127.0.0.1:8000/api")
+CONFIG = load_config()
+BASE_URL = api_url(CONFIG)
 
 # 项目作用域: --project 参数 > AI_HUB_PROJECT 环境变量 > 不传(服务端落默认项目)
 DEFAULT_PROJECT = os.environ.get("AI_HUB_PROJECT")
@@ -19,6 +24,34 @@ def _err_detail(e):
         except Exception:
             return e.response.text
     return str(e)
+
+def show_config(json_out=False, check=False):
+    cfg = public_config(CONFIG)
+    cfg["client_api_url"] = BASE_URL
+    if check:
+        try:
+            r = requests.get(f"{BASE_URL}/system/status", timeout=5)
+            r.raise_for_status()
+            cfg["server_status"] = r.json()
+        except Exception as e:
+            cfg["server_status_error"] = _err_detail(e)
+    if json_out:
+        print(json.dumps(cfg, ensure_ascii=False, indent=2))
+        return
+    print("🧭 AI Hub 配置")
+    print(f"   配置文件: {cfg['config_path']}")
+    print(f"   本机覆盖: {cfg['local_config_path']}")
+    print(f"   客户端 API: {cfg['client_api_url']}")
+    print(f"   服务公开地址: {cfg['api']['public_base_url']}")
+    print(f"   服务监听: {cfg['api']['host']}:{cfg['api']['port']}")
+    print(f"   数据库: {cfg['database']['url_masked']}")
+    print(f"   工作区根目录: {cfg['workspace'].get('root')}")
+    print(f"   默认项目: {cfg['workspace'].get('default_project')}")
+    if check:
+        if "server_status_error" in cfg:
+            print(f"   服务连通性: ❌ {cfg['server_status_error']}")
+        else:
+            print("   服务连通性: ✅ OK")
 
 def update_agent(name, status, cv_score, lb_score, workspace, project=None):
     payload = {"name": name, "current_status": status}
@@ -447,6 +480,10 @@ if __name__ == "__main__":
     p.add_argument("--peek", action="store_true", help="只查看, 不把未读标记为已读")
     p.add_argument("--project", default=None, help="项目名 (默认取 AI_HUB_PROJECT 环境变量)")
 
+    p = sub.add_parser("config", help="查看客户端/中心 API 配置")
+    p.add_argument("--json", action="store_true", help="输出原始 JSON")
+    p.add_argument("--check", action="store_true", help="请求 /api/system/status 检查远程中心是否连通")
+
     args = parser.parse_args()
     if args.command == "update": update_agent(args.name, args.status, args.score, args.lb_score, args.workspace, project=args.project)
     elif args.command == "topic": create_topic(args.creator, args.title, args.tag, args.content, project=args.project)
@@ -469,3 +506,4 @@ if __name__ == "__main__":
     elif args.command == "get": get_topic(args.topic_id, json_out=args.json)
     elif args.command == "batch": run_batch(args.name, args.file, project=args.project)
     elif args.command == "read": read_updates(args.name, peek=args.peek, project=args.project)
+    elif args.command == "config": show_config(json_out=args.json, check=args.check)

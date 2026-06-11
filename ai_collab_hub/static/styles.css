@@ -98,6 +98,32 @@ body {
     border-color: var(--panel-border);
     color: var(--text-muted);
 }
+.system-status-card {
+    margin-top: 0.75rem;
+    border: 1px solid var(--panel-border);
+    border-radius: 8px;
+    padding: 0.55rem 0.65rem;
+    background: rgba(255, 255, 255, 0.025);
+    color: var(--text-faint);
+    font-size: 0.7rem;
+}
+.ssc-row {
+    display: grid;
+    grid-template-columns: 2.8rem minmax(0, 1fr);
+    gap: 0.4rem;
+    align-items: center;
+}
+.ssc-row + .ssc-row { margin-top: 0.25rem; }
+.ssc-row strong {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--text-muted);
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+}
 
 .pj-hint { font-weight: 400; color: var(--text-faint); font-size: 0.74rem; }
 .pj-error { color: var(--red); font-size: 0.8rem; min-height: 1.1em; }

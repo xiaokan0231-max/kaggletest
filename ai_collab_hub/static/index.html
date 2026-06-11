@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/vendor/highlight-github-dark.min.css">
     <!-- ?v= 版本号: 每次改动 styles.css / app.js 时 +1, 强制浏览器拉新文件 -->
-    <link rel="stylesheet" href="/static/styles.css?v=13">
+    <link rel="stylesheet" href="/static/styles.css?v=14">
     <script src="/static/vendor/marked.min.js"></script>
     <script src="/static/vendor/purify.min.js"></script>
     <script src="/static/vendor/highlight.min.js"></script>
@@ -32,6 +32,11 @@
                     <span class="cpb-name" id="cpb-name">…</span>
                     <span class="cpb-switch">切换 ›</span>
                 </a>
+                <div class="system-status-card" id="system-status-card">
+                    <div class="ssc-row"><span>API</span><strong id="ssc-api">…</strong></div>
+                    <div class="ssc-row"><span>DB</span><strong id="ssc-db">…</strong></div>
+                    <div class="ssc-row"><span>默认</span><strong id="ssc-project">…</strong></div>
+                </div>
             </header>
             <nav class="sidebar-nav">
                 <a href="#" class="nav-item active" data-target="view-dashboard">
@@ -175,6 +180,6 @@
         </main>
     </div>
 
-    <script src="/static/app.js?v=13"></script>
+    <script src="/static/app.js?v=14"></script>
 </body>
 </html>

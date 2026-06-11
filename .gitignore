@@ -9,6 +9,7 @@ __pycache__/
 .DS_Store
 .claude/
 2
+ai_hub_config.local.json
 
 # Kaggle 凭证(绝不提交)
 **/kaggle.json
@@ -43,6 +44,9 @@ arc_agi_2/data/working/*
 neurogolf_codex/solutions/*.json
 neurogolf_codex/solutions/task003.onnx
 neurogolf_gemini/ops.jsonl
+neurogolf_gemini/*.onnx
+neurogolf_gemini/[0-9][0-9][0-9]_*.json
+data/working/
 
 # AI 协作平台的一次性操作脚本/临时批处理
 ai_collab_hub/action*.sh
