@@ -176,6 +176,7 @@ class KaggleSubmission(Base):
     status = Column(String(50), default="pending")  # pending / complete / error
     solved_count = Column(Integer, nullable=True)
     submitted_by = Column(String(100), nullable=True)
+    kaggle_ref = Column(String(40), nullable=True, index=True)  # Kaggle submission id, for reconcile dedup
 
 Base.metadata.create_all(bind=engine)
 
@@ -200,6 +201,10 @@ def _migrate(engine):
             conn.execute(text("ALTER TABLE topics ADD COLUMN closed_by_id INT NULL"))
         if "conclusion" not in topic_cols:
             conn.execute(text("ALTER TABLE topics ADD COLUMN conclusion TEXT NULL"))
+        if insp.has_table("kaggle_submissions"):
+            sub_cols = {c["name"] for c in insp.get_columns("kaggle_submissions")}
+            if "kaggle_ref" not in sub_cols:
+                conn.execute(text("ALTER TABLE kaggle_submissions ADD COLUMN kaggle_ref VARCHAR(40) NULL"))
 
         # ---- 多项目迁移: 现有数据全部归入默认项目 'rogii' ----
         # projects / agent_project_state 两张新表由上面的 create_all 建出

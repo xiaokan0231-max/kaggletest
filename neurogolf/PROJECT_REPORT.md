@@ -131,16 +131,30 @@ per task vs Hub state) → `batch_graft.py` (deploys winners through the Hub
 gate, records `data/working/provenance.json`). `regraft_source.py <slug>`
 mass-replaces a poisoned source with allow_regression.
 
-**Tiered-source discipline (learned the hard way, forum #66):** public bundles
-predating the grader rules change are POISON — they audit clean locally (~6258)
-but score 0 per task on the hidden benchmark (submission #53581890: local 6519
-→ LB 2755; the gap matched the April bundle's contribution exactly).
-- Tier 1 (graft allowed): artifacts labelled current-rules / published ≥ May 31
-  2026, plus our own rule-based solutions.
-- Tier 2 (audit-only): anything older — keep the audit JSON, do NOT graft until
-  a single-source LB submission validates the source.
-Every graft must carry provenance; LB-vs-local gaps >100 pts trigger bisection
-by source.
+**Source-trust discipline — ENFORCED via `neurogolf_claude/source_trust.json`
+(allowlist / default-deny). Learned the hard way TWICE (forum #66):** public
+bundles predating the 2026-05-31 grader rules change are POISON — they audit
+clean locally but score ~0 per task on the hidden benchmark. Proof: local 6519
+→ LB 2755 with the April 6335 bundle; purged → LB 6059. Local audit sum is NOT
+predictive of LB for unvalidated sources, so default-deny.
+- A source is `trusted` ONLY after a single-source Kaggle submission confirms
+  LB ≈ local-audit sum. Currently trusted: `neurogolf-manual-rewrites-v205`
+  (LB-proven ~6059). `candidate`: `...5689-51-current-rules...` (labelled
+  current-rules, not yet LB-validated). Everything else: `poisoned`.
+- merge_plan / batch_graft / regraft_source / rebuild_from_trusted ALL read
+  source_trust.json: in `allowlist` mode they graft ONLY trusted_slugs into the
+  live submission, so the routine pipeline CANNOT pull poison.
+- Recover after a bad graft: `python3 tools/rebuild_from_trusted.py`
+  (force-replaces every task with best-of-trusted, allow_regression).
+- Validate a candidate: deploy single-source, submit, compare LB to local;
+  promote to trusted only if they match. Every graft carries provenance;
+  LB-vs-local gap >100 pts ⇒ bisect by source.
+
+**Submission record-keeping:** ALWAYS submit via Hub `POST /submit` (writes a
+KaggleSubmission row so the dashboard tracks it), never raw `kaggle` CLI. The
+endpoint now trusts Kaggle's submission list (not the CLI return code) and keys
+rows by `kaggle_ref`; `POST /reconcile_submissions` self-heals the DB from
+Kaggle's list if anything was submitted out-of-band.
 
 Gate semantics (current, both in the hub plugin and rebuild_submission.py):
 - Inference gate accepts numeric/bool output dtypes (grader thresholds

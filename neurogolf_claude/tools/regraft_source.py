@@ -13,6 +13,7 @@ from pathlib import Path
 import requests
 
 AUDITS = Path("/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/working/audits")
+TRUST_CFG = Path("/Users/kanxiao/IdeaProjects/kaggletest/neurogolf_claude/source_trust.json")
 PROV = Path("/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/working/provenance.json")
 HUB = "http://127.0.0.1:8000/api/project_plugin/neurogolf"
 
@@ -27,13 +28,16 @@ def main():
     targets = sorted(t for t, v in prov.items() if v["source"] == args.poisoned)
     print(f"{len(targets)} tasks sourced from {args.poisoned}")
 
-    # alternatives from all other audits
+    # alternatives from all other audits, never re-selecting a known-poisoned source
+    pf = TRUST_CFG
+    banned = set(json.loads(pf.read_text()).get("poisoned_slugs", [])) if pf.exists() else set()
+    banned.add(args.poisoned)
     alt = {}
     for af in sorted(AUDITS.glob("*.json")):
-        if af.name == "merge_plan.json":
+        if af.name in ("merge_plan.json", "_poisoned.json"):
             continue
         data = json.loads(af.read_text())
-        if data["slug"] == args.poisoned:
+        if data.get("slug") in banned:
             continue
         for r in data.get("rows", []):
             if r.get("ready") and (r["task"] not in alt or r["points"] > alt[r["task"]]["points"]):

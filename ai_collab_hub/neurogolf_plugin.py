@@ -911,35 +911,122 @@ def submit_kaggle(project: str,
         raise HTTPException(status_code=404, detail="submission.zip 不存在，请先部署全部 400 个任务。")
 
     solved_count = _count_solved(project)
+    refs_before = _kaggle_submission_refs()
     proc = subprocess.run(
         ["kaggle", "competitions", "submit", "-c", KAGGLE_COMPETITION,
          "-f", str(zip_path), "-m", message],
         capture_output=True, text=True, timeout=300,
     )
-    if proc.returncode != 0:
-        raise HTTPException(status_code=500, detail=(proc.stdout + "\n" + proc.stderr)[-4000:])
+    # The CLI can exit non-zero even after the upload lands (transient), so we
+    # trust Kaggle's submission list, not the return code: succeed iff a NEW
+    # submission ref appeared. This makes the record-keeping authoritative.
+    refs_after = _kaggle_submission_refs()
+    new_refs = refs_after - refs_before
+    if not new_refs:
+        raise HTTPException(status_code=500,
+                            detail=("kaggle submit 未产生新提交记录。\n" + proc.stdout + "\n" + proc.stderr)[-4000:])
 
-    now = utcnow()
-    score_data = _fetch_kaggle_score(target_dt=now)
-    sub = KaggleSubmission(
-        project_id=p.id,
-        submitted_at=now,
-        message=message,
-        public_score=score_data.get("public_score"),
-        status=score_data.get("status", "pending"),
-        solved_count=solved_count,
-        submitted_by=submitted_by,
-    )
-    db.add(sub)
-    db.commit()
-    db.refresh(sub)
+    # sync the full list into the DB (creates the new row with its kaggle_ref)
+    _sync_kaggle_submissions(db, p.id, default_solved=solved_count,
+                             default_by=submitted_by, override_msg={r: message for r in new_refs})
+    sub = (db.query(KaggleSubmission)
+           .filter(KaggleSubmission.project_id == p.id,
+                   KaggleSubmission.kaggle_ref.in_(list(new_refs)))
+           .order_by(KaggleSubmission.submitted_at.desc()).first())
     return {
-        "id": sub.id,
-        "status": sub.status,
-        "public_score": sub.public_score,
-        "solved_count": solved_count,
+        "id": sub.id, "kaggle_ref": sub.kaggle_ref, "status": sub.status,
+        "public_score": sub.public_score, "solved_count": sub.solved_count,
         "submitted_at": iso(sub.submitted_at),
     }
+
+
+def _kaggle_submission_refs() -> set:
+    """Set of all current Kaggle submission ids for the competition (empty on error)."""
+    try:
+        proc = subprocess.run(
+            ["kaggle", "competitions", "submissions", "-c", KAGGLE_COMPETITION, "--csv"],
+            capture_output=True, text=True, timeout=30)
+        if proc.returncode != 0:
+            return set()
+        import csv as _csv, io as _io
+        return {(r.get("ref") or "").strip() for r in _csv.DictReader(_io.StringIO(proc.stdout))
+                if (r.get("ref") or "").strip()}
+    except Exception:  # noqa: BLE001
+        return set()
+
+
+def _sync_kaggle_submissions(db: Session, project_id: int, default_solved=None,
+                             default_by="kaggle-sync", override_msg=None) -> dict:
+    """Reconcile the DB with Kaggle's actual submission list (idempotent).
+
+    Keyed by kaggle_ref. A Kaggle submission with no matching ref adopts the
+    closest-in-time ref-less local row (within 30 min) — folding in rows made
+    before kaggle_ref existed or out-of-band — otherwise inserts a new row.
+    """
+    import csv as _csv, io as _io
+    override_msg = override_msg or {}
+    try:
+        proc = subprocess.run(
+            ["kaggle", "competitions", "submissions", "-c", KAGGLE_COMPETITION, "--csv"],
+            capture_output=True, text=True, timeout=30)
+        rows = list(_csv.DictReader(_io.StringIO(proc.stdout))) if proc.returncode == 0 else []
+    except Exception:  # noqa: BLE001
+        rows = []
+
+    existing = db.query(KaggleSubmission).filter(KaggleSubmission.project_id == project_id).all()
+    by_ref = {r.kaggle_ref: r for r in existing if r.kaggle_ref}
+    refless = [r for r in existing if not r.kaggle_ref]
+
+    def parse_dt(s):
+        try:
+            return datetime.fromisoformat((s or "").replace(" ", "T").split(".")[0])
+        except Exception:  # noqa: BLE001
+            return None
+
+    created = adopted = updated = 0
+    for kr in rows:
+        ref = (kr.get("ref") or "").strip()
+        if not ref:
+            continue
+        score_raw = (kr.get("publicScore") or "").strip()
+        score = float(score_raw) if score_raw else None
+        raw_status = (kr.get("status") or "pending").lower()
+        status = "complete" if "complete" in raw_status else "error" if ("error" in raw_status or "fail" in raw_status) else "pending"
+        dt = parse_dt(kr.get("date", ""))
+        desc = (kr.get("description") or "")[:500]
+        row = by_ref.get(ref)
+        if row is None:
+            cand = None
+            if dt and refless:
+                cand = min(refless, key=lambda r: abs(((r.submitted_at or datetime.min) - dt).total_seconds()))
+                if abs(((cand.submitted_at or datetime.min) - dt).total_seconds()) > 1800:
+                    cand = None
+            if cand is not None:
+                row = cand; refless.remove(cand); adopted += 1
+            else:
+                row = KaggleSubmission(project_id=project_id, submitted_at=dt or utcnow(),
+                                       solved_count=default_solved, submitted_by=default_by)
+                db.add(row); created += 1
+            row.kaggle_ref = ref
+        if score is not None:
+            row.public_score = score
+        row.status = status
+        if dt:
+            row.submitted_at = dt
+        row.message = override_msg.get(ref) or row.message or desc
+        if row.solved_count is None and default_solved is not None:
+            row.solved_count = default_solved
+        updated += 1
+    db.commit()
+    return {"created": created, "adopted": adopted, "synced": updated}
+
+
+@router.post("/{project}/reconcile_submissions")
+def reconcile_submissions(project: str, db: Session = Depends(get_db)):
+    """Self-heal: pull Kaggle's submission list and upsert any missing/changed
+    rows (idempotent). Use after an out-of-band CLI submit or to refresh scores."""
+    p = require_project(db, project)
+    return _sync_kaggle_submissions(db, p.id)
 
 
 @router.get("/{project}/kaggle_submissions")
@@ -952,6 +1039,7 @@ def get_kaggle_submissions(project: str, db: Session = Depends(get_db)):
             .all())
     return {"submissions": [{
         "id": r.id,
+        "kaggle_ref": r.kaggle_ref,
         "submitted_at": iso(r.submitted_at),
         "message": r.message,
         "public_score": r.public_score,

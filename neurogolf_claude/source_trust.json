@@ -1,0 +1,19 @@
+{
+ "_comment": "Source trust config. ALLOWLIST/default-deny: only trusted_slugs may be grafted into the live submission. A bundle is trusted ONLY after a single-source Kaggle LB submission confirms LB ~= local-audit sum (proves it passes the hidden private benchmark). Anything pre-2026-05-31 audits clean locally but scores ~0 on LB (v1 with 6335 -> LB 2755, v2 without -> LB 6059).",
+ "mode": "allowlist",
+ "trusted_slugs": [
+  "neurogolf-manual-rewrites-v205"
+ ],
+ "candidate_slugs": [
+  "neurogolf-5689-51-current-rules-open-artifact"
+ ],
+ "poisoned_slugs": [
+  "neurogolf-6335-19-controlled-public-artifact",
+  "neurogolf-2026-blended-401-v117",
+  "neurogolf-2026-blend-source-v3-6-0",
+  "google-neurogolf-2026-public",
+  "neurogolf-onnx-v31",
+  "neurogolf-2026-task-transformation-library",
+  "neurogolf-submission-v1"
+ ]
+}
