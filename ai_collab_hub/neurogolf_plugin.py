@@ -349,6 +349,52 @@ def archive_current(project: str, task_id: str, current: Path, deployed: Optiona
     return target
 
 
+def grader_inference_error(blob: bytes) -> str:
+    """Return '' if the model survives the Kaggle grader's call, else why it fails.
+
+    The grader (neurogolf_utils.convert_to_numpy/run_network) feeds a batch=1
+    one-hot float32 tensor [1,10,30,30] and thresholds a float output at 0 then
+    decodes it channel-wise. onnx.load / onnx.checker passing is NOT enough --
+    task034/059 deserialized fine yet errored the entire 2026-06-11 submission
+    (1-channel int32 output, hardcoded 11x11 input).
+
+    The output grid may be ANY H x W (SHRINK/EXPAND tasks resize the grid), so
+    we only require: runs at batch=1, rank-4 output, channel dim == 10, float
+    dtype. Scoring is all-or-nothing, so any violation poisons the whole zip.
+
+    Caveat: a model that works at batch=1 but throws at batch>1 (task017/060) is
+    indistinguishable here from the ~380 batch=1 dummies the grader accepts, so
+    that class is caught only by Kaggle's own error report, not this gate.
+    """
+    try:
+        import numpy as np  # type: ignore
+        import onnxruntime as ort  # type: ignore
+    except Exception as exc:  # noqa: BLE001
+        return f"deps: {exc}"  # caller decides whether to treat as fatal
+    try:
+        opt = ort.SessionOptions()
+        opt.graph_optimization_level = ort.GraphOptimizationLevel.ORT_DISABLE_ALL
+        sess = ort.InferenceSession(blob, opt, providers=["CPUExecutionProvider"])
+    except Exception as exc:  # noqa: BLE001
+        return f"load: {str(exc)[:80]}"
+    inp = sess.get_inputs()[0]
+    if inp.type != "tensor(float)":
+        return f"input dtype {inp.type} (grader feeds float32)"
+    x = np.zeros((1, 10, 30, 30), dtype=np.float32)
+    x[0, 0] = 1.0
+    try:
+        out = sess.run(["output"], {inp.name: x})[0]
+    except Exception as exc:  # noqa: BLE001
+        msg = str(exc)
+        msg = msg.split("Status Message:")[-1].strip() if "Status" in msg else msg
+        return f"infer: {msg[:80]}"
+    if out.ndim != 4 or out.shape[1] != 10:
+        return f"output shape {tuple(out.shape)} (need (1,10,H,W))"
+    if out.dtype.kind != "f":
+        return f"output dtype {out.dtype} (grader thresholds a float)"
+    return ""
+
+
 def rebuild_submission_zip(project: str) -> dict:
     wd = working_dir(project)
     zip_path = wd / "submission.zip"
@@ -360,6 +406,22 @@ def rebuild_submission_zip(project: str) -> dict:
         import onnx  # type: ignore
     except Exception as exc:
         raise HTTPException(status_code=503, detail=f"缺少 onnx 依赖，无法做 zip 内加载校验: {exc}")
+
+    # Inference gate BEFORE writing the zip: one poisoned model errors the whole
+    # submission, so reject up front instead of shipping a zip Kaggle will fail.
+    poisoned: list[str] = []
+    for i in range(1, 401):
+        name = f"task{i:03d}.onnx"
+        err = grader_inference_error((wd / name).read_bytes())
+        if err.startswith("deps:"):
+            raise HTTPException(status_code=503, detail=f"缺少 onnxruntime，无法做推理校验: {err}")
+        if err:
+            poisoned.append(f"{name}: {err}")
+    if poisoned:
+        raise HTTPException(
+            status_code=422,
+            detail=f"{len(poisoned)} 个模型会被判分器拒绝(整包报错), 已拦截: {poisoned[:8]}",
+        )
 
     tmp = zip_path.with_suffix(".zip.tmp")
     with zipfile.ZipFile(tmp, "w", compression=zipfile.ZIP_DEFLATED) as zf:
