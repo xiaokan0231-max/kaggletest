@@ -83,6 +83,7 @@ function fetchNeuroGolfTasks(cb) {
     fetchKaggleSubmissions();
 }
 
+
 function renderFamilyBar() {
     const bar = document.getElementById('neuro-family-bar');
     if (!bar) return;
@@ -245,11 +246,29 @@ function renderNeuroTasks() {
     const claimedCount = kpiBase.filter(t => t.status === 'claimed').length;
     const openCount = kpiBase.filter(t => t.status === 'open').length;
 
+    const unledgeredTasks = solvedTasks.filter(t => !t.ledger_verified);
+    const unledgeredRows = unledgeredTasks.map(t => {
+        const owner = t.created_by || t.forum?.creator || '—';
+        return `<tr><td style="padding:0.2rem 0.5rem;white-space:nowrap;">${t.id}</td><td style="padding:0.2rem 0.5rem;color:#9ca3af;">${t.rule_family}</td><td style="padding:0.2rem 0.5rem;font-weight:600;color:#f59e0b;">${owner}</td></tr>`;
+    }).join('');
+    const unledgeredHtml = unledgered ? `
+        <span style="position:relative;display:inline-block;">
+            <span style="font-size:0.75rem;color:var(--text-muted);cursor:default;border-bottom:1px dotted var(--text-muted);"
+                  class="unledgered-trigger">其中 ${unledgered} 个未过账</span>
+            <div style="display:none;position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);
+                        background:#1e2130;border:1px solid #374151;border-radius:8px;padding:0.5rem;
+                        min-width:220px;z-index:999;box-shadow:0 4px 16px rgba(0,0,0,0.4);font-size:0.78rem;"
+                 class="unledgered-popup">
+                <div style="color:#9ca3af;margin-bottom:0.3rem;font-size:0.72rem;">task · 家族 · 负责 AI</div>
+                <table style="border-collapse:collapse;width:100%;">${unledgeredRows}</table>
+            </div>
+        </span>` : '';
+
     document.getElementById('neuro-kpis').innerHTML = `
         <div class="kpi-card" style="--accent: #10b981;">
             <span class="kpi-title">✅ 已完成</span>
             <span class="kpi-value">${solvedCount} / 400</span>
-            ${unledgered ? `<span style="font-size:0.75rem;color:var(--text-muted);">其中 ${unledgered} 个未过账</span>` : ''}
+            ${unledgeredHtml}
         </div>
         <div class="kpi-card" style="--accent: #f59e0b;">
             <span class="kpi-title">🔧 进行中 (已认领)</span>
@@ -330,6 +349,14 @@ function renderNeuroTasks() {
             ${details}
         `;
         grid.appendChild(card);
+    });
+
+    // 未过账悬浮框
+    document.querySelectorAll('.unledgered-trigger').forEach(trigger => {
+        const popup = trigger.parentElement.querySelector('.unledgered-popup');
+        if (!popup) return;
+        trigger.addEventListener('mouseenter', () => { popup.style.display = 'block'; });
+        trigger.parentElement.addEventListener('mouseleave', () => { popup.style.display = 'none'; });
     });
 }
 
