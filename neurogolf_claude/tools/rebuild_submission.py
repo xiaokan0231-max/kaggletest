@@ -59,8 +59,8 @@ def inference_check(blob: bytes) -> str:
         return f"infer: {msg[:70]}"
     if out.ndim != 4 or out.shape[1] != 10:
         return f"output shape {out.shape} (need (1,10,H,W))"
-    if out.dtype.kind != "f":
-        return f"output dtype {out.dtype} (grader thresholds a float)"
+    if out.dtype.kind not in "fbui":  # grader thresholds (out>0): numeric/bool all fine (proven by scored 6335 bundle)
+        return f"output dtype {out.dtype} (grader cannot threshold it)"
     return ""
 
 

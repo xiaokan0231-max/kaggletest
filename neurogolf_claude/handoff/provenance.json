@@ -1,0 +1,3130 @@
+{
+ "task001": {
+  "at": "2026-06-11T22:23:37.855299Z",
+  "deployed_by": "Claude",
+  "points": 16.625,
+  "replaced_points": 12.56,
+  "sha256": "0fa36f41592b9d78fb9dffa6f03ad41663311c7414ee3ee0ca9a0787ee7553aa",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task002": {
+  "at": "2026-06-11T22:38:14.807214+00:00",
+  "deployed_by": "Claude",
+  "points": 13.51,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "4c3205c0141934e8750b205f87c8622ebfd80d2fce3c665797e3b1dd39c1d0b5",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task003": {
+  "at": "2026-06-11T22:38:16.340146+00:00",
+  "deployed_by": "Claude",
+  "points": 15.786,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "f7b1e9c321fcb23c216feb2476ddc69b220eb381e49e0edca3208bd9a8373693",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task004": {
+  "at": "2026-06-11T22:38:17.816328+00:00",
+  "deployed_by": "Claude",
+  "points": 14.085,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "fc9ef5d39847fe678249f3dd2ef4701d2d49b2afb4c27c424b79b6f9967ca118",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task006": {
+  "at": "2026-06-11T22:23:52.858102Z",
+  "deployed_by": "Claude",
+  "points": 17.44,
+  "replaced_points": 14.252,
+  "sha256": "730e2188defecad529681f66c74dcbe4bc3ea104d8fa752a6f1e719e3bf622bb",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task007": {
+  "at": "2026-06-11T22:24:09.904621Z",
+  "deployed_by": "Claude",
+  "points": 15.87,
+  "replaced_points": 13.019,
+  "sha256": "8e0308e58a7da64f203a04e83bc622cfe30b84e06cf914f0feb6c5d4238ced60",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task008": {
+  "at": "2026-06-11T22:29:39.582821Z",
+  "deployed_by": "Claude",
+  "points": 14.944,
+  "replaced_points": 13.541,
+  "sha256": "9f554244f259a2a22a65b8388f8589f19cb9a1db25ad57eeb687660e73a541ba",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task009": {
+  "at": "2026-06-11T22:38:19.552227+00:00",
+  "deployed_by": "Claude",
+  "points": 13.695,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "2043f559e1ee947e2533c1ca00c25a699daed5b516d1bb4bf3515822ea52518d",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task010": {
+  "at": "2026-06-11T22:38:21.261994+00:00",
+  "deployed_by": "Claude",
+  "points": 15.983,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "a5dd47c7b1bf11a5f9b073d7147d66749b67169969a9eb7befc020d4dc21116f",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task011": {
+  "at": "2026-06-11T22:38:23.131600+00:00",
+  "deployed_by": "Claude",
+  "points": 13.899,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "3f64ad20a9feacc16ad2ce2296652dbc2fb5438e444a47af1f885a374cd43046",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task012": {
+  "at": "2026-06-11T22:38:24.821285+00:00",
+  "deployed_by": "Claude",
+  "points": 15.555,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "8640eb9bb99f42035cb8d1dcd01054394706bac095af83170bf95a5d05a0d203",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task013": {
+  "at": "2026-06-11T22:50:00.043253Z",
+  "deployed_by": "Gemini",
+  "points": 16.305,
+  "replaced_points": 13.331,
+  "sha256": "3afefc2242bcb34b040113327016e5ca7f5fb6ec2bc53b14c715c77d325bfabe",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task014": {
+  "at": "2026-06-11T22:50:03.279059Z",
+  "deployed_by": "Gemini",
+  "points": 16.715,
+  "replaced_points": 13.76,
+  "sha256": "579efc32b51e32086cee2a20745740c37d8eb0e6186e747d9b932e6c269be8f9",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task015": {
+  "at": "2026-06-11T22:24:00.928664Z",
+  "deployed_by": "Claude",
+  "points": 18.198,
+  "replaced_points": 15.193,
+  "sha256": "1bdf0a59883c98795d2d54262adc099a55470837e426c2ad60d49f27b069db45",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task016": {
+  "at": "2026-06-11T22:32:23.696144Z",
+  "deployed_by": "Claude",
+  "points": 22.697,
+  "replaced_points": 13.262,
+  "sha256": "fb83a8e988f586009bf17279b7aedb194e3492a8e6f357be6d5e9ed903615733",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task017": {
+  "at": "2026-06-11T22:38:30.124199+00:00",
+  "deployed_by": "Claude",
+  "points": 14.528,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "fb2137630963bd757e3fa76d251d504d01fbf7b1b6106c0e123e2b4b6247e574",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task018": {
+  "at": "2026-06-11T22:21:07.026753Z",
+  "deployed_by": "Claude",
+  "points": 14.732,
+  "replaced_points": 0.0,
+  "sha256": "f941a7a6abaf3f26c03b8b485e680ad55eb9ec53bd966f2b7521c14ff6c7a318",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task019": {
+  "at": "2026-06-11T22:49:38.285426Z",
+  "deployed_by": "Gemini",
+  "points": 16.408,
+  "replaced_points": 13.166,
+  "sha256": "2584abc1cc32ec0c14881d903504210d6f2cb90ea02b452dc0d55fccc71cd040",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task020": {
+  "at": "2026-06-11T22:38:33.892729+00:00",
+  "deployed_by": "Claude",
+  "points": 13.591,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "4abb72f71f86d299893dcb1ee3be5937bc57ae169a6d1c33af77157df2be6f0d",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task023": {
+  "at": "2026-06-11T22:49:36.613326Z",
+  "deployed_by": "Gemini",
+  "points": 17.064,
+  "replaced_points": 13.799,
+  "sha256": "ecc92f4bcac3035dc287d514c4d2839d3258dc635aed5c66c6b0e0e934909a8f",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task024": {
+  "at": "2026-06-11T22:38:38.088740+00:00",
+  "deployed_by": "Claude",
+  "points": 15.886,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "f8a1d671c3118abe56700d79b82cd03b36acad2b03a5453a7790ca311b792d5d",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task025": {
+  "at": "2026-06-11T22:49:41.665620Z",
+  "deployed_by": "Gemini",
+  "points": 16.388,
+  "replaced_points": 13.15,
+  "sha256": "035521c1b19220741756ece7b1a86747c579133c5cd82a72d41ecb210616e0c1",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task026": {
+  "at": "2026-06-11T22:17:42.893701Z",
+  "deployed_by": "Claude",
+  "points": 17.92,
+  "replaced_points": 0.0,
+  "sha256": "55fef566fec33039e2cd8b0d9c807e31312de241a47ce0510f3f2add6aa3c844",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task027": {
+  "at": "2026-06-11T22:38:41.562352+00:00",
+  "deployed_by": "Claude",
+  "points": 14.063,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "cd99565e3aecbf39b54548dda245a23f47f986f704cadf8b4eb1103c2227d324",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task028": {
+  "at": "2026-06-11T22:38:43.139799+00:00",
+  "deployed_by": "Claude",
+  "points": 15.315,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "54411158e7a2309911394cbcf02fc6da8f0f7f0698d5b50cfa0c7787a98eea7f",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task029": {
+  "at": "2026-06-11T22:38:44.879075+00:00",
+  "deployed_by": "Claude",
+  "points": 13.516,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "67b2f5bba2a2aea6aec1a4bebfab5e828d34965219f8f312739337d2e77a59ce",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task030": {
+  "at": "2026-06-11T22:38:46.436810+00:00",
+  "deployed_by": "Claude",
+  "points": 14.175,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "a5510a4f161b29b5d68afe14b8280cce503694ad071a185b159d69c5a742f1c3",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task031": {
+  "at": "2026-06-11T22:38:47.920344+00:00",
+  "deployed_by": "Claude",
+  "points": 15.168,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "827e7229dd650485407f1ae7c8a511d8abc13716486a76f29cabbe46f1b02945",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task033": {
+  "at": "2026-06-11T22:38:49.406329+00:00",
+  "deployed_by": "Claude",
+  "points": 14.082,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "60ab4cceeab38a8952d0157e862ec2f374a51c7d70c00bdecdf9833a703455b5",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task034": {
+  "at": "2026-06-11T22:38:51.152031+00:00",
+  "deployed_by": "Claude",
+  "points": 13.421,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "7400b12dcb940f16d35589b5657e932c80b9aa92e8aed8c1f41a38cdff070b08",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task035": {
+  "at": "2026-06-11T22:38:52.868357+00:00",
+  "deployed_by": "Claude",
+  "points": 14.495,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "a1c1dfd0f49db3dfe69ff6266f317e7f7b01802e5e94d19f8332ea428f16b2f0",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task036": {
+  "at": "2026-06-11T22:50:11.643718Z",
+  "deployed_by": "Gemini",
+  "points": 16.579,
+  "replaced_points": 13.71,
+  "sha256": "776e2cbcebd885b7957df90e1cfad5d69bde9368a1a231d92113a591800ab1e8",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task037": {
+  "at": "2026-06-11T22:38:56.180394+00:00",
+  "deployed_by": "Claude",
+  "points": 13.938,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "e19669c0dec2c6b73986d1bd07ec5c19bb0bc452edb6cf3d006f85657ae46d12",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task038": {
+  "at": "2026-06-11T22:18:08.189532Z",
+  "deployed_by": "Claude",
+  "points": 17.307,
+  "replaced_points": 0.0,
+  "sha256": "a83d43302a9ef7e5b284cc1e38fc4ce8deedb152481de569220ea69b94855018",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task039": {
+  "at": "2026-06-11T22:38:57.643981+00:00",
+  "deployed_by": "Claude",
+  "points": 16.042,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "4e9c2db4798edb627e65601fb59b0b194a91b536746f1a97fab3a7317054d3be",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task040": {
+  "at": "2026-06-11T22:38:59.204489+00:00",
+  "deployed_by": "Claude",
+  "points": 16.029,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "f75c35724647ee41a691e8449bf8b38434ce9912519b1b33845a1eeb08cebff5",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task041": {
+  "at": "2026-06-11T22:39:00.709529+00:00",
+  "deployed_by": "Claude",
+  "points": 15.459,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "1465206599b9d6b78f720345beedaebe32f96a9d1a2e137fbe8640a88511df3d",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task042": {
+  "at": "2026-06-11T22:28:46.392297Z",
+  "deployed_by": "Claude",
+  "points": 15.94,
+  "replaced_points": 0.0,
+  "sha256": "1ba57e7f6cc5a3f07ac1f33128b30167693eb14fd2f1686b7066300fd8e4497b",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task043": {
+  "at": "2026-06-11T22:39:02.184185+00:00",
+  "deployed_by": "Claude",
+  "points": 16.129,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "16b05e98645b4d8da6cf555ed59cb2165317fe07248f91dd11f6747c0b38c22b",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task044": {
+  "at": "2026-06-11T22:39:04.712762+00:00",
+  "deployed_by": "Claude",
+  "points": 14.252,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "03106f9bd502a04c7aa0acade34deaefdba103fbb21dcfc6ce3d362f74afc6fc",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task045": {
+  "at": "2026-06-11T22:39:06.182807+00:00",
+  "deployed_by": "Claude",
+  "points": 16.04,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "43dc4b647f1683ea779fb39571b0cdbbad8fdcfd27c8713aaa44314281d7c131",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task046": {
+  "at": "2026-06-11T22:39:07.829906+00:00",
+  "deployed_by": "Claude",
+  "points": 14.059,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "902e4e1129d73fe4576d763127cc56d0574b72b02f96a7f8e1fe84e5f6e0eaf0",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task047": {
+  "at": "2026-06-11T22:39:09.339067+00:00",
+  "deployed_by": "Claude",
+  "points": 16.986,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "51caa99fe3ce9cb3e122d3a78119ede0e5beb0d8940d7959bece25bbe098d26a",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task048": {
+  "at": "2026-06-11T22:19:51.259255Z",
+  "deployed_by": "Claude",
+  "points": 15.914,
+  "replaced_points": 0.0,
+  "sha256": "456cdd9f32b273f9915a3be57620ba30f852d5f6b5b881b5c312c6d2fa592407",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task049": {
+  "at": "2026-06-11T22:39:10.834299+00:00",
+  "deployed_by": "Claude",
+  "points": 14.675,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "d742f5db9437894536afe2db2b87d8b3899117c92daf69927ab3854301d03698",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task050": {
+  "at": "2026-06-11T22:39:12.301376+00:00",
+  "deployed_by": "Claude",
+  "points": 15.753,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "817ceed6eed8f8639a03c7d8fc0b41ca1fc3ca5ef6ff87cb970dba5a510cd4be",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task051": {
+  "at": "2026-06-11T22:39:13.914511+00:00",
+  "deployed_by": "Claude",
+  "points": 13.587,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "86c7a1f4a9e1078f7176aac19c741859d1d72d5c8deeca5cd5fea73bfa951c7c",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task052": {
+  "at": "2026-06-11T22:25:13.128880Z",
+  "deployed_by": "Claude",
+  "points": 17.568,
+  "replaced_points": 17.306,
+  "sha256": "a506cc379f43f613ec0879da1737edf134628e2d759c6d40c886ba16e97ef73b",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task053": {
+  "at": "2026-06-11T22:32:35.714408Z",
+  "deployed_by": "Claude",
+  "points": 21.599,
+  "replaced_points": 13.307,
+  "sha256": "11d2a84ba10862f37e4dae8a206314fd4226f70b6f751eed23e52ba32ebde353",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task054": {
+  "at": "2026-06-11T22:50:06.745955Z",
+  "deployed_by": "Gemini",
+  "points": 15.855,
+  "replaced_points": 12.939,
+  "sha256": "4c2e6aa86bf3f917fd725c7e8b74aeed0a65f908deeef5f637cc69f4b6f52298",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task055": {
+  "at": "2026-06-11T22:39:17.748001+00:00",
+  "deployed_by": "Claude",
+  "points": 14.474,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "194c76a7c1f255cb8d516d9ba1ac658ddc6f99f862956432b21d038cfd5f4c1c",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task056": {
+  "at": "2026-06-11T22:17:23.874205Z",
+  "deployed_by": "Claude",
+  "points": 18.672,
+  "replaced_points": 0.0,
+  "sha256": "2306a2e7b1dd27af9e0ec17099ee8ed0568f6696623537f2599419319f7dd8cd",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task057": {
+  "at": "2026-06-11T22:39:19.204255+00:00",
+  "deployed_by": "Claude",
+  "points": 14.47,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "7150afbd4d18997c52669fa85a7198e3dac5cb97d0c65ff9ed61a6896b62a038",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task058": {
+  "at": "2026-06-11T22:28:53.261430Z",
+  "deployed_by": "Claude",
+  "points": 15.311,
+  "replaced_points": 0.0,
+  "sha256": "48cccc3699cb8685f22f16c7f24d7be617f9ee5928a2b4d7b1083db474b2c51a",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task059": {
+  "at": "2026-06-11T22:39:20.677507+00:00",
+  "deployed_by": "Claude",
+  "points": 14.74,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "7b3cd67ffb0008721082c7e1497b195b3c91364ade4b206a8aca22caba8fd4c5",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task060": {
+  "at": "2026-06-11T22:39:22.165167+00:00",
+  "deployed_by": "Claude",
+  "points": 15.78,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "ea4ad862446e19cbf2b7fecaf9051e6801c47b6c337bfc46e9530eddcebc41e9",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task061": {
+  "at": "2026-06-11T22:20:42.911238Z",
+  "deployed_by": "Claude",
+  "points": 15.152,
+  "replaced_points": 0.0,
+  "sha256": "27289ea0d11a669fe413e1b05826321af3d079ce8a5555fa2610a93704612c2e",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task062": {
+  "at": "2026-06-11T22:39:24.355904+00:00",
+  "deployed_by": "Claude",
+  "points": 14.232,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "d57d9a3dc711a3fa8561eb45e9b6fd261c7ab89c7fb30c7fca0080d49013c37c",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task063": {
+  "at": "2026-06-11T22:39:25.935384+00:00",
+  "deployed_by": "Claude",
+  "points": 14.667,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "5c8811b2da8473750953376c6dbdd913b50bc29b96f9a16a09cf201df9a483ce",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task064": {
+  "at": "2026-06-11T22:49:54.868586Z",
+  "deployed_by": "Gemini",
+  "points": 16.456,
+  "replaced_points": 13.355,
+  "sha256": "ae33de3137d7b84c4aaa71ba1a4a62f26f7a79b2366cfd102e1ad81a587cef62",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task065": {
+  "at": "2026-06-11T22:39:29.156019+00:00",
+  "deployed_by": "Claude",
+  "points": 14.152,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "a191af856b41ba1a6079e9a8dc2ef26069291cfbf182a5623693579f33263b3c",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task066": {
+  "at": "2026-06-11T22:39:35.728052+00:00",
+  "deployed_by": "Claude",
+  "points": 12.758,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "ca02396dbc645332397aa1bc0c091d79337d6c536f9f28b7e1e5e773053aa82e",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task067": {
+  "at": "2026-06-11T22:32:40.272738Z",
+  "deployed_by": "Claude",
+  "points": 19.247,
+  "replaced_points": 14.043,
+  "sha256": "e823d84640b258f8322dde914f6bd992553a53aadd84d4685cd18da5f1be35e9",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task068": {
+  "at": "2026-06-11T22:39:37.277329+00:00",
+  "deployed_by": "Claude",
+  "points": 15.205,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "fda283a479d2067e6eebc121aa1bc5b50af395b15a844c4a0742f3861f4d58f9",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task069": {
+  "at": "2026-06-11T22:39:40.267140+00:00",
+  "deployed_by": "Claude",
+  "points": 13.648,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "fb91d90981c4b2168ade67173f5ea1376db182db9350dbdf930d3cb5026325da",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task070": {
+  "at": "2026-06-11T22:39:42.026882+00:00",
+  "deployed_by": "Claude",
+  "points": 13.901,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "c09e95105072fd97b2106ecebc5fdb42c86bd41e9994b310781aa321351ec9d5",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task071": {
+  "at": "2026-06-11T22:39:43.710806+00:00",
+  "deployed_by": "Claude",
+  "points": 13.226,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "2d696d39af281a3a0ca1582e413672e8ef38ef9f06d584f19844a45a6e2aa4a2",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task072": {
+  "at": "2026-06-11T22:23:54.314702Z",
+  "deployed_by": "Claude",
+  "points": 17.342,
+  "replaced_points": 14.24,
+  "sha256": "188545c2133e8f311a556d754e465f755bfe94c8c5afb0495df211beb64cec49",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task073": {
+  "at": "2026-06-11T22:23:07.451311Z",
+  "deployed_by": "Claude",
+  "points": 18.187,
+  "replaced_points": 12.952,
+  "sha256": "c974fda7fe3001de4bd2200b9065826ac44cf359fcb1949954b82f28411b5b63",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task074": {
+  "at": "2026-06-11T22:39:45.333829+00:00",
+  "deployed_by": "Claude",
+  "points": 15.009,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "8194b1eba8a395566d686766b74869219cdfdaec5105dbad5f36b6ef32435be8",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task075": {
+  "at": "2026-06-11T22:39:46.986305+00:00",
+  "deployed_by": "Claude",
+  "points": 14.128,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "e42e990b0d7538c360b7ec46a58a74ddd4c3f1dd5db79365dd85700a10e25015",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task076": {
+  "at": "2026-06-11T22:22:28.131196Z",
+  "deployed_by": "Claude",
+  "points": 12.129,
+  "replaced_points": 0.0,
+  "sha256": "e531bfc095094257b88ba403a4f871efb84bd11fb41bc357efdb600a90a1dab8",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task077": {
+  "at": "2026-06-11T22:50:17.058369Z",
+  "deployed_by": "Gemini",
+  "points": 15.685,
+  "replaced_points": 12.855,
+  "sha256": "1e285b65841293c86cefe0d378c91210e0c8ac4713e449315df987445c1e9160",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task078": {
+  "at": "2026-06-11T22:39:50.377483+00:00",
+  "deployed_by": "Claude",
+  "points": 15.335,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "1f42d518b8bed0679fb0978abe48fb184ffa7bd3bff6e10ee8bf6312e0d5faba",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task079": {
+  "at": "2026-06-11T22:20:53.193833Z",
+  "deployed_by": "Claude",
+  "points": 15.03,
+  "replaced_points": 0.0,
+  "sha256": "4a4f6c8381af1ed692a1d279af1ebacd591befb7b825933520d08519653c1d13",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task080": {
+  "at": "2026-06-11T22:29:14.641195Z",
+  "deployed_by": "Claude",
+  "points": 13.048,
+  "replaced_points": 0.0,
+  "sha256": "21bbfa72e213a9524143ab1082c5a2a48c9c086ef959163f0d6bee91bfc8388b",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task081": {
+  "at": "2026-06-11T22:29:36.354496Z",
+  "deployed_by": "Claude",
+  "points": 17.256,
+  "replaced_points": 14.457,
+  "sha256": "118dc8373587509f07d12aec64778af91edff7253f80e273a30e5863c7b8c91b",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task082": {
+  "at": "2026-06-11T22:50:20.410639Z",
+  "deployed_by": "Gemini",
+  "points": 17.141,
+  "replaced_points": 14.347,
+  "sha256": "692c3227ab550206a59b6969cf61b3007b85a39e785f9df8c994dd13a483d6ca",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task083": {
+  "at": "2026-06-11T22:23:24.752310Z",
+  "deployed_by": "Claude",
+  "points": 17.504,
+  "replaced_points": 13.005,
+  "sha256": "3526144719574eafa02b2d1fa33a4be836ec96c267520ddd982697e447b8bc98",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task084": {
+  "at": "2026-06-11T22:39:53.476867+00:00",
+  "deployed_by": "Claude",
+  "points": 15.121,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "5bd28bac4f427d16b03dfcb9d4ae68237ccb4bb720b534e0e14b2768658ee6a0",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task085": {
+  "at": "2026-06-11T22:49:19.922568Z",
+  "deployed_by": "Gemini",
+  "points": 17.136,
+  "replaced_points": 13.363,
+  "sha256": "ad8eb8fc20328bbb9e44a6f3a3a7546b28b602b388bab1591f1631cbe97ca1ed",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task086": {
+  "at": "2026-06-11T22:39:56.782953+00:00",
+  "deployed_by": "Claude",
+  "points": 14.657,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "97a70f0428f6e4dd43b2aa934d65321ae516fe94abaf7a1fac331dd55904390e",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task087": {
+  "at": "2026-06-11T22:32:09.678915Z",
+  "deployed_by": "Claude",
+  "points": 19.07,
+  "replaced_points": 0.0,
+  "sha256": "4e9d18bfbd60be2b9135e2cc459588db6a40bb878e5e16dd89651e3c3eb1cfea",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task088": {
+  "at": "2026-06-11T22:39:58.562159+00:00",
+  "deployed_by": "Claude",
+  "points": 13.468,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "3d5e5840dfdc9ebffa4cf4bf83a4bfe2d30edac84b88ab71ed3a6686d3987ec3",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task089": {
+  "at": "2026-06-11T22:21:33.555018Z",
+  "deployed_by": "Claude",
+  "points": 14.179,
+  "replaced_points": 0.0,
+  "sha256": "0a479a40d999937f174a12134d5f78bb97ea8a6c108f09e8f44398fe6cbbcd40",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task090": {
+  "at": "2026-06-11T22:40:00.996272+00:00",
+  "deployed_by": "Claude",
+  "points": 13.944,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "8032717a5846db3d60ae06a4fa0ff8af92327fd6b6102d39eff9ae246e44816a",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task091": {
+  "at": "2026-06-11T22:40:02.762248+00:00",
+  "deployed_by": "Claude",
+  "points": 14.151,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "6c44a2a529dcac845b02796c463d82b35c8cc360fc72fc096564f3beeef63a30",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task092": {
+  "at": "2026-06-11T22:49:18.166567Z",
+  "deployed_by": "Gemini",
+  "points": 17.104,
+  "replaced_points": 13.071,
+  "sha256": "6a980f1fb610521ebba9907393f9bf3428b735d3dc48ba671ca493e6bac0192f",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task093": {
+  "at": "2026-06-11T22:40:06.236598+00:00",
+  "deployed_by": "Claude",
+  "points": 15.354,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "cd70e073d1fdbf93b6402aa5356e8c8f09529cd3e6048fc5501c4e44bda9d3e5",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task094": {
+  "at": "2026-06-11T22:40:07.864217+00:00",
+  "deployed_by": "Claude",
+  "points": 15.745,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "9877a08be2f356fe67653342ee102820efd26cbf7f80ad6490bd10011209d2ed",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task095": {
+  "at": "2026-06-11T22:23:48.490408Z",
+  "deployed_by": "Claude",
+  "points": 18.187,
+  "replaced_points": 14.718,
+  "sha256": "eca4d38cd8606a930a722084789b856626fff5d4938c02546296c7f3cca109cf",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task096": {
+  "at": "2026-06-11T22:40:11.256842+00:00",
+  "deployed_by": "Claude",
+  "points": 12.825,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "ce8db8caf6b5f6cc84108a5efe1947880da7d802796c33483bbc8132e48c4f3a",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task097": {
+  "at": "2026-06-11T22:50:22.036927Z",
+  "deployed_by": "Gemini",
+  "points": 16.605,
+  "replaced_points": 13.853,
+  "sha256": "6a0927feffaa6a61f95f54093faab4f6804eb124fcb111248010318184455439",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task098": {
+  "at": "2026-06-11T22:17:29.902535Z",
+  "deployed_by": "Claude",
+  "points": 18.187,
+  "replaced_points": 0.0,
+  "sha256": "8fff41bf99869a80261fa1ec8461431ffa90e7a616d10c1582642af88b241cde",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task099": {
+  "at": "2026-06-11T22:19:12.062005Z",
+  "deployed_by": "Claude",
+  "points": 16.501,
+  "replaced_points": 0.0,
+  "sha256": "1e320d88cf0eac19c3c20b9c005a4be28ac50d4bf0a39015404f9deb22a0c31e",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task100": {
+  "at": "2026-06-11T22:25:02.162968Z",
+  "deployed_by": "Claude",
+  "points": 16.215,
+  "replaced_points": 15.032,
+  "sha256": "dceade053a44b3cc0ee481a2b109060da44f7e12dc34d583c301f1c9d6f84691",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task101": {
+  "at": "2026-06-11T22:29:19.205285Z",
+  "deployed_by": "Claude",
+  "points": 12.167,
+  "replaced_points": 0.0,
+  "sha256": "346856b0736f5a90d2fdca9f6ff54e072e2e2304d49494b012ffedf032026e05",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task102": {
+  "at": "2026-06-11T22:40:14.829297+00:00",
+  "deployed_by": "Claude",
+  "points": 15.558,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "96828587e72bb4a7f3af9bce80fa95d9431a6740d99b3f93d32e3c48096cea60",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task103": {
+  "at": "2026-06-11T22:17:23.027479Z",
+  "deployed_by": "Claude",
+  "points": 19.387,
+  "replaced_points": 0.0,
+  "sha256": "73ad654a7982f0be2249d04af29d16d95ec276d6d3f697ecb36e9381eaec3937",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task104": {
+  "at": "2026-06-11T22:23:11.993461Z",
+  "deployed_by": "Claude",
+  "points": 16.239,
+  "replaced_points": 11.15,
+  "sha256": "33a343ec43a261d2e8d551e9e29fea0ff5d46927927aad4c34f9797225cd0556",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task105": {
+  "at": "2026-06-11T22:28:40.989753Z",
+  "deployed_by": "Claude",
+  "points": 16.138,
+  "replaced_points": 0.0,
+  "sha256": "a178f079b666fe13a89fdf07d03aeaaeb88e2fb7d5df9441161c9948918cc5bf",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task106": {
+  "at": "2026-06-11T22:29:30.327406Z",
+  "deployed_by": "Claude",
+  "points": 17.94,
+  "replaced_points": 11.852,
+  "sha256": "9b54191da37371effdb80aaca05a4cddbabc19d25cbc1ebceae1d85a897c6698",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task107": {
+  "at": "2026-06-11T22:40:16.719757+00:00",
+  "deployed_by": "Claude",
+  "points": 13.8,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "486d43b947a10c096cd5abb2121faf5664c1d92f9d0196957cff677676caa5cf",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task108": {
+  "at": "2026-06-11T22:23:26.199035Z",
+  "deployed_by": "Claude",
+  "points": 17.504,
+  "replaced_points": 13.005,
+  "sha256": "825c078fdd5cf248ddfcf1d91c57c125e6e2213304022e67810f2d3aaee2922c",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task109": {
+  "at": "2026-06-11T22:29:41.144588Z",
+  "deployed_by": "Claude",
+  "points": 13.539,
+  "replaced_points": 12.984,
+  "sha256": "b743a1e192a39c2d75aaf83cb75d56b809c2988910d9340cb23a699063ea121c",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task110": {
+  "at": "2026-06-11T22:40:18.951245+00:00",
+  "deployed_by": "Claude",
+  "points": 13.399,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "8c575949ac1a58e11b8b5888698200d932d67b0d0871c15aaa6a78816c46c929",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task111": {
+  "at": "2026-06-11T22:19:01.589567Z",
+  "deployed_by": "Claude",
+  "points": 16.581,
+  "replaced_points": 0.0,
+  "sha256": "294fe9b217bc48010d14839504c2d05f18c01b58a15ebe4d22e87994c1923f81",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task112": {
+  "at": "2026-06-11T22:50:04.938516Z",
+  "deployed_by": "Gemini",
+  "points": 16.949,
+  "replaced_points": 14.01,
+  "sha256": "d1191c62c0a6bc2795648b96c2c55ee54ac19cd33430a9598ffad9ad832a407a",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task113": {
+  "at": "2026-06-11T22:32:04.949472Z",
+  "deployed_by": "Claude",
+  "points": 21.599,
+  "replaced_points": 0.0,
+  "sha256": "356a5f1e2200cf2560f6c836ce7d21eca6b6cad9e68015c2ae31639613ef9b09",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task114": {
+  "at": "2026-06-11T22:28:25.470588Z",
+  "deployed_by": "Claude",
+  "points": 17.866,
+  "replaced_points": 0.0,
+  "sha256": "7d1973d605273db25b979fc20a63bacd338098bf8f239bc90618b4b89dd1baa4",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task115": {
+  "at": "2026-06-11T22:29:34.797472Z",
+  "deployed_by": "Claude",
+  "points": 16.676,
+  "replaced_points": 13.226,
+  "sha256": "fef642f35c49927e9440865ae0761f3f9ecb7d9bb8a03f2a5109e91a82deb620",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task116": {
+  "at": "2026-06-11T22:32:28.290248Z",
+  "deployed_by": "Claude",
+  "points": 21.599,
+  "replaced_points": 13.005,
+  "sha256": "3f87aab73b8c538752ffb070a34dd07ef95ccba2d299bd7526da67fcf956e1e5",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task117": {
+  "at": "2026-06-11T22:28:56.489397Z",
+  "deployed_by": "Claude",
+  "points": 15.177,
+  "replaced_points": 0.0,
+  "sha256": "201415cfba7ab07e31fa5ce17b5bb5c673022cb2154a084d4d12920e4344b297",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task118": {
+  "at": "2026-06-11T22:40:22.590815+00:00",
+  "deployed_by": "Claude",
+  "points": 13.009,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "22ad82472bdb9bbe5847f7640734d7b149d9773c07be609d4c31cd7b1c7ac4d6",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task119": {
+  "at": "2026-06-11T22:21:29.424924Z",
+  "deployed_by": "Claude",
+  "points": 14.224,
+  "replaced_points": 0.0,
+  "sha256": "afa30c6fc964d8a93392c6b8b9865d1ca2f73c682e977c50e35e0e3d800e9ab1",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task120": {
+  "at": "2026-06-11T22:17:30.783139Z",
+  "deployed_by": "Claude",
+  "points": 18.187,
+  "replaced_points": 0.0,
+  "sha256": "13dafeb021b56dac928f38d32b4a0b841fcf481296ab752c9ac203fa425e1acc",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task121": {
+  "at": "2026-06-11T22:40:24.246210+00:00",
+  "deployed_by": "Claude",
+  "points": 16.216,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "03880dc2a72d6781722a53ffad4b506867ebd9f9c0a7faae3760807eabe67856",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task122": {
+  "at": "2026-06-11T22:18:16.485923Z",
+  "deployed_by": "Claude",
+  "points": 17.172,
+  "replaced_points": 0.0,
+  "sha256": "d932a3ac54fb54cc09d9cdbaab21ba4e9165ed9a6a8e01b9e0c49fb972269b75",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task123": {
+  "at": "2026-06-11T22:23:17.186314Z",
+  "deployed_by": "Claude",
+  "points": 16.63,
+  "replaced_points": 11.852,
+  "sha256": "7a75e42172279efb638134db39ee0339cb6fe0d99590c0e86c1ad8f17ad3f8ab",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task124": {
+  "at": "2026-06-11T22:20:30.284763Z",
+  "deployed_by": "Claude",
+  "points": 15.359,
+  "replaced_points": 0.0,
+  "sha256": "f5ddbec920cb586ce09ab817a1eac51a16a213e64d1c00be161cc1047e74bc63",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task125": {
+  "at": "2026-06-11T22:40:26.027649+00:00",
+  "deployed_by": "Claude",
+  "points": 15.496,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "20f2c3e90cfb5afe5ac7e795a1cf906ce67453cb55deb5cbcc51275aea5fc7e8",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task126": {
+  "at": "2026-06-11T22:49:49.811873Z",
+  "deployed_by": "Gemini",
+  "points": 16.781,
+  "replaced_points": 13.637,
+  "sha256": "9dc2a0d4773ae6387ab29eecaab203819774cb1832c50cc46523955e1b45bdfe",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task127": {
+  "at": "2026-06-11T22:17:26.435743Z",
+  "deployed_by": "Claude",
+  "points": 18.198,
+  "replaced_points": 0.0,
+  "sha256": "81f551a5b779e861ce371fdc4697595db753242954a60c50a3ac8e3108937d97",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task128": {
+  "at": "2026-06-11T22:40:29.534732+00:00",
+  "deployed_by": "Claude",
+  "points": 13.538,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "5224331b88562c8c5864a82ed28442ed1a8c17321e5852eb0c193b0a8eabe7e5",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task129": {
+  "at": "2026-06-11T22:32:16.109841Z",
+  "deployed_by": "Claude",
+  "points": 18.258,
+  "replaced_points": 0.0,
+  "sha256": "bc11e9e80b9128561b6e14a4908c76853c1496104b6103d675d166b25e9f3a67",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task130": {
+  "at": "2026-06-11T22:40:31.192787+00:00",
+  "deployed_by": "Claude",
+  "points": 15.323,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "129e8e94901df68286dc85134b4be5ba1daa1437df26f1eb430b9272e7f77471",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task131": {
+  "at": "2026-06-11T22:40:33.154102+00:00",
+  "deployed_by": "Claude",
+  "points": 13.95,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "d0d26239641dc4c3252e3188ae42690c167800d860ffa9b75d9165a9aec0c31d",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task132": {
+  "at": "2026-06-11T22:40:34.912106+00:00",
+  "deployed_by": "Claude",
+  "points": 14.392,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "8e5ad5fe50f8836d322e025383ef96da6495a2be15418b5a9977f057f895f669",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task133": {
+  "at": "2026-06-11T22:29:22.399525Z",
+  "deployed_by": "Claude",
+  "points": 11.522,
+  "replaced_points": 0.0,
+  "sha256": "3a19c0cdbb2bcc44c378990c45cd8ca20a72e248d91e4fc9c75bedfc5076a62c",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task134": {
+  "at": "2026-06-11T22:24:46.560610Z",
+  "deployed_by": "Claude",
+  "points": 15.261,
+  "replaced_points": 13.199,
+  "sha256": "d74f06274e16ffc4a7f2cc87185c453572bf47ffbd449dfa2cc4473d6bf15352",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task135": {
+  "at": "2026-06-11T22:32:41.840708Z",
+  "deployed_by": "Claude",
+  "points": 19.097,
+  "replaced_points": 14.04,
+  "sha256": "a5ba0a9dc839a73fc24585aab0bb1e97cccd5531fb28b98b77e91a17e7701ecc",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task136": {
+  "at": "2026-06-11T22:28:35.423238Z",
+  "deployed_by": "Claude",
+  "points": 16.509,
+  "replaced_points": 0.0,
+  "sha256": "710479e576a6991b6a86112822abbda3344fa8c7713bcfb0b7fe423f977cfeb2",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task138": {
+  "at": "2026-06-11T22:50:15.145496Z",
+  "deployed_by": "Gemini",
+  "points": 15.655,
+  "replaced_points": 12.805,
+  "sha256": "f43303bbb4b2084730a45a92af9048474052373baf30b39b0baee7e27d7665db",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task139": {
+  "at": "2026-06-11T22:28:29.656535Z",
+  "deployed_by": "Claude",
+  "points": 16.803,
+  "replaced_points": 0.0,
+  "sha256": "e3e6133e136fc342560390d22bb08861dc290ef6c9f64e8854070984d4a5946f",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task140": {
+  "at": "2026-06-11T22:32:11.233229Z",
+  "deployed_by": "Claude",
+  "points": 19.07,
+  "replaced_points": 0.0,
+  "sha256": "4e9d18bfbd60be2b9135e2cc459588db6a40bb878e5e16dd89651e3c3eb1cfea",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task141": {
+  "at": "2026-06-11T22:28:51.969804Z",
+  "deployed_by": "Claude",
+  "points": 15.331,
+  "replaced_points": 0.0,
+  "sha256": "419409ee1ef9989b22aaba718cfe107b9d915bb476e1f4edee982507a294cede",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task142": {
+  "at": "2026-06-11T22:23:27.658851Z",
+  "deployed_by": "Claude",
+  "points": 17.504,
+  "replaced_points": 13.005,
+  "sha256": "b525fbe662a950ccba343052e36da4678bbd57b9039d4f6c5a15f3c0a16fd54a",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task143": {
+  "at": "2026-06-11T22:20:57.097128Z",
+  "deployed_by": "Claude",
+  "points": 14.96,
+  "replaced_points": 0.0,
+  "sha256": "a7806b205f75c1a19ea4f0096b31a078910e7c8146b42996f8e3107b639d23a4",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task144": {
+  "at": "2026-06-11T22:17:47.108246Z",
+  "deployed_by": "Claude",
+  "points": 17.856,
+  "replaced_points": 0.0,
+  "sha256": "e615d869e7b75b731a1e7c794f3e098932d43c523a514fc2aac85938a76e1624",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task145": {
+  "at": "2026-06-11T22:40:40.120461+00:00",
+  "deployed_by": "Claude",
+  "points": 13.797,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "22681d1e38fd9b4a50619a4900134ac568081a0007d313598a2d4a001a12a65b",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task146": {
+  "at": "2026-06-11T22:29:31.834311Z",
+  "deployed_by": "Claude",
+  "points": 17.279,
+  "replaced_points": 11.597,
+  "sha256": "773d61ca46def6d1e9fdb7916c51a9f5e99a5d39640f394231b2b05a400c4a31",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task147": {
+  "at": "2026-06-11T22:17:31.655504Z",
+  "deployed_by": "Claude",
+  "points": 18.187,
+  "replaced_points": 0.0,
+  "sha256": "e65dc2d49c2dd32775575699e73cb1ad0aca1fcca0a87fcec26127b52f631670",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task148": {
+  "at": "2026-06-11T22:40:42.060386+00:00",
+  "deployed_by": "Claude",
+  "points": 14.516,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "83bc09dcaea8524df3a4528943965a79d9f6165f72790b1291c63eb4f5449483",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task149": {
+  "at": "2026-06-11T22:40:43.703555+00:00",
+  "deployed_by": "Claude",
+  "points": 16.455,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "3137da6fb944a3bb6e03884efc695345a045254de6a366510505b2221d175600",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task150": {
+  "at": "2026-06-11T22:17:40.283062Z",
+  "deployed_by": "Claude",
+  "points": 18.078,
+  "replaced_points": 0.0,
+  "sha256": "eef66466514ec7a5328062908ce1f14ca3b8e113c6b1cf7adfe182abcc341de8",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task151": {
+  "at": "2026-06-11T22:49:43.278240Z",
+  "deployed_by": "Gemini",
+  "points": 18.187,
+  "replaced_points": 14.951,
+  "sha256": "265a8eb2b997ae3dae68af150413ae0c0301bc004251e92a8beb0dc79bd2e36b",
+  "source": "neurogolf-5689-51-current-rules-open-artifact"
+ },
+ "task152": {
+  "at": "2026-06-11T22:23:29.150707Z",
+  "deployed_by": "Claude",
+  "points": 17.504,
+  "replaced_points": 13.005,
+  "sha256": "b525fbe662a950ccba343052e36da4678bbd57b9039d4f6c5a15f3c0a16fd54a",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task153": {
+  "at": "2026-06-11T22:21:45.453254Z",
+  "deployed_by": "Claude",
+  "points": 13.989,
+  "replaced_points": 0.0,
+  "sha256": "ab0a01ecf95a452abb1c5c75e402501f65e87497f8ff0468b7cae514e5183b21",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task154": {
+  "at": "2026-06-11T22:40:47.113819+00:00",
+  "deployed_by": "Claude",
+  "points": 14.273,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "5f1e298db41b5a1f178cc757f413e3eab14e95291dd559a42ff084b616a29b41",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task155": {
+  "at": "2026-06-11T22:17:41.158634Z",
+  "deployed_by": "Claude",
+  "points": 18.078,
+  "replaced_points": 0.0,
+  "sha256": "eb14dfb5dced388e02e786c70561a892c539daf1e48ed47cd695642c53b65585",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task156": {
+  "at": "2026-06-11T22:29:00.627886Z",
+  "deployed_by": "Claude",
+  "points": 14.813,
+  "replaced_points": 0.0,
+  "sha256": "e365c128127e7c2ba75fc7e0efd5e0d695bb256972b63cf49206bbf65e227349",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task157": {
+  "at": "2026-06-11T22:49:16.380049Z",
+  "deployed_by": "Gemini",
+  "points": 15.68,
+  "replaced_points": 10.284,
+  "sha256": "ee659eb3d760a0114f9a3bd22ebc39da677cf54cdeee5f8ef9b78fb18e66b0aa",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task158": {
+  "at": "2026-06-11T22:40:54.867157+00:00",
+  "deployed_by": "Claude",
+  "points": 11.948,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "5263d580cb60a24afa12641d5b52439098c7f85d63b6ad5c9cc04a2d191415a8",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task159": {
+  "at": "2026-06-11T22:25:06.111290Z",
+  "deployed_by": "Claude",
+  "points": 13.598,
+  "replaced_points": 12.621,
+  "sha256": "93239bd39db8bb07ffc4f354ca7b43656c78ca03e18c9ca72a30ccb093e2eb5a",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task160": {
+  "at": "2026-06-11T22:40:56.480131+00:00",
+  "deployed_by": "Claude",
+  "points": 16.569,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "9614391ed6a8c961cb2a50b82e22337eab556621bb99de4baaa2f78d0f8b06ad",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task161": {
+  "at": "2026-06-11T22:49:21.720485Z",
+  "deployed_by": "Gemini",
+  "points": 16.824,
+  "replaced_points": 13.174,
+  "sha256": "443e1f8ded4ed4831e83c8b0ac3870254fe42a76e69c14a11e6e253ad0d6059a",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task162": {
+  "at": "2026-06-11T22:49:39.930988Z",
+  "deployed_by": "Gemini",
+  "points": 17.187,
+  "replaced_points": 13.945,
+  "sha256": "e83b7459c2ebfffbddd5069b11e77f37c4a77f66853de9a7dcd1b6c69ecc76be",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task163": {
+  "at": "2026-06-11T22:21:18.339704Z",
+  "deployed_by": "Claude",
+  "points": 14.537,
+  "replaced_points": 0.0,
+  "sha256": "3eb225bad21f34daca455495c894a722c9727d52301e14c4051410d35d644a91",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task164": {
+  "at": "2026-06-11T22:32:29.708618Z",
+  "deployed_by": "Claude",
+  "points": 21.599,
+  "replaced_points": 13.005,
+  "sha256": "250771b94d3db4658d4ac04e3bd9a0740f2af0f3aba0bb9b5df4d6181bb470d4",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task165": {
+  "at": "2026-06-11T22:29:08.577776Z",
+  "deployed_by": "Claude",
+  "points": 13.88,
+  "replaced_points": 0.0,
+  "sha256": "84191da6721ff334125fd7fa8616eb9122ba801b8e467d4f0bac42cdd367fab2",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task166": {
+  "at": "2026-06-11T22:41:01.509359+00:00",
+  "deployed_by": "Claude",
+  "points": 14.57,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "bb71f3b3d956f668ce203feb385d0a702c31c6bd17cc17e213e3889db57d510e",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task167": {
+  "at": "2026-06-11T22:17:25.579092Z",
+  "deployed_by": "Claude",
+  "points": 18.294,
+  "replaced_points": 0.0,
+  "sha256": "7205b15363f53274f9987b481f736b594008071406a8a8644556e6d42336b88b",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task168": {
+  "at": "2026-06-11T22:41:03.205843+00:00",
+  "deployed_by": "Claude",
+  "points": 14.629,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "10661d21c26bf5ff68d448b007b0212c34cb45503fb906d999fa4a13c3626ac4",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task169": {
+  "at": "2026-06-11T22:41:05.501153+00:00",
+  "deployed_by": "Claude",
+  "points": 14.929,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "ad2ee26f030f4cbbff155aa69ae2e24628a0853ec163253b327ebf3368124aa9",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task170": {
+  "at": "2026-06-11T22:41:09.351334+00:00",
+  "deployed_by": "Claude",
+  "points": 13.684,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "9f919ea1d3fae6c43dfb70c30fe5ce04e453a44324f39755cb00850f150578bb",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task171": {
+  "at": "2026-06-11T22:17:32.496446Z",
+  "deployed_by": "Claude",
+  "points": 18.187,
+  "replaced_points": 0.0,
+  "sha256": "c0dccfce69e87e53b68a617cc0ce6da5c9659180ce2acc2a46007c9915c524cb",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task172": {
+  "at": "2026-06-11T22:32:31.111135Z",
+  "deployed_by": "Claude",
+  "points": 21.599,
+  "replaced_points": 13.005,
+  "sha256": "aa923630b6479cf1a1f5e7b7bfe2e4947e1c8ba8edba4f31d250b0b2f0c98dde",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task173": {
+  "at": "2026-06-11T22:29:16.451518Z",
+  "deployed_by": "Claude",
+  "points": 12.926,
+  "replaced_points": 0.0,
+  "sha256": "6422b0cd8c4551cb02c6733546b9d7f1b9130a0e4e58c7132e4791558a968ec7",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task174": {
+  "at": "2026-06-11T22:24:41.867375Z",
+  "deployed_by": "Claude",
+  "points": 14.141,
+  "replaced_points": 11.978,
+  "sha256": "4501407339b9e160ae271315971c5baa39151bb8f252ce075fee7e027ffb1686",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task176": {
+  "at": "2026-06-11T22:19:58.425901Z",
+  "deployed_by": "Claude",
+  "points": 15.818,
+  "replaced_points": 0.0,
+  "sha256": "757c42a63bdd123372b7b8ac3de694e64df328a279914d385e15c5746b274cb9",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task177": {
+  "at": "2026-06-11T22:49:31.719975Z",
+  "deployed_by": "Gemini",
+  "points": 17.145,
+  "replaced_points": 13.779,
+  "sha256": "ad52399ebdd2bea25816ae51567c0723723ca421687609a12d25ec66dc0256b8",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task178": {
+  "at": "2026-06-11T22:24:29.549169Z",
+  "deployed_by": "Claude",
+  "points": 14.407,
+  "replaced_points": 12.015,
+  "sha256": "2efa4e0be0f029b9cfc6cd8f58f215c38a5b6839ceed8e44d6c0ee2c39d579ab",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task179": {
+  "at": "2026-06-11T22:32:01.824867Z",
+  "deployed_by": "Claude",
+  "points": 25.0,
+  "replaced_points": 0.0,
+  "sha256": "bde695a21a93b9e2084a9b7e8a8bee5f2cdc694baa71a12d1c34ae921a89cb87",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task180": {
+  "at": "2026-06-11T22:41:12.690210+00:00",
+  "deployed_by": "Claude",
+  "points": 15.911,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "2de5119963dd1a2c303ea79c0f562f2040d904a9a254cb3fe450ae080279da87",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task181": {
+  "at": "2026-06-11T22:28:24.086246Z",
+  "deployed_by": "Claude",
+  "points": 17.915,
+  "replaced_points": 0.0,
+  "sha256": "d5e423513a6d975dcf970b7fa00306491312801ed8b9c3232bddaa05e5217ae9",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task182": {
+  "at": "2026-06-11T22:41:15.503170+00:00",
+  "deployed_by": "Claude",
+  "points": 12.765,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "b8c2312076501eb99bd7fa1160482f67da919ddaaf6817dc9a7374d7b94a44b8",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task183": {
+  "at": "2026-06-11T22:41:17.201869+00:00",
+  "deployed_by": "Claude",
+  "points": 14.878,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "304fd9d6c78ea14e6b21f5a8929aec65dc8582e0ed5300bcfe6c020cd031d4c2",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task184": {
+  "at": "2026-06-11T22:41:18.879227+00:00",
+  "deployed_by": "Claude",
+  "points": 14.147,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "d104af166e5c9363a02c3f7e6ed8251c41e1d392701919524a25fceb6aeb384c",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task185": {
+  "at": "2026-06-11T22:41:21.251673+00:00",
+  "deployed_by": "Claude",
+  "points": 14.005,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "dbc48d1e31979b5114d5df411783ca8989f9ae9c4bd063f24eb529ea5d5b1dae",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task186": {
+  "at": "2026-06-11T22:17:24.724459Z",
+  "deployed_by": "Claude",
+  "points": 18.318,
+  "replaced_points": 0.0,
+  "sha256": "e08e25bcc7a87cfdcb14c47188efdde385ff6605c966217b934a67aa0589a797",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task187": {
+  "at": "2026-06-11T22:41:23.135631+00:00",
+  "deployed_by": "Claude",
+  "points": 13.41,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "2975071ab48a9883483483822c3d24affcd8bb30d824d97f87c1af47cc9bafff",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task188": {
+  "at": "2026-06-11T22:24:03.932621Z",
+  "deployed_by": "Claude",
+  "points": 15.693,
+  "replaced_points": 12.743,
+  "sha256": "b48429ec56843515f15fb784b0246488517e52cca244ecee0a432bfdacfcdec0",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task189": {
+  "at": "2026-06-11T22:41:24.947830+00:00",
+  "deployed_by": "Claude",
+  "points": 14.256,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "fc979831b169f556d8d807bbdbd1958adeadff21a63e0ae51d203717a20273ed",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task190": {
+  "at": "2026-06-11T22:28:47.870264Z",
+  "deployed_by": "Claude",
+  "points": 15.676,
+  "replaced_points": 0.0,
+  "sha256": "0a31ba38881a6fc4af83224d1aa59f0a876aea5808f55f95707b8c5975ac4c06",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task192": {
+  "at": "2026-06-11T22:49:51.458414Z",
+  "deployed_by": "Gemini",
+  "points": 17.22,
+  "replaced_points": 14.093,
+  "sha256": "41824072cc4eddafbaac0586c609d5f99b77c759f6fedc2df6d32d9ab5ba09f3",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task193": {
+  "at": "2026-06-11T22:49:34.973437Z",
+  "deployed_by": "Gemini",
+  "points": 17.427,
+  "replaced_points": 14.11,
+  "sha256": "d91e3787c93f2085eb08043f32ca039a3d8bfe303a07513c8b4b61e825901924",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task194": {
+  "at": "2026-06-11T22:41:29.756428+00:00",
+  "deployed_by": "Claude",
+  "points": 17.504,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "5a188032e9933c63bea9816c0846001d769eb356d00653af9e5e766ff62bb53b",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task195": {
+  "at": "2026-06-11T22:29:37.909286Z",
+  "deployed_by": "Claude",
+  "points": 15.437,
+  "replaced_points": 13.032,
+  "sha256": "ba4b722b42ea9bdbffbe4fcf38c90d387045eee91e245e77f502c246c158e0dd",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task196": {
+  "at": "2026-06-11T22:41:31.402214+00:00",
+  "deployed_by": "Claude",
+  "points": 14.299,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "88e7b78d4c040a3e5555fce0c21fc2f7d85b4493a83e388036fd089f020c5ef3",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task197": {
+  "at": "2026-06-11T22:49:25.065056Z",
+  "deployed_by": "Gemini",
+  "points": 17.529,
+  "replaced_points": 13.913,
+  "sha256": "56eb71f7f62f093f8f2f5ec5d5c5128246b11c6e1aea74701c44a761aca0dd36",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task198": {
+  "at": "2026-06-11T22:41:34.820813+00:00",
+  "deployed_by": "Claude",
+  "points": 13.45,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "a1cd099e3d965fb4506eded8d4bde77ea202357df70e9212b36911ca002c8cb1",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task199": {
+  "at": "2026-06-11T22:41:36.433701+00:00",
+  "deployed_by": "Claude",
+  "points": 15.31,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "7f8ae82add1995ce631f2596ebf18e50b694cb8ec8d56a776cb6b1f393d891fa",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task200": {
+  "at": "2026-06-11T22:28:44.877848Z",
+  "deployed_by": "Claude",
+  "points": 15.975,
+  "replaced_points": 0.0,
+  "sha256": "3db82e421fb1700c12efd717427c8530ccb8c8b610c32b22b6ae170655c00c8e",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task201": {
+  "at": "2026-06-11T22:24:43.651480Z",
+  "deployed_by": "Claude",
+  "points": 13.556,
+  "replaced_points": 11.413,
+  "sha256": "f7a500540c3480662d00d7867a35db2791da429b6c2a8a4d621e511b7839b795",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task202": {
+  "at": "2026-06-11T22:41:38.067811+00:00",
+  "deployed_by": "Claude",
+  "points": 13.258,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "548ea01a96ba723d596f57386963dc208eac1c74ee9c8ad978597704d8065f5d",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task203": {
+  "at": "2026-06-11T22:22:04.022365Z",
+  "deployed_by": "Claude",
+  "points": 13.61,
+  "replaced_points": 0.0,
+  "sha256": "5c86587356aef4914bda51c97f89e22464a8270b22c47a7b46fe9a7cfed22036",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task204": {
+  "at": "2026-06-11T22:49:28.401327Z",
+  "deployed_by": "Gemini",
+  "points": 16.707,
+  "replaced_points": 13.206,
+  "sha256": "62ed69376d39c7c5e022b0fc5e2f4174291d6b63578fdff47736bca6d959be66",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task205": {
+  "at": "2026-06-11T22:41:43.764589+00:00",
+  "deployed_by": "Claude",
+  "points": 12.815,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "1db7ba454673116595b849f24af71af773785d5c65b2f97c8da6efdf83482840",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task206": {
+  "at": "2026-06-11T22:41:46.028593+00:00",
+  "deployed_by": "Claude",
+  "points": 13.895,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "a9a48933d73ab0ca96c39812eaf2d7cc02be75d240f640166a9e5b4a88f1a1ea",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task207": {
+  "at": "2026-06-11T22:23:01.569143Z",
+  "deployed_by": "Claude",
+  "points": 17.222,
+  "replaced_points": 11.213,
+  "sha256": "8cb6ddf4039b0c5d6313a9f40608f99cdbba78cd975fd42f6f501a67c8a3c933",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task208": {
+  "at": "2026-06-11T22:41:48.275596+00:00",
+  "deployed_by": "Claude",
+  "points": 13.566,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "5d341124008dfd310bc5a123793ff6f9beaeead1fd98692f86f798a8f1e3f4a1",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task209": {
+  "at": "2026-06-11T22:41:52.520175+00:00",
+  "deployed_by": "Claude",
+  "points": 12.495,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "f56e3cc63838db0e07db2c65feb748397b45af40ea12d489c31f4568830b0921",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task210": {
+  "at": "2026-06-11T22:32:32.561059Z",
+  "deployed_by": "Claude",
+  "points": 21.599,
+  "replaced_points": 13.005,
+  "sha256": "aa923630b6479cf1a1f5e7b7bfe2e4947e1c8ba8edba4f31d250b0b2f0c98dde",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task211": {
+  "at": "2026-06-11T22:23:30.651028Z",
+  "deployed_by": "Claude",
+  "points": 17.504,
+  "replaced_points": 13.005,
+  "sha256": "3c58a51ab06ee25bf3c54539284f6def4bc6e10c364246d45f5533df0905fd17",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task212": {
+  "at": "2026-06-11T22:41:54.106005+00:00",
+  "deployed_by": "Claude",
+  "points": 15.309,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "e0311574c6c6586444723f216d16eb35cfad0522511fec1fda4498c410113b3d",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task213": {
+  "at": "2026-06-11T22:21:37.269855Z",
+  "deployed_by": "Claude",
+  "points": 14.175,
+  "replaced_points": 0.0,
+  "sha256": "3f5b36e0eccf4798f845ad10df7d2bc7948f10933966b09f25a7505175b7e121",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task214": {
+  "at": "2026-06-11T22:41:55.535646+00:00",
+  "deployed_by": "Claude",
+  "points": 17.504,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "476030b9c3c916862c896b22ae9f1ee46d6bedd703bd39deeb4fe1a9a7cf6c54",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task215": {
+  "at": "2026-06-11T22:29:04.992596Z",
+  "deployed_by": "Claude",
+  "points": 14.181,
+  "replaced_points": 0.0,
+  "sha256": "a823981941d8f498cb8e0826b2e4700d851544d06b11b1f732d9b1411edcd3de",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task216": {
+  "at": "2026-06-11T22:41:57.801622+00:00",
+  "deployed_by": "Claude",
+  "points": 13.451,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "cbbcf98c1996eff11b40249f28a038c75d67e9eb5cd883434d3d6cf12ae72a98",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task217": {
+  "at": "2026-06-11T22:29:10.045373Z",
+  "deployed_by": "Claude",
+  "points": 13.748,
+  "replaced_points": 0.0,
+  "sha256": "58f2ed503258d9c007e4e93b086250cd0e66b2871fbc7602a1fa7d6869dadd1e",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task218": {
+  "at": "2026-06-11T22:20:58.458616Z",
+  "deployed_by": "Claude",
+  "points": 14.948,
+  "replaced_points": 0.0,
+  "sha256": "14bb6c5e5fa3712e4f556142985fa03de40ba2accd475bb596ee538d3c10c60e",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task219": {
+  "at": "2026-06-11T22:49:14.572648Z",
+  "deployed_by": "Gemini",
+  "points": 14.218,
+  "replaced_points": 8.422,
+  "sha256": "6e5cd657b62c80511d57e08b97cb9d15da29a2d7bfb76e458b83a869ec05a64b",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task220": {
+  "at": "2026-06-11T22:17:27.296952Z",
+  "deployed_by": "Claude",
+  "points": 18.198,
+  "replaced_points": 0.0,
+  "sha256": "924ca3ff6b3c2190ebdd92b73e0c33ac441a7e64b5924bb34b2faa596a40dd55",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task221": {
+  "at": "2026-06-11T22:42:02.736941+00:00",
+  "deployed_by": "Claude",
+  "points": 14.069,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "fc40a9c864b222aaeab1d16ab69b17f524fd95dc657baa701b144f4288e5bcb5",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task222": {
+  "at": "2026-06-11T22:49:44.914644Z",
+  "deployed_by": "Gemini",
+  "points": 17.197,
+  "replaced_points": 14.031,
+  "sha256": "7294d8a13661b08fa76891ce8b8b09e4bc40e3860596a753367859f435a6543d",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task223": {
+  "at": "2026-06-11T22:42:05.756981+00:00",
+  "deployed_by": "Claude",
+  "points": 17.504,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "51cd95a032c661ce28fa653ad0e727fb33cf6a709a5747e02a8ab323190ae968",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task224": {
+  "at": "2026-06-11T22:42:07.379555+00:00",
+  "deployed_by": "Claude",
+  "points": 13.844,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "1618c4868a39993d5318e610ce888f4b46394aa114feb2e20618a9034a6e1e50",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task225": {
+  "at": "2026-06-11T22:42:08.941434+00:00",
+  "deployed_by": "Claude",
+  "points": 15.148,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "feb56d8f1c720012318ee348511e98aaff19c284a140f7de45fa6c3503d713ae",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task226": {
+  "at": "2026-06-11T22:42:10.438093+00:00",
+  "deployed_by": "Claude",
+  "points": 15.874,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "011547c7c4fba33dd6a9bb00f3695fe5d493c03cb376a25175f0e57b4934af4c",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task227": {
+  "at": "2026-06-11T22:42:11.975326+00:00",
+  "deployed_by": "Claude",
+  "points": 16.839,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "cf6f7c36c8f667cf326367ed494b71cee047311e9c84a08efac3bd0f846d0363",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task228": {
+  "at": "2026-06-11T22:42:13.618632+00:00",
+  "deployed_by": "Claude",
+  "points": 14.374,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "b10ad9d1da09a0132a90affd556d138ae9c203e734709b8b4c64054e52e480c6",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task229": {
+  "at": "2026-06-11T22:42:15.112588+00:00",
+  "deployed_by": "Claude",
+  "points": 17.387,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "a3200ca8c2d6a3398ab0c6b8816f2846845377b8b542e3e5ce44e3493e76b6fa",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task230": {
+  "at": "2026-06-11T22:17:28.168117Z",
+  "deployed_by": "Claude",
+  "points": 18.198,
+  "replaced_points": 0.0,
+  "sha256": "1444325f9990947c4e2b6bd66f2ce611d8efc4be97b595c4bf2ad63e9e166ad0",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task231": {
+  "at": "2026-06-11T22:42:16.739273+00:00",
+  "deployed_by": "Claude",
+  "points": 14.348,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "6c022eb9496c0144963923d81b389ed748d24bf4115e6d8ce753bd1bb58ea3f9",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task232": {
+  "at": "2026-06-11T22:42:18.282968+00:00",
+  "deployed_by": "Claude",
+  "points": 14.367,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "cb69a041f629158a4782d801f36c826d6e76433fe59846f726270dac46923946",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task233": {
+  "at": "2026-06-11T22:22:46.648045Z",
+  "deployed_by": "Claude",
+  "points": 10.678,
+  "replaced_points": 0.0,
+  "sha256": "d4c2341f9ab79e4277042f6098169402b5c12b4d97c66e4ad11ee38e03404992",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task234": {
+  "at": "2026-06-11T22:42:20.171618+00:00",
+  "deployed_by": "Claude",
+  "points": 13.151,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "f1bed9c14a107314718a6a2c2d272373b791ed46a99cd3e21b405ee8bee98776",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task235": {
+  "at": "2026-06-11T22:17:59.289680Z",
+  "deployed_by": "Claude",
+  "points": 17.431,
+  "replaced_points": 0.0,
+  "sha256": "a1bf6e5bb8b79a4f92a3fc58a545e6df73dbaf0282e6e379a533855766a06f8c",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task236": {
+  "at": "2026-06-11T22:17:42.028490Z",
+  "deployed_by": "Claude",
+  "points": 17.963,
+  "replaced_points": 0.0,
+  "sha256": "7f166f01eb2cf5e98be10a109467f99606fa9e5b533bf2bf8f34a298dad06666",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task237": {
+  "at": "2026-06-11T22:42:21.716182+00:00",
+  "deployed_by": "Claude",
+  "points": 15.003,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "6be29b90d62d7a882838b1f290182dcfab7283351c790750f5018e02cda045cc",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task238": {
+  "at": "2026-06-11T22:24:23.499646Z",
+  "deployed_by": "Claude",
+  "points": 13.928,
+  "replaced_points": 11.409,
+  "sha256": "3208dbc8cec5a6a6874fb45bdf74920c0447b6b2745454a2ca76efdd5aa83d45",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task239": {
+  "at": "2026-06-11T22:50:13.288946Z",
+  "deployed_by": "Gemini",
+  "points": 16.394,
+  "replaced_points": 13.525,
+  "sha256": "8004b75c2ac8c303145962269852abac2154fc8149e0503095a0ff5119f097a6",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task240": {
+  "at": "2026-06-11T22:42:24.929051+00:00",
+  "deployed_by": "Claude",
+  "points": 13.894,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "faa91380b9775a3eed48bdcfe401ad8e5d1b5e2dc62a2dcb17feeafe00f6a1ce",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task241": {
+  "at": "2026-06-11T22:32:03.398964Z",
+  "deployed_by": "Claude",
+  "points": 25.0,
+  "replaced_points": 0.0,
+  "sha256": "bde695a21a93b9e2084a9b7e8a8bee5f2cdc694baa71a12d1c34ae921a89cb87",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task242": {
+  "at": "2026-06-11T22:28:57.836982Z",
+  "deployed_by": "Claude",
+  "points": 15.047,
+  "replaced_points": 0.0,
+  "sha256": "4037bc7bffc24662a27d3619b1671d67f9ff5c735fb78eff5f06860df6501fbf",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task243": {
+  "at": "2026-06-11T22:42:26.902163+00:00",
+  "deployed_by": "Claude",
+  "points": 13.395,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "40f59da41ba2cfc084b9eaaa726d179194120eaeece0b9b5ec99bb299daca438",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task244": {
+  "at": "2026-06-11T22:42:28.579002+00:00",
+  "deployed_by": "Claude",
+  "points": 14.633,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "12974cd83da15658ad0e0fe3b624c0b705d56b763e2925eda0818540265e7af8",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task245": {
+  "at": "2026-06-11T22:29:02.071697Z",
+  "deployed_by": "Claude",
+  "points": 14.724,
+  "replaced_points": 0.0,
+  "sha256": "9a7e78ac605c6378be3f47d88a35aae0e1cf73ab864258254dd4987e43d54c37",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task246": {
+  "at": "2026-06-11T22:42:30.186997+00:00",
+  "deployed_by": "Claude",
+  "points": 15.498,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "379b5a73e3dee6f56eedab3ab0bd0ed8414179c6e7ae1edd0a948060d6401309",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task247": {
+  "at": "2026-06-11T22:42:31.726264+00:00",
+  "deployed_by": "Claude",
+  "points": 14.996,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "687d227d377754e0bdb525e56deaa3c2f67049b4bb02d7f579e411f2978a74f8",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task248": {
+  "at": "2026-06-11T22:28:42.259988Z",
+  "deployed_by": "Claude",
+  "points": 16.121,
+  "replaced_points": 0.0,
+  "sha256": "1cc5ba184903e8307ed5ba4d36263e3487d7beec6142f401fc6d0424e70f1e18",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task249": {
+  "at": "2026-06-11T22:42:33.254437+00:00",
+  "deployed_by": "Claude",
+  "points": 15.462,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "a59e4c09e5d3e602f7ca21839c22449d6075728887f1641219db927833c1f7e2",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task250": {
+  "at": "2026-06-11T22:28:54.951692Z",
+  "deployed_by": "Claude",
+  "points": 15.28,
+  "replaced_points": 0.0,
+  "sha256": "db7b6112f672f2a70588e91f451c893bc7b1ecec188c8c984be8cff297851bfb",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task251": {
+  "at": "2026-06-11T22:42:34.962263+00:00",
+  "deployed_by": "Claude",
+  "points": 13.472,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "054a1310978ea762a181de2ac68b1c10e5d9e706e70a593b68af3d1f26ff74b3",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task252": {
+  "at": "2026-06-11T22:42:36.555099+00:00",
+  "deployed_by": "Claude",
+  "points": 14.401,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "20bbdff14100a78ff5ba0ae2d08e7e82af19b2832308a8a739256b3f3416c6a7",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task253": {
+  "at": "2026-06-11T22:50:08.335970Z",
+  "deployed_by": "Gemini",
+  "points": 17.129,
+  "replaced_points": 14.215,
+  "sha256": "76720d70afb9bc0cd78cae645e8e8003ea9b9a5a3d1b8d66438f94b86f7af4b5",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task254": {
+  "at": "2026-06-11T22:42:39.772645+00:00",
+  "deployed_by": "Claude",
+  "points": 15.865,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "a723230701ba601d3d39bcceb6c41545ed7dcecec7d640d794a6d298303c6654",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task255": {
+  "at": "2026-06-11T22:42:42.195835+00:00",
+  "deployed_by": "Claude",
+  "points": 10.661,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "e6ed6b4ff01e155169486c7b822db244629ebc48a8b802870d51af90aa2cb5c6",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task256": {
+  "at": "2026-06-11T22:20:59.491556Z",
+  "deployed_by": "Claude",
+  "points": 14.816,
+  "replaced_points": 0.0,
+  "sha256": "d0cabd95c8b29764920aaddbda780fb79edd4934fd0149ae2f4085d6a62e5025",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task257": {
+  "at": "2026-06-11T22:17:50.572573Z",
+  "deployed_by": "Claude",
+  "points": 17.629,
+  "replaced_points": 0.0,
+  "sha256": "1ba5d2b1f3d209e5deac17cc33773a38e6e8595872daef742a965a2ebd3fb42a",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task258": {
+  "at": "2026-06-11T22:17:33.351789Z",
+  "deployed_by": "Claude",
+  "points": 18.187,
+  "replaced_points": 0.0,
+  "sha256": "e5948973e4d14232b7cb957f26c0487779f6c8b9e06e32151b75a5a21ad5e5db",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task259": {
+  "at": "2026-06-11T22:42:43.782827+00:00",
+  "deployed_by": "Claude",
+  "points": 16.169,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "cd8f2883b4e59672ccd19f5a5b45fc92a1c48a4e736beaa179e62ce6d6dd7a07",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task260": {
+  "at": "2026-06-11T22:42:45.394798+00:00",
+  "deployed_by": "Claude",
+  "points": 15.377,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "21c776e8235ed69d82386e0937fe02a8389a6b09a67bf7b25cd35601008d0ac1",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task261": {
+  "at": "2026-06-11T22:32:08.096895Z",
+  "deployed_by": "Claude",
+  "points": 19.702,
+  "replaced_points": 0.0,
+  "sha256": "6104690685d52f02ca149095658b51c2d448d252f763922efdb0fd69749b630f",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task262": {
+  "at": "2026-06-11T22:42:46.857128+00:00",
+  "deployed_by": "Claude",
+  "points": 16.086,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "c4714ec84de4fa51ba3751b69dbf34ecf5bdaeb8026531c6a3a6a7fc3e22e9d9",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task263": {
+  "at": "2026-06-11T22:23:15.634963Z",
+  "deployed_by": "Claude",
+  "points": 15.981,
+  "replaced_points": 11.127,
+  "sha256": "1b8a040360232f6944fa110231b6a00266523ac9e4cb025a05f8dc5fdbd23da1",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task264": {
+  "at": "2026-06-11T22:42:48.781338+00:00",
+  "deployed_by": "Claude",
+  "points": 13.155,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "01ac406f30f0ffced1625ed8050b91086a8967573523be0ac1583a6eef0e4dbb",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task265": {
+  "at": "2026-06-11T22:42:50.439079+00:00",
+  "deployed_by": "Claude",
+  "points": 14.408,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "e44b248f5902d3d38b34e32679474cc70b8ee0d23a58ae93c6e8658e0375fc5d",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task266": {
+  "at": "2026-06-11T22:17:34.187162Z",
+  "deployed_by": "Claude",
+  "points": 18.187,
+  "replaced_points": 0.0,
+  "sha256": "491258de81aba00b6aa06f223356e30346665751690278693288e858450c8563",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task267": {
+  "at": "2026-06-11T22:29:33.281392Z",
+  "deployed_by": "Claude",
+  "points": 17.742,
+  "replaced_points": 13.262,
+  "sha256": "50444bff71d0c42d80ad99a08ebb92d401d889eef377adecf9fc146b863d6c3f",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task268": {
+  "at": "2026-06-11T22:42:52.434927+00:00",
+  "deployed_by": "Claude",
+  "points": 14.878,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "0eaf42695ba70b84bba537b2bdc0424a1e075d68e473c6c823414474dde4258f",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task270": {
+  "at": "2026-06-11T22:42:54.150950+00:00",
+  "deployed_by": "Claude",
+  "points": 14.235,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "de4452f5ceb78efb5ed81c15ccd96957c4aebe7e91c0419c5f82fd254e1c63f3",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task271": {
+  "at": "2026-06-11T22:42:55.708594+00:00",
+  "deployed_by": "Claude",
+  "points": 14.725,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "1d303e94d417fc4786c4e80dee5be764e57f981905d0bf8f5e5fdf48595b19ed",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task272": {
+  "at": "2026-06-11T22:17:35.046963Z",
+  "deployed_by": "Claude",
+  "points": 18.187,
+  "replaced_points": 0.0,
+  "sha256": "bb44a1717b5f9b6f1cd8f6bdd32aa6a40d88b17db3e200a8cb6f7806bb2c658d",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task273": {
+  "at": "2026-06-11T22:42:57.261437+00:00",
+  "deployed_by": "Claude",
+  "points": 16.294,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "ef481d8f02832385edb2ae3838215e1c01c80ebc407639a5d04a17ab09227a4e",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task274": {
+  "at": "2026-06-11T22:19:46.300305Z",
+  "deployed_by": "Claude",
+  "points": 15.943,
+  "replaced_points": 0.0,
+  "sha256": "05e714a8af955d6f5061cbf93ea6964c368b3f5c164831d0bff7c9a31b8986d6",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task275": {
+  "at": "2026-06-11T22:22:02.562631Z",
+  "deployed_by": "Claude",
+  "points": 13.663,
+  "replaced_points": 0.0,
+  "sha256": "b05c9d902d60b5e03aa3436e187c874a4948bffc12b2ce6c86fd8ed957970680",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task276": {
+  "at": "2026-06-11T22:32:25.124767Z",
+  "deployed_by": "Claude",
+  "points": 22.697,
+  "replaced_points": 13.262,
+  "sha256": "2a3e881ae92099c36f1955bdf96ca1e9f77a4ef3d1d3eb58c63eccc80a655c7e",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task277": {
+  "at": "2026-06-11T22:42:58.964550+00:00",
+  "deployed_by": "Claude",
+  "points": 15.41,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "cdd58c9156822d0c5c668ebff763d57659136b9c3169c7db59aad321bb92dad1",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task278": {
+  "at": "2026-06-11T22:43:00.509414+00:00",
+  "deployed_by": "Claude",
+  "points": 14.414,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "33724e4205ac1b5cd67dff8fb471583b1e478ffda0887f7ddde257b2b5fed045",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task279": {
+  "at": "2026-06-11T22:43:02.154672+00:00",
+  "deployed_by": "Claude",
+  "points": 14.171,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "0cc3ec0ebbbf1322a18ede62c2d99f42f05048f3ac7f437ea5234eea0b28c4db",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task280": {
+  "at": "2026-06-11T22:43:04.125115+00:00",
+  "deployed_by": "Claude",
+  "points": 13.156,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "82b670978372ce1c23e03297fac4c9a8b660a0ab794420b6151459faffdbd466",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task281": {
+  "at": "2026-06-11T22:49:53.157755Z",
+  "deployed_by": "Gemini",
+  "points": 16.708,
+  "replaced_points": 13.597,
+  "sha256": "f49c6f9221dcce44720917e8c0cb6dd368109ba845c2cfb85d13c86c051738db",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task282": {
+  "at": "2026-06-11T22:17:29.027735Z",
+  "deployed_by": "Claude",
+  "points": 18.198,
+  "replaced_points": 0.0,
+  "sha256": "3b69ffb73c79f09e8523073931061610e74b3e0d32534378317960c9557acd0d",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task283": {
+  "at": "2026-06-11T22:17:35.916524Z",
+  "deployed_by": "Claude",
+  "points": 18.187,
+  "replaced_points": 0.0,
+  "sha256": "b0e2a1e5a77dc63e5c2faa69d44120f7fe0e8773160760e68b7f5912591f4c60",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task284": {
+  "at": "2026-06-11T22:49:58.297998Z",
+  "deployed_by": "Gemini",
+  "points": 16.339,
+  "replaced_points": 13.304,
+  "sha256": "14b53fe905b9129c3493a5373c1c1d8d797cd156e790529e3df35366d6cb50e2",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task285": {
+  "at": "2026-06-11T22:43:10.642304+00:00",
+  "deployed_by": "Claude",
+  "points": 11.903,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "7e7174483c54bc2036afeed9b286625024f4bb3502e4c708e4c0e8e55cb7dbdf",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task286": {
+  "at": "2026-06-11T22:43:12.695164+00:00",
+  "deployed_by": "Claude",
+  "points": 13.003,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "4f012dc2e0a2b7b30e956f16edf2b883865d3a35d150e621bde7331b202015d5",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task287": {
+  "at": "2026-06-11T22:43:14.286112+00:00",
+  "deployed_by": "Claude",
+  "points": 14.976,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "597d6d8d9fb465183a384f7f4a71596b1a35c46163dc529eadb64646cf3c0ebd",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task288": {
+  "at": "2026-06-11T22:43:15.958482+00:00",
+  "deployed_by": "Claude",
+  "points": 14.201,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "2ef01939d8fb465f7d079f337f55c77fe2c332eeb2f01b47e5759981f01b1175",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task289": {
+  "at": "2026-06-11T22:43:17.562672+00:00",
+  "deployed_by": "Claude",
+  "points": 14.635,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "ddcdd8e5f14fe99b7c79bba1087ff0af80515de9b95497fc7d86edae3f7b4dc4",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task290": {
+  "at": "2026-06-11T22:49:26.730889Z",
+  "deployed_by": "Gemini",
+  "points": 16.952,
+  "replaced_points": 13.384,
+  "sha256": "8fa3f8ef6dd2cf0abe25ae6fe53644934050886f08024ea562524d89d8f4cd1c",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task291": {
+  "at": "2026-06-11T22:24:52.030910Z",
+  "deployed_by": "Claude",
+  "points": 16.627,
+  "replaced_points": 15.031,
+  "sha256": "f97257c9bae5cbdf0614cf4f6d0aeda2c0db164b44f4861fc829c00eae636b67",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task292": {
+  "at": "2026-06-11T22:19:39.402853Z",
+  "deployed_by": "Claude",
+  "points": 16.04,
+  "replaced_points": 0.0,
+  "sha256": "6c7d97812715e7fabefd85ae7cd7069c242c3fece1fced47e289ef103c53a575",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task293": {
+  "at": "2026-06-11T22:43:21.103044+00:00",
+  "deployed_by": "Claude",
+  "points": 14.883,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "d0d3cadd99d8938cc3977399ed5dee18a032739905995bcf0fbc76a20c04297f",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task294": {
+  "at": "2026-06-11T22:17:36.795511Z",
+  "deployed_by": "Claude",
+  "points": 18.187,
+  "replaced_points": 0.0,
+  "sha256": "247179b0cb2fab9e792e9f91da564f6ee1f8d4059046fabd7bfd7e7d3d010cd9",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task295": {
+  "at": "2026-06-11T22:43:22.690736+00:00",
+  "deployed_by": "Claude",
+  "points": 14.968,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "18acddbc84d5c34f0a238bc7700ab1ab9a2519dec5529953f3e4eeff4bd2a81a",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task296": {
+  "at": "2026-06-11T22:23:43.840916Z",
+  "deployed_by": "Claude",
+  "points": 16.678,
+  "replaced_points": 13.013,
+  "sha256": "4306af04547e103c395a41f15f7829592897a368a36d02047b54c256c5e54b13",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task297": {
+  "at": "2026-06-11T22:43:24.293360+00:00",
+  "deployed_by": "Claude",
+  "points": 15.685,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "7f12a7dd6a0b83b2502328d7bcfcc2ee5ce44ba8feaccb32246078a33484b76e",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task298": {
+  "at": "2026-06-11T22:43:25.893519+00:00",
+  "deployed_by": "Claude",
+  "points": 14.958,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "5cb2c2997afb77da1e33a268d22b34b95cd5918413cf91668da1aa33f5b411b4",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task299": {
+  "at": "2026-06-11T22:43:27.375480+00:00",
+  "deployed_by": "Claude",
+  "points": 17.107,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "dee7954386eec83e61b74e30694b2d391a4dc0610602a58dd1b37dcc92fb028b",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task300": {
+  "at": "2026-06-11T22:49:56.476781Z",
+  "deployed_by": "Gemini",
+  "points": 16.81,
+  "replaced_points": 13.741,
+  "sha256": "ef5167538b050ec5785cfdff285a390de8eda205e6d3db61f53f921437807ae6",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task301": {
+  "at": "2026-06-11T22:50:01.669894Z",
+  "deployed_by": "Gemini",
+  "points": 16.881,
+  "replaced_points": 13.918,
+  "sha256": "e21affa74faa9e38014f2e484c6564dde4b49d71d0905eee2de974577bff7fc7",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task302": {
+  "at": "2026-06-11T22:43:32.421076+00:00",
+  "deployed_by": "Claude",
+  "points": 16.039,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "fc0c4095ee26f99dfa28593219832fb1744068c9c08b4b65293674194a176ad1",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task303": {
+  "at": "2026-06-11T22:49:30.058737Z",
+  "deployed_by": "Gemini",
+  "points": 17.105,
+  "replaced_points": 13.701,
+  "sha256": "2249c00b1991204ca99f5dfc9a79b461bd203af73f4038ff822cb32cac80d82e",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task304": {
+  "at": "2026-06-11T22:43:35.556943+00:00",
+  "deployed_by": "Claude",
+  "points": 15.413,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "da36b408e1af537d161fbb14dbba577380417c72233e4a1458970d507c43ae7d",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task305": {
+  "at": "2026-06-11T22:28:32.520929Z",
+  "deployed_by": "Claude",
+  "points": 16.718,
+  "replaced_points": 0.0,
+  "sha256": "9f735899c445d2de0753685201dbbaa448ff1306c5f52d568270b4588d8e242d",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task306": {
+  "at": "2026-06-11T22:50:09.978947Z",
+  "deployed_by": "Gemini",
+  "points": 16.822,
+  "replaced_points": 13.926,
+  "sha256": "d0fe094585b06b6f487ca22deb3e4acb6c4bfa05e42ef6cbce0511254650105d",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task307": {
+  "at": "2026-06-11T22:23:32.136798Z",
+  "deployed_by": "Claude",
+  "points": 17.504,
+  "replaced_points": 13.005,
+  "sha256": "badc5326d1acd892c77212fc876a3f3192e5b67a9806ab111d1e9589eff70706",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task308": {
+  "at": "2026-06-11T22:23:57.538838Z",
+  "deployed_by": "Claude",
+  "points": 14.149,
+  "replaced_points": 11.064,
+  "sha256": "4e29d8af281a2ed570ccd3f03a786e0e94f4a0cd651cb677e9955d522f712ae1",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task310": {
+  "at": "2026-06-11T22:43:38.972987+00:00",
+  "deployed_by": "Claude",
+  "points": 14.017,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "8ba42d4bf0a654f913a7bee8772a22258fedd188475ce77c77e8bba0fee69bdb",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task311": {
+  "at": "2026-06-11T22:32:34.166002Z",
+  "deployed_by": "Claude",
+  "points": 21.599,
+  "replaced_points": 13.005,
+  "sha256": "250771b94d3db4658d4ac04e3bd9a0740f2af0f3aba0bb9b5df4d6181bb470d4",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task312": {
+  "at": "2026-06-11T22:43:40.513049+00:00",
+  "deployed_by": "Claude",
+  "points": 15.792,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "5f8662413159b881c8dff97e5c51ca63270ea3b1609d0f333539af73166348ff",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task313": {
+  "at": "2026-06-11T22:22:00.014512Z",
+  "deployed_by": "Claude",
+  "points": 13.667,
+  "replaced_points": 0.0,
+  "sha256": "a53af0418f5de87303fcf7282bd1ed16deca5a31b88b7ebaf2a2f4b6d689a574",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task314": {
+  "at": "2026-06-11T22:43:42.736744+00:00",
+  "deployed_by": "Claude",
+  "points": 15.617,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "c5e30ef3e59d2973ed66b4202d3784913f7d6936ce28ce71437eb9d398cfc298",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task315": {
+  "at": "2026-06-11T22:43:44.309382+00:00",
+  "deployed_by": "Claude",
+  "points": 15.469,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "1bf0b18c996602619e9fd51d9c5b13d00e57feaab87cc78fd43463a38ba05c04",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task316": {
+  "at": "2026-06-11T22:24:56.491251Z",
+  "deployed_by": "Claude",
+  "points": 14.15,
+  "replaced_points": 12.771,
+  "sha256": "0b697272db5461192d00f8168c702d2dde635fe5bebc4fe3b7506a820ca9150f",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task317": {
+  "at": "2026-06-11T22:24:05.351751Z",
+  "deployed_by": "Claude",
+  "points": 18.198,
+  "replaced_points": 15.26,
+  "sha256": "54ad9bc9831f0f3a781e65116809c2c60f3246bbdc84fc6c0fa8064fecb5d8c5",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task318": {
+  "at": "2026-06-11T22:17:44.559994Z",
+  "deployed_by": "Claude",
+  "points": 17.908,
+  "replaced_points": 0.0,
+  "sha256": "8a6d9a5329cb6796da0fa92ad568b2b6d4486946f9e8ba759321818a4ca8144c",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task319": {
+  "at": "2026-06-11T22:49:23.382151Z",
+  "deployed_by": "Gemini",
+  "points": 15.138,
+  "replaced_points": 11.488,
+  "sha256": "2bcedd1b7b5d14261ecef5da7957a6158efa620aeb7d1a4c265d071bd9a2d0f8",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task320": {
+  "at": "2026-06-11T22:28:38.204855Z",
+  "deployed_by": "Claude",
+  "points": 16.446,
+  "replaced_points": 0.0,
+  "sha256": "b5f9d264034aafc2780289baeb60a45e338fd6478233a720f13b79faa2d6b39f",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task321": {
+  "at": "2026-06-11T22:43:55.494130+00:00",
+  "deployed_by": "Claude",
+  "points": 16.14,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "b563dc7797c6347f41ca4931e7495e5bf990351453842b3410e31e0fa5be47a6",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task322": {
+  "at": "2026-06-11T22:32:19.216366Z",
+  "deployed_by": "Claude",
+  "points": 17.828,
+  "replaced_points": 0.0,
+  "sha256": "da58fc153116de779e39ae0114219bcd1f033939308c902e4dae7ad4b25c665d",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task323": {
+  "at": "2026-06-11T22:28:33.960495Z",
+  "deployed_by": "Claude",
+  "points": 16.581,
+  "replaced_points": 0.0,
+  "sha256": "730233a73b9e6e98e25c77baf2e139a562e458088de6d66cb6f5a0090c133eb5",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task324": {
+  "at": "2026-06-11T22:43:58.380424+00:00",
+  "deployed_by": "Claude",
+  "points": 12.837,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "a9978fd1a5ce35580d87b1ade55329ef3edb36f46f8471fbc1f8a51cbfc6a9f8",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task325": {
+  "at": "2026-06-11T22:29:03.546544Z",
+  "deployed_by": "Claude",
+  "points": 14.331,
+  "replaced_points": 0.0,
+  "sha256": "703958452270456b7d0aa9d4685a3bb4279c1a189050c3b1c4c5c0ef26767373",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task326": {
+  "at": "2026-06-11T22:32:38.737367Z",
+  "deployed_by": "Claude",
+  "points": 19.888,
+  "replaced_points": 14.04,
+  "sha256": "b95776b4618ae80d707674425b68a1b903cfc9925a01d24b03b330ce97a9c421",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task327": {
+  "at": "2026-06-11T22:44:00.210944+00:00",
+  "deployed_by": "Claude",
+  "points": 15.429,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "c1e27b3e2516488d97fe6bc640b49553d912c7e6de9b4b9fadda8d8d305fa039",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task328": {
+  "at": "2026-06-11T22:44:02.464678+00:00",
+  "deployed_by": "Claude",
+  "points": 13.847,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "c0634dd4996ee7e706d1418802970c093d7a36a1375de2a27ceeb256fe577ce0",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task329": {
+  "at": "2026-06-11T22:44:04.320076+00:00",
+  "deployed_by": "Claude",
+  "points": 15.454,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "d74a675084da2fb504b608bab4f432a3093fad2bad9e29ecf0c3515cf01d07e3",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task330": {
+  "at": "2026-06-11T22:44:06.124774+00:00",
+  "deployed_by": "Claude",
+  "points": 13.965,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "675442c846426a26e2d6628d2ecff7a4ce11e1c850e4f58075542b7b8be05c53",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task331": {
+  "at": "2026-06-11T22:17:37.658130Z",
+  "deployed_by": "Claude",
+  "points": 18.187,
+  "replaced_points": 0.0,
+  "sha256": "159b7db4377d2a7d75a15aa8f84344e6d919741566944220da8f361aa1da572a",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task332": {
+  "at": "2026-06-11T22:19:53.193020Z",
+  "deployed_by": "Claude",
+  "points": 15.896,
+  "replaced_points": 0.0,
+  "sha256": "7b9311fbf91d7c0760a21f824b62a7b07e127068f266044e6d565ee397b4cdde",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task333": {
+  "at": "2026-06-11T22:44:08.035640+00:00",
+  "deployed_by": "Claude",
+  "points": 14.878,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "056322558aa8fa4149af6ce9821d3273f0b403e4408e461963db3d70864f1adc",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task334": {
+  "at": "2026-06-11T22:17:38.513611Z",
+  "deployed_by": "Claude",
+  "points": 18.12,
+  "replaced_points": 0.0,
+  "sha256": "7cf8e36e93bccf26226adc1d02671e72d48d747bc6fdd93ca0435a1baa2ceb85",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task335": {
+  "at": "2026-06-11T22:49:46.548179Z",
+  "deployed_by": "Gemini",
+  "points": 17.144,
+  "replaced_points": 13.996,
+  "sha256": "9b9c9aeefdac0d18a5b8f9fc8cab2b322cd86a31ec6b67e101f0c44009f55f92",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task336": {
+  "at": "2026-06-11T22:28:39.501855Z",
+  "deployed_by": "Claude",
+  "points": 16.295,
+  "replaced_points": 0.0,
+  "sha256": "66605e39204e06dd97980e812e93d14e7dab3eb0d815b075ac29202827cc6a4e",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task337": {
+  "at": "2026-06-11T22:32:26.905900Z",
+  "deployed_by": "Claude",
+  "points": 22.697,
+  "replaced_points": 13.262,
+  "sha256": "c276f5799bf0f2f77bbc0c31f5ed97472afbff9a946326286e229929029e2484",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task338": {
+  "at": "2026-06-11T22:44:11.841714+00:00",
+  "deployed_by": "Claude",
+  "points": 14.258,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "f79bb1d2c099cb8da1e9d9101a4b570e2d8da2acb0b58a0f1280760c0bbec784",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task339": {
+  "at": "2026-06-11T22:17:39.403514Z",
+  "deployed_by": "Claude",
+  "points": 18.112,
+  "replaced_points": 0.0,
+  "sha256": "e8be4c26edfb079da2c23ae2f0b4d5d89e4dbc9c4ef2dd065ae8f448193eec36",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task340": {
+  "at": "2026-06-11T22:44:13.879807+00:00",
+  "deployed_by": "Claude",
+  "points": 13.836,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "ae9d3b10081fa4e93487ffe7567852135f45ec4342fdbd9a3ff936ee5f937c52",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task341": {
+  "at": "2026-06-11T22:44:15.987572+00:00",
+  "deployed_by": "Claude",
+  "points": 14.99,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "c71ffbf3d469ff1f5ff08e06e8a0e63931c352df9bedb0eab43b2adbea21010c",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task342": {
+  "at": "2026-06-11T22:28:49.293353Z",
+  "deployed_by": "Claude",
+  "points": 15.499,
+  "replaced_points": 0.0,
+  "sha256": "568532a57f0cc0277edc76b1421770305f1a68dd847468cc0cf3c8d021e03009",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task343": {
+  "at": "2026-06-11T22:44:18.036196+00:00",
+  "deployed_by": "Claude",
+  "points": 14.7,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "df6df42dd51bc8bd68188dba44776eb25926c7dd542729c2dcda48b60fd156bd",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task344": {
+  "at": "2026-06-11T22:18:17.380989Z",
+  "deployed_by": "Claude",
+  "points": 17.172,
+  "replaced_points": 0.0,
+  "sha256": "a23999c886c62393d115371628fbee6b6043de7a35bed72285639240d6def4fd",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task345": {
+  "at": "2026-06-11T22:44:19.833933+00:00",
+  "deployed_by": "Claude",
+  "points": 14.154,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "a2280b92ae787f7017bb1ae28368cc578fe47293edbe98af935f4e7572d6087c",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task346": {
+  "at": "2026-06-11T22:44:21.500976+00:00",
+  "deployed_by": "Claude",
+  "points": 15.875,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "11e08c307d334e0429612fd7a8873ecf53260f716ca9da99b6693e6d9b369548",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task347": {
+  "at": "2026-06-11T22:17:58.434984Z",
+  "deployed_by": "Claude",
+  "points": 17.44,
+  "replaced_points": 0.0,
+  "sha256": "fed395462b49017236bd7c8efec1bf01bac6ab9d8aaab79388c4befd346d40cc",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task348": {
+  "at": "2026-06-11T22:44:23.202039+00:00",
+  "deployed_by": "Claude",
+  "points": 16.103,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "a6dd8eb329ee1c4b5ee60a6985610b6685bad770c76a14d12eb9e9665303821e",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task349": {
+  "at": "2026-06-11T22:50:18.801462Z",
+  "deployed_by": "Gemini",
+  "points": 15.921,
+  "replaced_points": 13.103,
+  "sha256": "6ff810ce72c6358e7c9b2c919cdb2a27455b32562b27a475201808181d11678a",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task350": {
+  "at": "2026-06-11T22:44:26.889626+00:00",
+  "deployed_by": "Claude",
+  "points": 15.105,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "0a4953ef042161b10533c2687cf95494f213b8913fe824d49955a6077178c613",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task351": {
+  "at": "2026-06-11T22:49:33.354734Z",
+  "deployed_by": "Gemini",
+  "points": 17.864,
+  "replaced_points": 14.533,
+  "sha256": "0d370d11368555565cb4f86179e28e8e7b9e2aa2b46fc52867d715ac5d795a7b",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task352": {
+  "at": "2026-06-11T22:44:30.276838+00:00",
+  "deployed_by": "Claude",
+  "points": 16.201,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "f3b9bb985cfb0478df981c689aab9f22dc5bb177e02b6f3b6a3b330669eef601",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task353": {
+  "at": "2026-06-11T22:44:32.002195+00:00",
+  "deployed_by": "Claude",
+  "points": 16.404,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "1639de1c1d4d3ee61a8454a02d3b5af4d359f13f2fb1c963687d4cd76b280a8b",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task354": {
+  "at": "2026-06-11T22:44:33.787370+00:00",
+  "deployed_by": "Claude",
+  "points": 14.253,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "a4fcbcc1ef0fd8b1a7950c768d7a39b706052f1c2c56e6e41edbd73314bc6f98",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task355": {
+  "at": "2026-06-11T22:44:35.596482+00:00",
+  "deployed_by": "Claude",
+  "points": 15.407,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "9131fbe19a9b5cd500461fd94e3f6137ce23be6c158494512cb880891f36f5db",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task356": {
+  "at": "2026-06-11T22:28:36.811925Z",
+  "deployed_by": "Claude",
+  "points": 16.482,
+  "replaced_points": 0.0,
+  "sha256": "551900e26ac21ba20631069f1a4268e5b9992eabbfd9cde50643affea19fc2f0",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task357": {
+  "at": "2026-06-11T22:28:43.542963Z",
+  "deployed_by": "Claude",
+  "points": 16.121,
+  "replaced_points": 0.0,
+  "sha256": "3d4c5d3ef46e8c9f15401243e101a1f27b9981a0b79e63fc1ea26fda02c8ea43",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task358": {
+  "at": "2026-06-11T22:44:37.689667+00:00",
+  "deployed_by": "Claude",
+  "points": 13.356,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "50650df0548143121954ee03c9db4532be39a4a56b686e8bf4987af48b47c2cf",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task359": {
+  "at": "2026-06-11T22:44:39.443042+00:00",
+  "deployed_by": "Claude",
+  "points": 14.157,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "5402e526d36f56006e6fe3438c6875e02057cade74e68784d892dc9c4510bdb1",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task360": {
+  "at": "2026-06-11T22:44:41.065878+00:00",
+  "deployed_by": "Claude",
+  "points": 15.659,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "cbf7727157a80c28ac6fcc451f84b9049d33032b1ef3a0e2d1f894ae885bcc5d",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task361": {
+  "at": "2026-06-11T22:44:42.875454+00:00",
+  "deployed_by": "Claude",
+  "points": 15.325,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "19579bc412a62eb7963775c72f2af0a5d9f7ccf5b184a9d0519a43ef227426f4",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task362": {
+  "at": "2026-06-11T22:44:44.586521+00:00",
+  "deployed_by": "Claude",
+  "points": 15.356,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "948c36d60760728278e165c782624303a83fbd0475705cc005aabfeeca71a6d3",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task363": {
+  "at": "2026-06-11T22:29:11.570738Z",
+  "deployed_by": "Claude",
+  "points": 13.605,
+  "replaced_points": 0.0,
+  "sha256": "1a3e1739b184db4f6be604baeeee9d04e13cf86e0afc107fcb31ffe8419245d7",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task364": {
+  "at": "2026-06-11T22:44:46.419168+00:00",
+  "deployed_by": "Claude",
+  "points": 13.737,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "11a0ad8c61393d7892946c396fdb4016436e9442bfd987bd11780a7a6dc35cae",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task365": {
+  "at": "2026-06-11T22:44:48.707208+00:00",
+  "deployed_by": "Claude",
+  "points": 14.018,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "b5433fef2a486e434f677cabc36a073d21f90962bd37a741806cbce8ba33a836",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task366": {
+  "at": "2026-06-11T22:29:27.525151Z",
+  "deployed_by": "Claude",
+  "points": 11.097,
+  "replaced_points": 0.0,
+  "sha256": "c327a807028175dcbf54e63fd5b24fb76943251e46d8f42abbb93a1dc6cbaa92",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task367": {
+  "at": "2026-06-11T22:44:51.165859+00:00",
+  "deployed_by": "Claude",
+  "points": 12.575,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "6815e915af7345638b8365663e29fa061a603bc9a692aaef89fc6b8e1145a0e6",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task368": {
+  "at": "2026-06-11T22:44:53.333086+00:00",
+  "deployed_by": "Claude",
+  "points": 14.166,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "a4e2285ef899a8ae853aac896ed24b56bc663ea3cc332551fdc5d4df9e33ff16",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task369": {
+  "at": "2026-06-11T22:44:55.001926+00:00",
+  "deployed_by": "Claude",
+  "points": 15.502,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "24921a929eecce8ddfb843425f57bf35451669b9f27ff197089bc2e6015e3b8b",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task370": {
+  "at": "2026-06-11T22:44:57.892233+00:00",
+  "deployed_by": "Claude",
+  "points": 13.024,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "36f3ff16eafecd13a6eb66bb0fd138b420c6ea1974461b06d4e596346309660c",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task371": {
+  "at": "2026-06-11T22:44:59.595298+00:00",
+  "deployed_by": "Claude",
+  "points": 14.88,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "4bc87a58a1a7aa1545317a2b449e5ce6834f7c6ea948bee7bb30d6354847e3b5",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task372": {
+  "at": "2026-06-11T22:45:01.223663+00:00",
+  "deployed_by": "Claude",
+  "points": 15.477,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "8287976a56507f8fa1adddb31b7db71a31afc8b1966ef19d1d7f2775c85f696c",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task373": {
+  "at": "2026-06-11T22:32:17.590148Z",
+  "deployed_by": "Claude",
+  "points": 18.027,
+  "replaced_points": 0.0,
+  "sha256": "e3ca2087cc04caad3b005d7dfc630796288768c44b0d1bc85e85f3494ba1be24",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task374": {
+  "at": "2026-06-11T22:45:03.301373+00:00",
+  "deployed_by": "Claude",
+  "points": 14.14,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "29c99ccb14d1600e97d7b8c3c292672fed67326cc713432a0fd26edcbd5c2182",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task375": {
+  "at": "2026-06-11T22:28:50.591587Z",
+  "deployed_by": "Claude",
+  "points": 15.373,
+  "replaced_points": 0.0,
+  "sha256": "509686d607b3126316a284357799deb369829fe56865a1b05609fa3447c4c5d7",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task376": {
+  "at": "2026-06-11T22:21:24.268967Z",
+  "deployed_by": "Claude",
+  "points": 14.343,
+  "replaced_points": 0.0,
+  "sha256": "7dfcc89f311bf7f416d63006b35acd1110a420651b08e0123dd606e2d8e36498",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task377": {
+  "at": "2026-06-11T22:29:07.105750Z",
+  "deployed_by": "Claude",
+  "points": 13.92,
+  "replaced_points": 0.0,
+  "sha256": "9634d0c4c5f2d3616c292399129487757b13a675d7e4d66ee409a56adffdec77",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task378": {
+  "at": "2026-06-11T22:45:05.177842+00:00",
+  "deployed_by": "Claude",
+  "points": 13.926,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "5cfb4ed375b262770e33cd356d40d8b9e1900d6a0a5d4f3575021b742dcefdbc",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task379": {
+  "at": "2026-06-11T22:21:50.516110Z",
+  "deployed_by": "Claude",
+  "points": 13.809,
+  "replaced_points": 0.0,
+  "sha256": "0002ebca2333b2402894d90300cae16c7fa1dcf04c9df3bc98751db32899d9ed",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task380": {
+  "at": "2026-06-11T22:32:12.933639Z",
+  "deployed_by": "Claude",
+  "points": 18.397,
+  "replaced_points": 0.0,
+  "sha256": "b23f227e055e494818df0587e34418a5054807bd258a80e00f9170bcedfd819c",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task381": {
+  "at": "2026-06-11T22:28:31.115524Z",
+  "deployed_by": "Claude",
+  "points": 16.789,
+  "replaced_points": 0.0,
+  "sha256": "3998a8083b77dc723fc5dff3622d4ead64bd8bdadb3c886c1aff33fadfc34765",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task382": {
+  "at": "2026-06-11T22:22:10.505797Z",
+  "deployed_by": "Claude",
+  "points": 13.352,
+  "replaced_points": 0.0,
+  "sha256": "b424c17afc3f4e1c37d8dbfe1078bd4e65b9f7e141fdb71d48fb1cf41e44abe3",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task383": {
+  "at": "2026-06-11T22:45:07.001443+00:00",
+  "deployed_by": "Claude",
+  "points": 13.225,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "19da36427e6ee74fe0cf46bc86c98b873576bc8e0c1302e4d8b61c04ded4f8d8",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task384": {
+  "at": "2026-06-11T22:49:48.185632Z",
+  "deployed_by": "Gemini",
+  "points": 16.924,
+  "replaced_points": 13.778,
+  "sha256": "58095f7f720a1d437da50901d54a2e1c391393568d2d112ce62571eaced86243",
+  "source": "neurogolf-6335-19-controlled-public-artifact"
+ },
+ "task385": {
+  "at": "2026-06-11T22:32:06.510016Z",
+  "deployed_by": "Claude",
+  "points": 21.599,
+  "replaced_points": 0.0,
+  "sha256": "629a5673b6a8e745a4c5b1b5afcf3c5e7214f2fd7c54d7f5da27eb3e788ea5d1",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task386": {
+  "at": "2026-06-11T22:45:10.328639+00:00",
+  "deployed_by": "Claude",
+  "points": 17.122,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "de138b32b21fe35facfd4995972863055b13d2b794c18dced2522843483f024a",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task387": {
+  "at": "2026-06-11T22:45:12.399824+00:00",
+  "deployed_by": "Claude",
+  "points": 13.935,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "51c5ea4543c17a9365e7c65dd4a6ec0ab7655c19a9a039910dc3c31eceb646c0",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task388": {
+  "at": "2026-06-11T22:45:14.154788+00:00",
+  "deployed_by": "Claude",
+  "points": 15.273,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "1ff8077147ab57a653e86c4389d3f5f467208ac76bab46c461bda7daf30d5d61",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task389": {
+  "at": "2026-06-11T22:45:15.778934+00:00",
+  "deployed_by": "Claude",
+  "points": 17.451,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "5d19a4d137ddfa5d5e278378f5210bdd9ffd9225b6b7ca3cfb0a823a86ca0be9",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task390": {
+  "at": "2026-06-11T22:45:17.517233+00:00",
+  "deployed_by": "Claude",
+  "points": 14.616,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "b35cfff252a2d3608ad005f521354f269c257ea36955aef72141d6d75f07f776",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task391": {
+  "at": "2026-06-11T22:20:01.009325Z",
+  "deployed_by": "Claude",
+  "points": 15.788,
+  "replaced_points": 0.0,
+  "sha256": "1582c8e52095b42ea4800ff8753f6e9fcb62f2e7b65b1642a469835c6548bf80",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task392": {
+  "at": "2026-06-11T22:21:34.826954Z",
+  "deployed_by": "Claude",
+  "points": 14.178,
+  "replaced_points": 0.0,
+  "sha256": "c9f864dc7d099eabf2caa44afa6efeea57c9595efb9613ff3aaadac839883523",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task393": {
+  "at": "2026-06-11T22:45:19.157214+00:00",
+  "deployed_by": "Claude",
+  "points": 16.322,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "2f236f0f741468312b3933de81bd4f1f7d36a96e624a1545d1986160d95c466a",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task394": {
+  "at": "2026-06-11T22:19:05.197675Z",
+  "deployed_by": "Claude",
+  "points": 16.531,
+  "replaced_points": 0.0,
+  "sha256": "d3ebe869f1ff5d4580f7ef1750bbca032bda17d235f3d765771a202aa8b3961f",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task395": {
+  "at": "2026-06-11T22:18:02.040994Z",
+  "deployed_by": "Claude",
+  "points": 17.404,
+  "replaced_points": 0.0,
+  "sha256": "72a72e6428f843b5c12ac4172aef1eaff9da1ce6a13e6252568aea13233c191e",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task396": {
+  "at": "2026-06-11T22:45:22.411478+00:00",
+  "deployed_by": "Claude",
+  "points": 12.968,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "deecb12bf534491a8adbe29e9b1927ba002fffacc6253071aeeb6bef2ef188a4",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task397": {
+  "at": "2026-06-11T22:45:24.272747+00:00",
+  "deployed_by": "Claude",
+  "points": 14.714,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "d6838f43238e0445f2c5c2e513eac4c47739950e777647e7dd7b476270eafd64",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task398": {
+  "at": "2026-06-11T22:45:26.009016+00:00",
+  "deployed_by": "Claude",
+  "points": 13.658,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "5d6faac9d879be8dcfabbf8a25b82e0c62f0d41eb7d39aea7eb37e1fc447e023",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task399": {
+  "at": "2026-06-11T22:28:26.793463Z",
+  "deployed_by": "Claude",
+  "points": 17.483,
+  "replaced_points": 0.0,
+  "sha256": "f8e72c2228ae91a54d38c5a7f101356edc42d906cda234321b13bfc87a5ff38f",
+  "source": "neurogolf-manual-rewrites-v205"
+ },
+ "task400": {
+  "at": "2026-06-11T22:45:27.730768+00:00",
+  "deployed_by": "Claude",
+  "points": 14.533,
+  "regraft_from": "neurogolf-6335-19-controlled-public-artifact",
+  "sha256": "85a9828beec5f14034326e3d758cb7a93f61e66437df97f60e5b4a304af62110",
+  "source": "neurogolf-manual-rewrites-v205"
+ }
+}

@@ -34,7 +34,7 @@ WORKSPACE_ROOT = Path(CONFIG["workspace"]["root"]).resolve()
 TASK_RE = re.compile(r"^task(\d{3})\.onnx$")
 TASK_ID_RE = re.compile(r"task\s*0*(\d{1,3})", re.IGNORECASE)
 SOLVED_STATUS = "IS_READY"
-DUMMY_SIZE_BYTES = 1024
+DUMMY_SIZE_BYTES = 868  # the placeholder template is EXACTLY 868 bytes (verified on disk)
 CLAIM_EXPIRE_HOURS = 24   # 认领有效期: 超时自动可被接管, 防止崩溃 AI 死锁任务
 MAX_ACTIVE_CLAIMS = 12    # 单 AI 同时认领上限 (沿用论坛 #44 批量认领的先例)
 
@@ -105,7 +105,10 @@ def sha256_file(path: Path) -> str:
 
 
 def is_dummy_model(path: Path) -> bool:
-    return (not path.exists()) or path.stat().st_size <= DUMMY_SIZE_BYTES
+    # The placeholder dummies are one fixed template of EXACTLY 868 bytes.
+    # Legit golfed models can be smaller (tiny = high points), so a <= size
+    # heuristic would misclassify them; equality pins the actual template.
+    return (not path.exists()) or path.stat().st_size == DUMMY_SIZE_BYTES
 
 
 def load_manifest(project: str) -> dict:
@@ -390,8 +393,12 @@ def grader_inference_error(blob: bytes) -> str:
         return f"infer: {msg[:80]}"
     if out.ndim != 4 or out.shape[1] != 10:
         return f"output shape {tuple(out.shape)} (need (1,10,H,W))"
-    if out.dtype.kind != "f":
-        return f"output dtype {out.dtype} (grader thresholds a float)"
+    # The grader thresholds via `(out > 0.0).astype(float)`, which is dtype-
+    # agnostic for numeric/bool. bool/uint8 outputs are proven safe: they ship
+    # inside real scored Kaggle submissions (afr1ste 6335). Only non-numeric
+    # outputs would break it. The fatal 2026-06-11 models failed on SHAPE.
+    if out.dtype.kind not in "fbui":
+        return f"output dtype {out.dtype} (grader cannot threshold it)"
     return ""
 
 

@@ -39,17 +39,19 @@ NeuroGolf artifacts are coordinated through the central AI Hub, not through ad-h
 - Failed or postponed investigations must still be resolved in the forum, but they do not count as solved tasks. For example, a rule-discovery closure like `task003` is a knowledge result, not an ONNX solve.
 - Kaggle credentials never go into git or MySQL. Prefer downloading the Hub-built `submission.zip` and submitting locally; center-machine submission may be enabled only by an explicit environment switch.
 
-Remote submission workflow from any client:
+Remote submission workflow from any client (hub LAN IP changes with DHCP —
+192.168.40.70 as of 2026-06-12; on the hub machine itself always use
+http://127.0.0.1:8000):
 
 ```powershell
-py -3.11 tools/pull_submission.py --hub http://192.168.137.215:8000 --out neurogolf/data/working/submission.zip
+py -3.11 tools/pull_submission.py --hub http://192.168.40.70:8000 --out neurogolf/data/working/submission.zip
 kaggle competitions submit -c neurogolf-2026 -f neurogolf/data/working/submission.zip -m "NeuroGolf Hub submission"
 ```
 
 Remote artifact deployment workflow from any client:
 
 ```powershell
-py -3.11 tools/deploy_neurogolf_artifact.py --hub http://192.168.137.215:8000 --task task015 --model path/to/task015.onnx --score 13.080 --topic 28 --agent Gemini
+py -3.11 tools/deploy_neurogolf_artifact.py --hub http://192.168.40.70:8000 --task task015 --model path/to/task015.onnx --score 13.080 --topic 28 --agent Gemini
 ```
 
 ## First Questions
@@ -77,7 +79,7 @@ challenges forever.
 1. **Claim before you code** (exclusive flag, prevents duplicate work):
 
    ```bash
-   curl -X POST http://192.168.137.215:8000/api/project_plugin/neurogolf/claim \
+   curl -X POST http://192.168.40.70:8000/api/project_plugin/neurogolf/claim \
         -F task_id=task037 -F agent_name=Claude -F note="periodic tiling family"
    ```
 
@@ -87,7 +89,7 @@ challenges forever.
    - Giving up? Release with a reason (logged to the activity stream):
 
    ```bash
-   curl -X POST http://192.168.137.215:8000/api/project_plugin/neurogolf/release \
+   curl -X POST http://192.168.40.70:8000/api/project_plugin/neurogolf/release \
         -F task_id=task037 -F agent_name=Claude -F reason="needs Conv tricks I don't have"
    ```
 
@@ -103,7 +105,7 @@ challenges forever.
 4. **Check history before re-attempting anything:**
 
    ```bash
-   curl "http://192.168.137.215:8000/api/project_plugin/neurogolf/history?task_id=task037"
+   curl "http://192.168.40.70:8000/api/project_plugin/neurogolf/history?task_id=task037"
    # → best_score, all attempts (incl. rejected challenges), current claim, archives
    ```
 
@@ -114,3 +116,41 @@ challenges forever.
 
 6. Board view: `GET /api/project_plugin/neurogolf/status` lists all 400 tasks
    with claim / solved / best_score; the web dashboard renders the same data.
+
+## Strategy A — Public Bundle Merge + Differentiation (human decree, 2026-06-12)
+
+Forum #66. The competitive meta is "audit public bundles, merge best-of,
+differentiate with hand-builds" (LB top ~7710, public ceiling ~6347, pure
+from-scratch was uncompetitive at ~945). Scoring per task (official
+neurogolf_utils): `points = max(1, 25 - ln(bytes + params))`, summed over 400.
+
+Pipeline (all in `neurogolf_claude/tools/`, run on the hub machine):
+`bundle_pull.py <kaggle-ref>` → `audit_bundle.py <slug>` (parallel official
+verification, auto index-shift detection) → `merge_plan.py` (best READY model
+per task vs Hub state) → `batch_graft.py` (deploys winners through the Hub
+gate, records `data/working/provenance.json`). `regraft_source.py <slug>`
+mass-replaces a poisoned source with allow_regression.
+
+**Tiered-source discipline (learned the hard way, forum #66):** public bundles
+predating the grader rules change are POISON — they audit clean locally (~6258)
+but score 0 per task on the hidden benchmark (submission #53581890: local 6519
+→ LB 2755; the gap matched the April bundle's contribution exactly).
+- Tier 1 (graft allowed): artifacts labelled current-rules / published ≥ May 31
+  2026, plus our own rule-based solutions.
+- Tier 2 (audit-only): anything older — keep the audit JSON, do NOT graft until
+  a single-source LB submission validates the source.
+Every graft must carry provenance; LB-vs-local gaps >100 pts trigger bisection
+by source.
+
+Gate semantics (current, both in the hub plugin and rebuild_submission.py):
+- Inference gate accepts numeric/bool output dtypes (grader thresholds
+  `out > 0`), rejects wrong shapes (≠ (1,10,H,W)) and models that throw —
+  those zero the ENTIRE submission.
+- Dummy = exactly 868 bytes (the placeholder template). Smaller real models
+  are legitimate (golfing!) and deployable.
+
+Division of labor: G1 merge pipeline + baseline (Claude, done: 397 solved,
+local ~6109), G2 ScatterND hand-builds for CC-blocked tasks + cost compression
+(Codex; rules and reference code in `neurogolf_claude/scratch/wf_rules_remaining.json`,
+`neurogolf_claude/scratch/kaggle_pub/`, audits in `neurogolf/data/working/audits/`),
+G3 bundle mining per the tiered discipline (Gemini, manual in forum #66/#110).

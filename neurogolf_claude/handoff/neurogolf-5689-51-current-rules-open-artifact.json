@@ -1,0 +1,3606 @@
+{
+ "slug": "neurogolf-5689-51-current-rules-open-artifact",
+ "shift": 0,
+ "rows": [
+  {
+   "task": "task006",
+   "ready": true,
+   "points": 17.603,
+   "bytes": null,
+   "params": null,
+   "sha256": "17e048671c7f056a80feba6875cdbb34da1521c36887cfdb399f371d8d5e163c",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task006.onnx"
+  },
+  {
+   "task": "task001",
+   "ready": true,
+   "points": 17.041,
+   "bytes": null,
+   "params": null,
+   "sha256": "e797ed891931604093a242891035430eac3d4815502c982c3a516c6f7db1b462",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task001.onnx"
+  },
+  {
+   "task": "task004",
+   "ready": true,
+   "points": 14.085,
+   "bytes": null,
+   "params": null,
+   "sha256": "fc9ef5d39847fe678249f3dd2ef4701d2d49b2afb4c27c424b79b6f9967ca118",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task004.onnx"
+  },
+  {
+   "task": "task007",
+   "ready": true,
+   "points": 15.982,
+   "bytes": null,
+   "params": null,
+   "sha256": "f428fcccaa7c166df8066ea715126ddcc5f75122c86a8b1c5c59c3e14f1a973b",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task007.onnx"
+  },
+  {
+   "task": "task016",
+   "ready": true,
+   "points": 22.697,
+   "bytes": null,
+   "params": null,
+   "sha256": "fb83a8e988f586009bf17279b7aedb194e3492a8e6f357be6d5e9ed903615733",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task016.onnx"
+  },
+  {
+   "task": "task015",
+   "ready": true,
+   "points": 18.198,
+   "bytes": null,
+   "params": null,
+   "sha256": "1bdf0a59883c98795d2d54262adc099a55470837e426c2ad60d49f27b069db45",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task015.onnx"
+  },
+  {
+   "task": "task012",
+   "ready": true,
+   "points": 15.469,
+   "bytes": null,
+   "params": null,
+   "sha256": "cf80b1fc317b51dbd8efa9eca069b2dccd1d58066ce1eb61dabe815a96124043",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task012.onnx"
+  },
+  {
+   "task": "task009",
+   "ready": true,
+   "points": 13.695,
+   "bytes": null,
+   "params": null,
+   "sha256": "2043f559e1ee947e2533c1ca00c25a699daed5b516d1bb4bf3515822ea52518d",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task009.onnx"
+  },
+  {
+   "task": "task003",
+   "ready": true,
+   "points": 15.884,
+   "bytes": null,
+   "params": null,
+   "sha256": "af63acf28b90fea42960fbbf559775a83a53e0ee70ec23546b76626bd8718e4b",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task003.onnx"
+  },
+  {
+   "task": "task014",
+   "ready": true,
+   "points": 14.345,
+   "bytes": null,
+   "params": null,
+   "sha256": "ad49f42f30198141d4db98f05c2c6ed2684b5f87cf96ab29e7ab2c46172832d5",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task014.onnx"
+  },
+  {
+   "task": "task019",
+   "ready": true,
+   "points": 13.166,
+   "bytes": null,
+   "params": null,
+   "sha256": "eecf7625da383cb85e5c0579fb3b8635767d444eff594d0b30dfd79b2d44ffb1",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task019.onnx"
+  },
+  {
+   "task": "task010",
+   "ready": true,
+   "points": 16.48,
+   "bytes": null,
+   "params": null,
+   "sha256": "92d798f28d116dabbd7bef3a2e3f10f312184eb43390d09a00b3fe6c22a61b58",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task010.onnx"
+  },
+  {
+   "task": "task008",
+   "ready": true,
+   "points": 14.933,
+   "bytes": null,
+   "params": null,
+   "sha256": "662af396ddc9ba7a33d3a0179ae26ef1ac06a69bc0c08ef6be718fa379001d10",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task008.onnx"
+  },
+  {
+   "task": "task011",
+   "ready": true,
+   "points": 13.899,
+   "bytes": null,
+   "params": null,
+   "sha256": "3f64ad20a9feacc16ad2ce2296652dbc2fb5438e444a47af1f885a374cd43046",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task011.onnx"
+  },
+  {
+   "task": "task026",
+   "ready": true,
+   "points": 18.396,
+   "bytes": null,
+   "params": null,
+   "sha256": "7b1677f67eb3a42b35d9d881fb5afa91618d944fae08e6ae12d4aeff0faa3601",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task026.onnx"
+  },
+  {
+   "task": "task024",
+   "ready": true,
+   "points": 15.886,
+   "bytes": null,
+   "params": null,
+   "sha256": "f8a1d671c3118abe56700d79b82cd03b36acad2b03a5453a7790ca311b792d5d",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task024.onnx"
+  },
+  {
+   "task": "task017",
+   "ready": true,
+   "points": 14.415,
+   "bytes": null,
+   "params": null,
+   "sha256": "c153488103a6c52651cb16e429199a90d9aad0e6045615fd11850d11d80283e8",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task017.onnx"
+  },
+  {
+   "task": "task028",
+   "ready": true,
+   "points": 15.896,
+   "bytes": null,
+   "params": null,
+   "sha256": "5882fa43bf7f98d605e8098fc72437800e43705b6484f0675c3c72fae26e9e30",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task028.onnx"
+  },
+  {
+   "task": "task021",
+   "ready": true,
+   "points": 13.931,
+   "bytes": null,
+   "params": null,
+   "sha256": "23fd70baae6140c9a73583e3cc02fbc3a3688eaa407ef137fcfb087456cb99df",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task021.onnx"
+  },
+  {
+   "task": "task002",
+   "ready": true,
+   "points": 13.51,
+   "bytes": null,
+   "params": null,
+   "sha256": "4c3205c0141934e8750b205f87c8622ebfd80d2fce3c665797e3b1dd39c1d0b5",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task002.onnx"
+  },
+  {
+   "task": "task027",
+   "ready": true,
+   "points": 14.487,
+   "bytes": null,
+   "params": null,
+   "sha256": "63da1fe45860bc98d31a806aeabad3d8d81890198997b6d66fe5343ab004d658",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task027.onnx"
+  },
+  {
+   "task": "task013",
+   "ready": true,
+   "points": 13.331,
+   "bytes": null,
+   "params": null,
+   "sha256": "98f0942c7dbfaf541df9396cfbf3af4d1699a7f8bae9f96b9c4541f220eea98f",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task013.onnx"
+  },
+  {
+   "task": "task005",
+   "ready": true,
+   "points": 13.324,
+   "bytes": null,
+   "params": null,
+   "sha256": "021d15497308032798c85f53d555a20782e19dd8962dcff4f068600918b4fbd5",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task005.onnx"
+  },
+  {
+   "task": "task032",
+   "ready": true,
+   "points": 16.867,
+   "bytes": null,
+   "params": null,
+   "sha256": "64d66eeaba95588367af53102ecf4fb2ceb4c93327b677f80f1a9591b342f6a5",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task032.onnx"
+  },
+  {
+   "task": "task025",
+   "ready": true,
+   "points": 12.209,
+   "bytes": null,
+   "params": null,
+   "sha256": "7edd7ed06bb2dd2a31adddfefc0deea3938a481790f0fe4276f9555e40a30ab0",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task025.onnx"
+  },
+  {
+   "task": "task031",
+   "ready": true,
+   "points": 15.164,
+   "bytes": null,
+   "params": null,
+   "sha256": "b90c3fc6af40739352e474797fcd60c161bf6ecf6e4312dd7060ba0ff8383f7a",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task031.onnx"
+  },
+  {
+   "task": "task033",
+   "ready": true,
+   "points": 14.082,
+   "bytes": null,
+   "params": null,
+   "sha256": "60ab4cceeab38a8952d0157e862ec2f374a51c7d70c00bdecdf9833a703455b5",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task033.onnx"
+  },
+  {
+   "task": "task038",
+   "ready": true,
+   "points": 17.307,
+   "bytes": null,
+   "params": null,
+   "sha256": "a83d43302a9ef7e5b284cc1e38fc4ce8deedb152481de569220ea69b94855018",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task038.onnx"
+  },
+  {
+   "task": "task035",
+   "ready": true,
+   "points": 15.36,
+   "bytes": null,
+   "params": null,
+   "sha256": "15a9c474e70c83253daaa3ff80387d3b29feadebd4ec8018b87fc277cf69f62a",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task035.onnx"
+  },
+  {
+   "task": "task039",
+   "ready": true,
+   "points": 16.034,
+   "bytes": null,
+   "params": null,
+   "sha256": "3bac77b4053405c006f1695572c1a8853909392131b90cc60df799a75bef2677",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task039.onnx"
+  },
+  {
+   "task": "task030",
+   "ready": true,
+   "points": 14.27,
+   "bytes": null,
+   "params": null,
+   "sha256": "075de94951dfd2e7ca5e14c9b4080562a4bdc0b28ca1732af2945df0536be105",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task030.onnx"
+  },
+  {
+   "task": "task041",
+   "ready": true,
+   "points": 15.627,
+   "bytes": null,
+   "params": null,
+   "sha256": "2ae5ccde56d9118ad549ef2a4383dfc5a74e4b8fcbbd3b3dc4d09c92209444a6",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task041.onnx"
+  },
+  {
+   "task": "task043",
+   "ready": true,
+   "points": 16.129,
+   "bytes": null,
+   "params": null,
+   "sha256": "16b05e98645b4d8da6cf555ed59cb2165317fe07248f91dd11f6747c0b38c22b",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task043.onnx"
+  },
+  {
+   "task": "task029",
+   "ready": true,
+   "points": 13.503,
+   "bytes": null,
+   "params": null,
+   "sha256": "25fd930dd65d6c39e3db30c12b581ca4e5dd8c8aea1ce2a272e893b8ea92fac5",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task029.onnx"
+  },
+  {
+   "task": "task037",
+   "ready": true,
+   "points": 13.938,
+   "bytes": null,
+   "params": null,
+   "sha256": "e19669c0dec2c6b73986d1bd07ec5c19bb0bc452edb6cf3d006f85657ae46d12",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task037.onnx"
+  },
+  {
+   "task": "task045",
+   "ready": true,
+   "points": 16.04,
+   "bytes": null,
+   "params": null,
+   "sha256": "43dc4b647f1683ea779fb39571b0cdbbad8fdcfd27c8713aaa44314281d7c131",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task045.onnx"
+  },
+  {
+   "task": "task040",
+   "ready": true,
+   "points": 15.778,
+   "bytes": null,
+   "params": null,
+   "sha256": "a759237736d4acc76d05d0cffac6e4cafc4e202ff4fdeb0d137356dafd1fe9cf",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task040.onnx"
+  },
+  {
+   "task": "task034",
+   "ready": true,
+   "points": 13.426,
+   "bytes": null,
+   "params": null,
+   "sha256": "40e15c163ffd24e22a1ff78e4e3cda24a02c486f385e9e6f18214290493f4ce1",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task034.onnx"
+  },
+  {
+   "task": "task036",
+   "ready": true,
+   "points": 13.71,
+   "bytes": null,
+   "params": null,
+   "sha256": "76facc8f1d2b1b6691dc621f3160abfd35d151bfaf74961ef3d21abebefdb575",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task036.onnx"
+  },
+  {
+   "task": "task042",
+   "ready": true,
+   "points": 15.255,
+   "bytes": null,
+   "params": null,
+   "sha256": "8b8a9ad58a540a15e4c7e3feeeeff5772adc9728f3dcdef4b6570033c8a0a84f",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task042.onnx"
+  },
+  {
+   "task": "task047",
+   "ready": true,
+   "points": 16.493,
+   "bytes": null,
+   "params": null,
+   "sha256": "4d3bd9f3b89f4cbffbaa53b514aaf33d6a74318b8a86531c4f5d13411ed2546c",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task047.onnx"
+  },
+  {
+   "task": "task053",
+   "ready": true,
+   "points": 21.599,
+   "bytes": null,
+   "params": null,
+   "sha256": "11d2a84ba10862f37e4dae8a206314fd4226f70b6f751eed23e52ba32ebde353",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task053.onnx"
+  },
+  {
+   "task": "task049",
+   "ready": true,
+   "points": 14.614,
+   "bytes": null,
+   "params": null,
+   "sha256": "a37e8cb1f6134fded24f6bb205efbdfe9c4b4f96f2b9195d9db3108653eadb0c",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task049.onnx"
+  },
+  {
+   "task": "task050",
+   "ready": true,
+   "points": 15.844,
+   "bytes": null,
+   "params": null,
+   "sha256": "a43a64896f788cffb0e83ee188a7680ae80f27578b1bb607a36e32c9a39258ab",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task050.onnx"
+  },
+  {
+   "task": "task056",
+   "ready": true,
+   "points": 18.672,
+   "bytes": null,
+   "params": null,
+   "sha256": "2306a2e7b1dd27af9e0ec17099ee8ed0568f6696623537f2599419319f7dd8cd",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task056.onnx"
+  },
+  {
+   "task": "task052",
+   "ready": true,
+   "points": 17.887,
+   "bytes": null,
+   "params": null,
+   "sha256": "195c01dfdaae84b9a7a585295b8d44c1c3741ab522a7e9d472753ad121d8014d",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task052.onnx"
+  },
+  {
+   "task": "task058",
+   "ready": true,
+   "points": 15.313,
+   "bytes": null,
+   "params": null,
+   "sha256": "7a4b47e465104bb5b576167d51d642e539c3f9d5bafef55faac8d1987475593b",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task058.onnx"
+  },
+  {
+   "task": "task048",
+   "ready": true,
+   "points": 16.368,
+   "bytes": null,
+   "params": null,
+   "sha256": "9423c02033058a1188fae998353c04f6fbf4e48361dbee5461896ddd5d49ac28",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task048.onnx"
+  },
+  {
+   "task": "task057",
+   "ready": true,
+   "points": 14.246,
+   "bytes": null,
+   "params": null,
+   "sha256": "fe71c735896585cb2e65fe6bfc6479a0d1ef8b1f8f2c7b7a1fe27b318ca72304",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task057.onnx"
+  },
+  {
+   "task": "task020",
+   "ready": true,
+   "points": 13.591,
+   "bytes": null,
+   "params": null,
+   "sha256": "4abb72f71f86d299893dcb1ee3be5937bc57ae169a6d1c33af77157df2be6f0d",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task020.onnx"
+  },
+  {
+   "task": "task046",
+   "ready": true,
+   "points": 14.583,
+   "bytes": null,
+   "params": null,
+   "sha256": "776e40c71ae05f511e59e234f5f52931c7f966c95b139fed312451a249a5f138",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task046.onnx"
+  },
+  {
+   "task": "task060",
+   "ready": true,
+   "points": 16.373,
+   "bytes": null,
+   "params": null,
+   "sha256": "03687375b7e8938e4f841fe856da30c83884468ff07c648d7021c6b6748784bd",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task060.onnx"
+  },
+  {
+   "task": "task061",
+   "ready": true,
+   "points": 15.152,
+   "bytes": null,
+   "params": null,
+   "sha256": "27289ea0d11a669fe413e1b05826321af3d079ce8a5555fa2610a93704612c2e",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task061.onnx"
+  },
+  {
+   "task": "task051",
+   "ready": true,
+   "points": 13.866,
+   "bytes": null,
+   "params": null,
+   "sha256": "1fccc900903384492e825dfc74d6952195755b48411dd42c988cf3bb64ea878c",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task051.onnx"
+  },
+  {
+   "task": "task059",
+   "ready": true,
+   "points": 15.077,
+   "bytes": null,
+   "params": null,
+   "sha256": "6f93fccf92e34dbb6b51e75c53fd4882a6ba090c755d7c47d23c132b936f7520",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task059.onnx"
+  },
+  {
+   "task": "task067",
+   "ready": true,
+   "points": 19.247,
+   "bytes": null,
+   "params": null,
+   "sha256": "e823d84640b258f8322dde914f6bd992553a53aadd84d4685cd18da5f1be35e9",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task067.onnx"
+  },
+  {
+   "task": "task063",
+   "ready": true,
+   "points": 14.667,
+   "bytes": null,
+   "params": null,
+   "sha256": "5c8811b2da8473750953376c6dbdd913b50bc29b96f9a16a09cf201df9a483ce",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task063.onnx"
+  },
+  {
+   "task": "task065",
+   "ready": true,
+   "points": 14.534,
+   "bytes": null,
+   "params": null,
+   "sha256": "6c2ce6ffae5840d17998c36ee6a5eb3f43eb8f79699c9bfb3b25a07562742370",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task065.onnx"
+  },
+  {
+   "task": "task068",
+   "ready": true,
+   "points": 15.559,
+   "bytes": null,
+   "params": null,
+   "sha256": "e490818d91a162474f9a9ed4c4d7a03517788fb18760e2fe6ca209f592660a82",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task068.onnx"
+  },
+  {
+   "task": "task064",
+   "ready": true,
+   "points": 13.211,
+   "bytes": null,
+   "params": null,
+   "sha256": "58b449d06ee31558e5b72e234bafcedd075ca374d90de0e17b116281716fafd3",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task064.onnx"
+  },
+  {
+   "task": "task072",
+   "ready": true,
+   "points": 17.801,
+   "bytes": null,
+   "params": null,
+   "sha256": "579e7a8a616faf51a4ee64994c8709f2e15ca52f63c805a39b48ac05fe546a76",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task072.onnx"
+  },
+  {
+   "task": "task073",
+   "ready": true,
+   "points": 18.187,
+   "bytes": null,
+   "params": null,
+   "sha256": "c974fda7fe3001de4bd2200b9065826ac44cf359fcb1949954b82f28411b5b63",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task073.onnx"
+  },
+  {
+   "task": "task023",
+   "ready": true,
+   "points": 11.877,
+   "bytes": null,
+   "params": null,
+   "sha256": "7100cb2173a477c20f040892ca20db7dfcdcb2dfe5ce3e697d26cd8c5f090af5",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task023.onnx"
+  },
+  {
+   "task": "task054",
+   "ready": true,
+   "points": 12.944,
+   "bytes": null,
+   "params": null,
+   "sha256": "5a4045b57ef7aa20458e7d31ed7aafc0d5ac705da9c9dcec05004416674ed7f9",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task054.onnx"
+  },
+  {
+   "task": "task071",
+   "ready": true,
+   "points": 13.226,
+   "bytes": null,
+   "params": null,
+   "sha256": "2d696d39af281a3a0ca1582e413672e8ef38ef9f06d584f19844a45a6e2aa4a2",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task071.onnx"
+  },
+  {
+   "task": "task074",
+   "ready": true,
+   "points": 15.009,
+   "bytes": null,
+   "params": null,
+   "sha256": "8194b1eba8a395566d686766b74869219cdfdaec5105dbad5f36b6ef32435be8",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task074.onnx"
+  },
+  {
+   "task": "task070",
+   "ready": true,
+   "points": 13.901,
+   "bytes": null,
+   "params": null,
+   "sha256": "c09e95105072fd97b2106ecebc5fdb42c86bd41e9994b310781aa321351ec9d5",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task070.onnx"
+  },
+  {
+   "task": "task022",
+   "ready": true,
+   "points": 14.288,
+   "bytes": null,
+   "params": null,
+   "sha256": "c5be88130ee878e905ac112de991b5ae0af82dff2e767849306c7de8a0f03573",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task022.onnx"
+  },
+  {
+   "task": "task075",
+   "ready": true,
+   "points": 14.743,
+   "bytes": null,
+   "params": null,
+   "sha256": "211a2ab0ea4cb67b9b8714d411d361e7eab6ec1192f0f74155bd9bd9c043c7d1",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task075.onnx"
+  },
+  {
+   "task": "task078",
+   "ready": true,
+   "points": 15.65,
+   "bytes": null,
+   "params": null,
+   "sha256": "c33e2e8bb8525ee7c4bfa0aca9ec69955cdd9a97837985fb38efdb309903089a",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task078.onnx"
+  },
+  {
+   "task": "task079",
+   "ready": true,
+   "points": 14.875,
+   "bytes": null,
+   "params": null,
+   "sha256": "60ad44e5b208b22c2d4a93f322baf5362bf4a0b2cec7283e9db31f1de40a9346",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task079.onnx"
+  },
+  {
+   "task": "task083",
+   "ready": true,
+   "points": 17.504,
+   "bytes": null,
+   "params": null,
+   "sha256": "3526144719574eafa02b2d1fa33a4be836ec96c267520ddd982697e447b8bc98",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task083.onnx"
+  },
+  {
+   "task": "task055",
+   "ready": true,
+   "points": 14.82,
+   "bytes": null,
+   "params": null,
+   "sha256": "af92ce2ca4857d58e51cfa086182fd59313bd341f4f07fa157fa0f684d675f92",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task055.onnx"
+  },
+  {
+   "task": "task084",
+   "ready": true,
+   "points": 15.121,
+   "bytes": null,
+   "params": null,
+   "sha256": "5bd28bac4f427d16b03dfcb9d4ae68237ccb4bb720b534e0e14b2768658ee6a0",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task084.onnx"
+  },
+  {
+   "task": "task082",
+   "ready": true,
+   "points": 14.936,
+   "bytes": null,
+   "params": null,
+   "sha256": "5f994c35d189c6fc8c7c8733202150cd5bd5bb9aa686ef9497ce5a384641de47",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task082.onnx"
+  },
+  {
+   "task": "task087",
+   "ready": true,
+   "points": 19.07,
+   "bytes": null,
+   "params": null,
+   "sha256": "4e9d18bfbd60be2b9135e2cc459588db6a40bb878e5e16dd89651e3c3eb1cfea",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task087.onnx"
+  },
+  {
+   "task": "task081",
+   "ready": true,
+   "points": 17.256,
+   "bytes": null,
+   "params": null,
+   "sha256": "118dc8373587509f07d12aec64778af91edff7253f80e273a30e5863c7b8c91b",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task081.onnx"
+  },
+  {
+   "task": "task018",
+   "ready": false,
+   "points": 0.0,
+   "bytes": null,
+   "params": null,
+   "sha256": "fcab9ead5fa47a4411d35b61bfa722ceb6c5e22ed413895e0903e077698a9ded",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task018.onnx"
+  },
+  {
+   "task": "task077",
+   "ready": true,
+   "points": 13.03,
+   "bytes": null,
+   "params": null,
+   "sha256": "17691436bc7996bb9aa5b6b77bf34cfcc7674700abc8e4d69f7ec65ff4351709",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task077.onnx"
+  },
+  {
+   "task": "task085",
+   "ready": true,
+   "points": 13.363,
+   "bytes": null,
+   "params": null,
+   "sha256": "0cf2b40dcd4fe9bb85de2e251fdca74496734e7c804425012cb1c1110d27505c",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task085.onnx"
+  },
+  {
+   "task": "task062",
+   "ready": true,
+   "points": 14.671,
+   "bytes": null,
+   "params": null,
+   "sha256": "0a2e640c0671d137a38ff13794cbaaf44ed872742a534c52771f99d309757432",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task062.onnx"
+  },
+  {
+   "task": "task086",
+   "ready": true,
+   "points": 14.84,
+   "bytes": null,
+   "params": null,
+   "sha256": "a786a589e429892c1114751b2e5d6b83669038bb955a0fd41d08d037fc8dc020",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task086.onnx"
+  },
+  {
+   "task": "task080",
+   "ready": true,
+   "points": 13.048,
+   "bytes": null,
+   "params": null,
+   "sha256": "da97f63843845f687d92854fc2b1b0498fc0cb2543e1e41022a77c4b3933deab",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task080.onnx"
+  },
+  {
+   "task": "task095",
+   "ready": true,
+   "points": 18.187,
+   "bytes": null,
+   "params": null,
+   "sha256": "eca4d38cd8606a930a722084789b856626fff5d4938c02546296c7f3cca109cf",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task095.onnx"
+  },
+  {
+   "task": "task091",
+   "ready": true,
+   "points": 14.151,
+   "bytes": null,
+   "params": null,
+   "sha256": "6c44a2a529dcac845b02796c463d82b35c8cc360fc72fc096564f3beeef63a30",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task091.onnx"
+  },
+  {
+   "task": "task088",
+   "ready": true,
+   "points": 13.468,
+   "bytes": null,
+   "params": null,
+   "sha256": "3d5e5840dfdc9ebffa4cf4bf83a4bfe2d30edac84b88ab71ed3a6686d3987ec3",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task088.onnx"
+  },
+  {
+   "task": "task097",
+   "ready": true,
+   "points": 13.853,
+   "bytes": null,
+   "params": null,
+   "sha256": "f0d0ab9a04954377879cace70b48610fc891b8e6d5d68ee0d372dd78fe3f2268",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task097.onnx"
+  },
+  {
+   "task": "task098",
+   "ready": true,
+   "points": 18.187,
+   "bytes": null,
+   "params": null,
+   "sha256": "8fff41bf99869a80261fa1ec8461431ffa90e7a616d10c1582642af88b241cde",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task098.onnx"
+  },
+  {
+   "task": "task093",
+   "ready": true,
+   "points": 15.329,
+   "bytes": null,
+   "params": null,
+   "sha256": "d53709d4227a80fe5b678dc89ce6f57c3aea63e823e2046c48c474183ec11503",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task093.onnx"
+  },
+  {
+   "task": "task099",
+   "ready": true,
+   "points": 16.501,
+   "bytes": null,
+   "params": null,
+   "sha256": "1e320d88cf0eac19c3c20b9c005a4be28ac50d4bf0a39015404f9deb22a0c31e",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task099.onnx"
+  },
+  {
+   "task": "task092",
+   "ready": true,
+   "points": 13.071,
+   "bytes": null,
+   "params": null,
+   "sha256": "31e6aa2df4e75b2376481ad479c8d107cebe1f6701ab925ab0272b482eb2f1a1",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task092.onnx"
+  },
+  {
+   "task": "task094",
+   "ready": true,
+   "points": 14.352,
+   "bytes": null,
+   "params": null,
+   "sha256": "28a21120b9528a2dcb7bca0292efd6f74673ee738c73dd8067742a81e6b16d7b",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task094.onnx"
+  },
+  {
+   "task": "task104",
+   "ready": true,
+   "points": 16.767,
+   "bytes": null,
+   "params": null,
+   "sha256": "9fe39c7d53c73444d4dcdde3b3e423ec71943f7133c2fb675ca3e111a67794bc",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task104.onnx"
+  },
+  {
+   "task": "task090",
+   "ready": true,
+   "points": 13.944,
+   "bytes": null,
+   "params": null,
+   "sha256": "8032717a5846db3d60ae06a4fa0ff8af92327fd6b6102d39eff9ae246e44816a",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task090.onnx"
+  },
+  {
+   "task": "task106",
+   "ready": true,
+   "points": 17.94,
+   "bytes": null,
+   "params": null,
+   "sha256": "9b54191da37371effdb80aaca05a4cddbabc19d25cbc1ebceae1d85a897c6698",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task106.onnx"
+  },
+  {
+   "task": "task103",
+   "ready": true,
+   "points": 19.455,
+   "bytes": null,
+   "params": null,
+   "sha256": "2a39294d09b90ef9b18c45cfe1e70b48b0689d5fb9f0a00d564162a10a0e7289",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task103.onnx"
+  },
+  {
+   "task": "task100",
+   "ready": true,
+   "points": 16.136,
+   "bytes": null,
+   "params": null,
+   "sha256": "c815d3a42090024e57143982ac6320779019d7524c630a2c9f175975e6254567",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task100.onnx"
+  },
+  {
+   "task": "task108",
+   "ready": true,
+   "points": 17.504,
+   "bytes": null,
+   "params": null,
+   "sha256": "825c078fdd5cf248ddfcf1d91c57c125e6e2213304022e67810f2d3aaee2922c",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task108.onnx"
+  },
+  {
+   "task": "task107",
+   "ready": true,
+   "points": 13.8,
+   "bytes": null,
+   "params": null,
+   "sha256": "486d43b947a10c096cd5abb2121faf5664c1d92f9d0196957cff677676caa5cf",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task107.onnx"
+  },
+  {
+   "task": "task111",
+   "ready": true,
+   "points": 18.319,
+   "bytes": null,
+   "params": null,
+   "sha256": "c01911e7f5493ba19bcc496b439eb2106bd44f79305daefd94e102a96691a8ca",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task111.onnx"
+  },
+  {
+   "task": "task105",
+   "ready": true,
+   "points": 14.495,
+   "bytes": null,
+   "params": null,
+   "sha256": "59f8fd1ff45ba79e9a46fbc1a64499901637d50581b1bedd691122bf65782406",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task105.onnx"
+  },
+  {
+   "task": "task109",
+   "ready": true,
+   "points": 13.539,
+   "bytes": null,
+   "params": null,
+   "sha256": "b743a1e192a39c2d75aaf83cb75d56b809c2988910d9340cb23a699063ea121c",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task109.onnx"
+  },
+  {
+   "task": "task112",
+   "ready": true,
+   "points": 14.005,
+   "bytes": null,
+   "params": null,
+   "sha256": "56e657e71c47611607ce5664aae5fb20583375121df117d9aa302b41a2634031",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task112.onnx"
+  },
+  {
+   "task": "task113",
+   "ready": true,
+   "points": 21.599,
+   "bytes": null,
+   "params": null,
+   "sha256": "356a5f1e2200cf2560f6c836ce7d21eca6b6cad9e68015c2ae31639613ef9b09",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task113.onnx"
+  },
+  {
+   "task": "task116",
+   "ready": true,
+   "points": 21.599,
+   "bytes": null,
+   "params": null,
+   "sha256": "3f87aab73b8c538752ffb070a34dd07ef95ccba2d299bd7526da67fcf956e1e5",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task116.onnx"
+  },
+  {
+   "task": "task115",
+   "ready": true,
+   "points": 16.676,
+   "bytes": null,
+   "params": null,
+   "sha256": "fef642f35c49927e9440865ae0761f3f9ecb7d9bb8a03f2a5109e91a82deb620",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task115.onnx"
+  },
+  {
+   "task": "task089",
+   "ready": true,
+   "points": 14.186,
+   "bytes": null,
+   "params": null,
+   "sha256": "6b502b05846871ec53995c1f5c9da455a389ed9a1336c0f4ae4255e129e1d093",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task089.onnx"
+  },
+  {
+   "task": "task114",
+   "ready": true,
+   "points": 17.866,
+   "bytes": null,
+   "params": null,
+   "sha256": "7d1973d605273db25b979fc20a63bacd338098bf8f239bc90618b4b89dd1baa4",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task114.onnx"
+  },
+  {
+   "task": "task076",
+   "ready": true,
+   "points": 11.008,
+   "bytes": null,
+   "params": null,
+   "sha256": "a638cb261ccd8b6f9e1c092d6be4f2a0499c896d048eef22ac590b760e082481",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task076.onnx"
+  },
+  {
+   "task": "task117",
+   "ready": true,
+   "points": 15.17,
+   "bytes": null,
+   "params": null,
+   "sha256": "c32189337a4b14d3d52244ff7914e7dce9ebcfaf9f942408fd29acc95156c013",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task117.onnx"
+  },
+  {
+   "task": "task102",
+   "ready": true,
+   "points": 14.299,
+   "bytes": null,
+   "params": null,
+   "sha256": "555379670415499a3469509eba3ce99d6489d0542cfbb844f67eb81334252529",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task102.onnx"
+  },
+  {
+   "task": "task122",
+   "ready": true,
+   "points": 17.172,
+   "bytes": null,
+   "params": null,
+   "sha256": "d932a3ac54fb54cc09d9cdbaab21ba4e9165ed9a6a8e01b9e0c49fb972269b75",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task122.onnx"
+  },
+  {
+   "task": "task121",
+   "ready": true,
+   "points": 16.216,
+   "bytes": null,
+   "params": null,
+   "sha256": "03880dc2a72d6781722a53ffad4b506867ebd9f9c0a7faae3760807eabe67856",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task121.onnx"
+  },
+  {
+   "task": "task123",
+   "ready": true,
+   "points": 16.68,
+   "bytes": null,
+   "params": null,
+   "sha256": "984533b7a16d9c9d396feb3804602dd6044b4573d05d14964f3f23d179764af2",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task123.onnx"
+  },
+  {
+   "task": "task069",
+   "ready": true,
+   "points": 13.648,
+   "bytes": null,
+   "params": null,
+   "sha256": "fb91d90981c4b2168ade67173f5ea1376db182db9350dbdf930d3cb5026325da",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task069.onnx"
+  },
+  {
+   "task": "task120",
+   "ready": true,
+   "points": 18.187,
+   "bytes": null,
+   "params": null,
+   "sha256": "13dafeb021b56dac928f38d32b4a0b841fcf481296ab752c9ac203fa425e1acc",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task120.onnx"
+  },
+  {
+   "task": "task110",
+   "ready": true,
+   "points": 13.329,
+   "bytes": null,
+   "params": null,
+   "sha256": "3c6a969967d00d5933bfc76224740332ab35c72aaf1647b7a2ff532e3c71cf91",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task110.onnx"
+  },
+  {
+   "task": "task125",
+   "ready": true,
+   "points": 15.496,
+   "bytes": null,
+   "params": null,
+   "sha256": "20f2c3e90cfb5afe5ac7e795a1cf906ce67453cb55deb5cbcc51275aea5fc7e8",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task125.onnx"
+  },
+  {
+   "task": "task129",
+   "ready": true,
+   "points": 18.307,
+   "bytes": null,
+   "params": null,
+   "sha256": "728f63fb36979fd5cd4db20aa2b8b128603016a86250a5df2cdbca61d2d2662c",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task129.onnx"
+  },
+  {
+   "task": "task130",
+   "ready": true,
+   "points": 15.323,
+   "bytes": null,
+   "params": null,
+   "sha256": "129e8e94901df68286dc85134b4be5ba1daa1437df26f1eb430b9272e7f77471",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task130.onnx"
+  },
+  {
+   "task": "task126",
+   "ready": true,
+   "points": 13.637,
+   "bytes": null,
+   "params": null,
+   "sha256": "b86dafbc68af0e5b698f0241dd534874e44ffd9dfca8bac7b89280a3534f3824",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task126.onnx"
+  },
+  {
+   "task": "task124",
+   "ready": true,
+   "points": 15.635,
+   "bytes": null,
+   "params": null,
+   "sha256": "da414abc8e11d3e2038a3d6606b2781ef28d37a402428e1d219ee350a98f9bf4",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task124.onnx"
+  },
+  {
+   "task": "task128",
+   "ready": true,
+   "points": 13.538,
+   "bytes": null,
+   "params": null,
+   "sha256": "5224331b88562c8c5864a82ed28442ed1a8c17321e5852eb0c193b0a8eabe7e5",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task128.onnx"
+  },
+  {
+   "task": "task127",
+   "ready": true,
+   "points": 18.198,
+   "bytes": null,
+   "params": null,
+   "sha256": "81f551a5b779e861ce371fdc4697595db753242954a60c50a3ac8e3108937d97",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task127.onnx"
+  },
+  {
+   "task": "task132",
+   "ready": true,
+   "points": 14.709,
+   "bytes": null,
+   "params": null,
+   "sha256": "02558813adda79590927fa1e3d0be80af0e44475a6abbd69beb0d87da57bfdbb",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task132.onnx"
+  },
+  {
+   "task": "task119",
+   "ready": true,
+   "points": 14.224,
+   "bytes": null,
+   "params": null,
+   "sha256": "afa30c6fc964d8a93392c6b8b9865d1ca2f73c682e977c50e35e0e3d800e9ab1",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task119.onnx"
+  },
+  {
+   "task": "task136",
+   "ready": true,
+   "points": 15.572,
+   "bytes": null,
+   "params": null,
+   "sha256": "6719c0f34b735f8968b63c25277b18aa2eefbe6fd1267c5d7e90914180c5437b",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task136.onnx"
+  },
+  {
+   "task": "task135",
+   "ready": true,
+   "points": 19.097,
+   "bytes": null,
+   "params": null,
+   "sha256": "a5ba0a9dc839a73fc24585aab0bb1e97cccd5531fb28b98b77e91a17e7701ecc",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task135.onnx"
+  },
+  {
+   "task": "task140",
+   "ready": true,
+   "points": 19.07,
+   "bytes": null,
+   "params": null,
+   "sha256": "4e9d18bfbd60be2b9135e2cc459588db6a40bb878e5e16dd89651e3c3eb1cfea",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task140.onnx"
+  },
+  {
+   "task": "task134",
+   "ready": true,
+   "points": 15.576,
+   "bytes": null,
+   "params": null,
+   "sha256": "b8c97031d4dd9d04cdd7ec5e6e43525899b583f45e8266ddaa88aa4340ea596a",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task134.onnx"
+  },
+  {
+   "task": "task142",
+   "ready": true,
+   "points": 17.504,
+   "bytes": null,
+   "params": null,
+   "sha256": "b525fbe662a950ccba343052e36da4678bbd57b9039d4f6c5a15f3c0a16fd54a",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task142.onnx"
+  },
+  {
+   "task": "task137",
+   "ready": true,
+   "points": 13.809,
+   "bytes": null,
+   "params": null,
+   "sha256": "ef031cef24d9c3cbefd960f1b4194426dfaca31af36b0b1f7efef5d288784706",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task137.onnx"
+  },
+  {
+   "task": "task131",
+   "ready": true,
+   "points": 14.296,
+   "bytes": null,
+   "params": null,
+   "sha256": "aef2df6731cdd0168ed41a7637a2b939bb42ff5efe498e6732b1bc4fa4aa2d64",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task131.onnx"
+  },
+  {
+   "task": "task118",
+   "ready": true,
+   "points": 11.007,
+   "bytes": null,
+   "params": null,
+   "sha256": "5f328d2ec86defbfb2c13a18295bdee794ba98cb6ff1c7b17aa66de2cf5a7d54",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task118.onnx"
+  },
+  {
+   "task": "task139",
+   "ready": true,
+   "points": 16.803,
+   "bytes": null,
+   "params": null,
+   "sha256": "e3e6133e136fc342560390d22bb08861dc290ef6c9f64e8854070984d4a5946f",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task139.onnx"
+  },
+  {
+   "task": "task144",
+   "ready": true,
+   "points": 18.333,
+   "bytes": null,
+   "params": null,
+   "sha256": "9ccdbc162d23747b26bd043d8488ba2aebe080e2a693304f16ff65bd3b7d6a0e",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task144.onnx"
+  },
+  {
+   "task": "task147",
+   "ready": true,
+   "points": 18.187,
+   "bytes": null,
+   "params": null,
+   "sha256": "e65dc2d49c2dd32775575699e73cb1ad0aca1fcca0a87fcec26127b52f631670",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task147.onnx"
+  },
+  {
+   "task": "task141",
+   "ready": true,
+   "points": 15.331,
+   "bytes": null,
+   "params": null,
+   "sha256": "419409ee1ef9989b22aaba718cfe107b9d915bb476e1f4edee982507a294cede",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task141.onnx"
+  },
+  {
+   "task": "task146",
+   "ready": true,
+   "points": 17.279,
+   "bytes": null,
+   "params": null,
+   "sha256": "773d61ca46def6d1e9fdb7916c51a9f5e99a5d39640f394231b2b05a400c4a31",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task146.onnx"
+  },
+  {
+   "task": "task151",
+   "ready": true,
+   "points": 18.187,
+   "bytes": null,
+   "params": null,
+   "sha256": "265a8eb2b997ae3dae68af150413ae0c0301bc004251e92a8beb0dc79bd2e36b",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task151.onnx"
+  },
+  {
+   "task": "task143",
+   "ready": true,
+   "points": 15.125,
+   "bytes": null,
+   "params": null,
+   "sha256": "545186fc1e5605ade4d666e87702a09678e9c34c1449945e1a0fdef567cea868",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task143.onnx"
+  },
+  {
+   "task": "task152",
+   "ready": true,
+   "points": 17.504,
+   "bytes": null,
+   "params": null,
+   "sha256": "b525fbe662a950ccba343052e36da4678bbd57b9039d4f6c5a15f3c0a16fd54a",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task152.onnx"
+  },
+  {
+   "task": "task149",
+   "ready": true,
+   "points": 16.455,
+   "bytes": null,
+   "params": null,
+   "sha256": "3137da6fb944a3bb6e03884efc695345a045254de6a366510505b2221d175600",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task149.onnx"
+  },
+  {
+   "task": "task150",
+   "ready": true,
+   "points": 18.074,
+   "bytes": null,
+   "params": null,
+   "sha256": "76f8eb9da3807edf4124e46806f9b031641e226c6487d3b112d4d85922554a90",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task150.onnx"
+  },
+  {
+   "task": "task155",
+   "ready": true,
+   "points": 18.074,
+   "bytes": null,
+   "params": null,
+   "sha256": "919878d799b8ff18c13fd3be962d0bc547560b109f2cb30f24b36a62988dbd7c",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task155.onnx"
+  },
+  {
+   "task": "task154",
+   "ready": true,
+   "points": 14.033,
+   "bytes": null,
+   "params": null,
+   "sha256": "d2d3797d93f1e482fe57a04807f0fa583ae404d99fcdd43ce56c940784f9347d",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task154.onnx"
+  },
+  {
+   "task": "task096",
+   "ready": true,
+   "points": 12.187,
+   "bytes": null,
+   "params": null,
+   "sha256": "82f94876f3238891fc492b3e9a5008f6f8e86e0dde71e9b9fe63d9654bc8a6cb",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task096.onnx"
+  },
+  {
+   "task": "task153",
+   "ready": true,
+   "points": 15.056,
+   "bytes": null,
+   "params": null,
+   "sha256": "38fbc20149dd80b1eb16214f6f1117d5d462101850784faac14737ef78eb10b1",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task153.onnx"
+  },
+  {
+   "task": "task138",
+   "ready": true,
+   "points": 12.804,
+   "bytes": null,
+   "params": null,
+   "sha256": "955dbb96bc55cace778678f56c5bd88133614ec7110a51346c1a0dc4a1db6f1b",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task138.onnx"
+  },
+  {
+   "task": "task156",
+   "ready": true,
+   "points": 14.02,
+   "bytes": null,
+   "params": null,
+   "sha256": "8c08fac91ad49f27e4378ae5bcb222ed3bfcb051a9a2a1f9f7e6cec14d51c15a",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task156.onnx"
+  },
+  {
+   "task": "task148",
+   "ready": true,
+   "points": 15.0,
+   "bytes": null,
+   "params": null,
+   "sha256": "977766efe15f7fabde643b68e24ea47cc5d9069210a295f8ba0c7ab3a2f5b9de",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task148.onnx"
+  },
+  {
+   "task": "task160",
+   "ready": true,
+   "points": 15.677,
+   "bytes": null,
+   "params": null,
+   "sha256": "5395ca933d4016406d6256408f8400e48279e5bc870b46c5a08c6d4cd29837f9",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task160.onnx"
+  },
+  {
+   "task": "task164",
+   "ready": true,
+   "points": 21.599,
+   "bytes": null,
+   "params": null,
+   "sha256": "250771b94d3db4658d4ac04e3bd9a0740f2af0f3aba0bb9b5df4d6181bb470d4",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task164.onnx"
+  },
+  {
+   "task": "task159",
+   "ready": true,
+   "points": 13.598,
+   "bytes": null,
+   "params": null,
+   "sha256": "93239bd39db8bb07ffc4f354ca7b43656c78ca03e18c9ca72a30ccb093e2eb5a",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task159.onnx"
+  },
+  {
+   "task": "task162",
+   "ready": true,
+   "points": 13.945,
+   "bytes": null,
+   "params": null,
+   "sha256": "29467827e023a09da29f2c6bcf10d77d7bff035e613d5615f27d623e6f2f3224",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task162.onnx"
+  },
+  {
+   "task": "task166",
+   "ready": true,
+   "points": 14.882,
+   "bytes": null,
+   "params": null,
+   "sha256": "635ac35cdaf739d7549ee8cd70b4042ae832ff18d2798a37fb1e315bb0990a02",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task166.onnx"
+  },
+  {
+   "task": "task167",
+   "ready": true,
+   "points": 18.471,
+   "bytes": null,
+   "params": null,
+   "sha256": "71960feaa6f01d141e2e847cf629191d99e40b6ceb0199f2c3f955b43a84d6d9",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task167.onnx"
+  },
+  {
+   "task": "task161",
+   "ready": true,
+   "points": 13.178,
+   "bytes": null,
+   "params": null,
+   "sha256": "bc60184c9e320b956f991805f7c0af6ce62b2e358d772803650d8f5ff57e986d",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task161.onnx"
+  },
+  {
+   "task": "task165",
+   "ready": true,
+   "points": 13.88,
+   "bytes": null,
+   "params": null,
+   "sha256": "84191da6721ff334125fd7fa8616eb9122ba801b8e467d4f0bac42cdd367fab2",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task165.onnx"
+  },
+  {
+   "task": "task171",
+   "ready": true,
+   "points": 18.187,
+   "bytes": null,
+   "params": null,
+   "sha256": "c0dccfce69e87e53b68a617cc0ce6da5c9659180ce2acc2a46007c9915c524cb",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task171.onnx"
+  },
+  {
+   "task": "task172",
+   "ready": true,
+   "points": 21.599,
+   "bytes": null,
+   "params": null,
+   "sha256": "aa923630b6479cf1a1f5e7b7bfe2e4947e1c8ba8edba4f31d250b0b2f0c98dde",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task172.onnx"
+  },
+  {
+   "task": "task163",
+   "ready": true,
+   "points": 14.911,
+   "bytes": null,
+   "params": null,
+   "sha256": "261af5c25f75b8f68293fce15ca95d8473efdd1a3ee6edf45eb5b1981fe6d584",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task163.onnx"
+  },
+  {
+   "task": "task168",
+   "ready": true,
+   "points": 15.072,
+   "bytes": null,
+   "params": null,
+   "sha256": "2205bf940f52b8c30a0c4ed0a64d1a137e71404a8af99f96a01447ae4386c250",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task168.onnx"
+  },
+  {
+   "task": "task175",
+   "ready": true,
+   "points": 13.62,
+   "bytes": null,
+   "params": null,
+   "sha256": "f64edba1034b5114f957565b1dc72841ea8b5ec0962c5181886797026716c435",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task175.onnx"
+  },
+  {
+   "task": "task176",
+   "ready": true,
+   "points": 16.023,
+   "bytes": null,
+   "params": null,
+   "sha256": "e323248617622d6f3ec11b2d387952fea83ecc2fed3bdb998ca12143a2168c6b",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task176.onnx"
+  },
+  {
+   "task": "task173",
+   "ready": true,
+   "points": 12.891,
+   "bytes": null,
+   "params": null,
+   "sha256": "a0299600440d0a79709022f1953af8a56eda11e1855cebe4f865b5a0de0e5a2d",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task173.onnx"
+  },
+  {
+   "task": "task101",
+   "ready": true,
+   "points": 11.158,
+   "bytes": null,
+   "params": null,
+   "sha256": "2f86f7f3d26580e8b2e7c17dcb6f116d1426cedc46a8e42862c31b700b08bc84",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task101.onnx"
+  },
+  {
+   "task": "task179",
+   "ready": true,
+   "points": 25.0,
+   "bytes": null,
+   "params": null,
+   "sha256": "bde695a21a93b9e2084a9b7e8a8bee5f2cdc694baa71a12d1c34ae921a89cb87",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task179.onnx"
+  },
+  {
+   "task": "task177",
+   "ready": true,
+   "points": 13.779,
+   "bytes": null,
+   "params": null,
+   "sha256": "cdcbf832519bece9b4bc7966b23d1dba298385f8a602e49475b595b22b33b001",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task177.onnx"
+  },
+  {
+   "task": "task180",
+   "ready": true,
+   "points": 16.084,
+   "bytes": null,
+   "params": null,
+   "sha256": "8f6b55aa41b48daa3c5bde2cf091752666c75e5b3b9acd0b61ce5c378a8988a7",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task180.onnx"
+  },
+  {
+   "task": "task181",
+   "ready": true,
+   "points": 17.915,
+   "bytes": null,
+   "params": null,
+   "sha256": "d5e423513a6d975dcf970b7fa00306491312801ed8b9c3232bddaa05e5217ae9",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task181.onnx"
+  },
+  {
+   "task": "task044",
+   "ready": true,
+   "points": 10.531,
+   "bytes": null,
+   "params": null,
+   "sha256": "d215e071509bbb0e89e16c7db0a9fa3b02b9a517685f71d35e1908d5c347fd05",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task044.onnx"
+  },
+  {
+   "task": "task183",
+   "ready": true,
+   "points": 14.878,
+   "bytes": null,
+   "params": null,
+   "sha256": "304fd9d6c78ea14e6b21f5a8929aec65dc8582e0ed5300bcfe6c020cd031d4c2",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task183.onnx"
+  },
+  {
+   "task": "task169",
+   "ready": true,
+   "points": 14.557,
+   "bytes": null,
+   "params": null,
+   "sha256": "d34446738a954a6fc1b16cb7d16b84bb05cbe2d02a20979c41868a592c719042",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task169.onnx"
+  },
+  {
+   "task": "task133",
+   "ready": true,
+   "points": 8.973,
+   "bytes": null,
+   "params": null,
+   "sha256": "6ccb57c3810dc0c3b6f064c5e119e90c2385d4820e00ac2839ca00b113ab2b02",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task133.onnx"
+  },
+  {
+   "task": "task184",
+   "ready": true,
+   "points": 14.302,
+   "bytes": null,
+   "params": null,
+   "sha256": "13b15a1ef518df2e500f0ae82e229000633c9b202b8a3823a64b53b2f3f0f6af",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task184.onnx"
+  },
+  {
+   "task": "task186",
+   "ready": true,
+   "points": 18.548,
+   "bytes": null,
+   "params": null,
+   "sha256": "4319d403e35394db90c4c67a58bad9ece89975a89250f5093212455c57f88fef",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task186.onnx"
+  },
+  {
+   "task": "task178",
+   "ready": true,
+   "points": 14.714,
+   "bytes": null,
+   "params": null,
+   "sha256": "4da8ed1ed0676bf74ff1db264eee36e5a51569d8bfd9726b145975fb852cb357",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task178.onnx"
+  },
+  {
+   "task": "task188",
+   "ready": true,
+   "points": 15.725,
+   "bytes": null,
+   "params": null,
+   "sha256": "b5aedf9a8411d84cd20d8bded8746b6a16044a019d7d5352e049a9c98ef96837",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task188.onnx"
+  },
+  {
+   "task": "task158",
+   "ready": true,
+   "points": 10.019,
+   "bytes": null,
+   "params": null,
+   "sha256": "b92c95057fb98f92c7cc90048da937cff4fb30b454c831d01ba28d99fd137939",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task158.onnx"
+  },
+  {
+   "task": "task190",
+   "ready": true,
+   "points": 15.676,
+   "bytes": null,
+   "params": null,
+   "sha256": "0a31ba38881a6fc4af83224d1aa59f0a876aea5808f55f95707b8c5975ac4c06",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task190.onnx"
+  },
+  {
+   "task": "task189",
+   "ready": true,
+   "points": 14.886,
+   "bytes": null,
+   "params": null,
+   "sha256": "ad40fd32da208b67a234bbace455a8c50984a7075ef19f2a27f1a571ce90a1e6",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task189.onnx"
+  },
+  {
+   "task": "task145",
+   "ready": true,
+   "points": 13.847,
+   "bytes": null,
+   "params": null,
+   "sha256": "56b66728666329e2dd3c2c70b5c11b0cecc7b7dbeadcc916e3420976161016e6",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task145.onnx"
+  },
+  {
+   "task": "task192",
+   "ready": true,
+   "points": 14.093,
+   "bytes": null,
+   "params": null,
+   "sha256": "b33d9d2c7a44e0ccefa26f20c6eb211ff45cdba6b7ca7a38c8fd674ddc5062b7",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task192.onnx"
+  },
+  {
+   "task": "task187",
+   "ready": true,
+   "points": 13.435,
+   "bytes": null,
+   "params": null,
+   "sha256": "a12ff26344d3636a415f318272f96b57a7e6c98ebd9e5bd92bc9465f8ff342d7",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task187.onnx"
+  },
+  {
+   "task": "task194",
+   "ready": true,
+   "points": 17.504,
+   "bytes": null,
+   "params": null,
+   "sha256": "5a188032e9933c63bea9816c0846001d769eb356d00653af9e5e766ff62bb53b",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task194.onnx"
+  },
+  {
+   "task": "task193",
+   "ready": true,
+   "points": 14.11,
+   "bytes": null,
+   "params": null,
+   "sha256": "1184ed012012ee9bc87677fea86382acea9bc6b8979f087a5b3500492d6138dd",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task193.onnx"
+  },
+  {
+   "task": "task196",
+   "ready": true,
+   "points": 14.619,
+   "bytes": null,
+   "params": null,
+   "sha256": "89719c41cdbc1176e45d78565003ab2f9feb673cd43fcf7fef4c3ff8a4a302e1",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task196.onnx"
+  },
+  {
+   "task": "task200",
+   "ready": true,
+   "points": 15.742,
+   "bytes": null,
+   "params": null,
+   "sha256": "4589e9e345d5611e06a3f259a9385c606cd59f02b27c7f64bf63e16a54ccd803",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task200.onnx"
+  },
+  {
+   "task": "task195",
+   "ready": true,
+   "points": 15.437,
+   "bytes": null,
+   "params": null,
+   "sha256": "ba4b722b42ea9bdbffbe4fcf38c90d387045eee91e245e77f502c246c158e0dd",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task195.onnx"
+  },
+  {
+   "task": "task197",
+   "ready": true,
+   "points": 14.167,
+   "bytes": null,
+   "params": null,
+   "sha256": "6f798e4fbe242d845f4168a71ad84c782a558bb70838d9f5b70f1596902b00f8",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task197.onnx"
+  },
+  {
+   "task": "task199",
+   "ready": true,
+   "points": 15.31,
+   "bytes": null,
+   "params": null,
+   "sha256": "7f8ae82add1995ce631f2596ebf18e50b694cb8ec8d56a776cb6b1f393d891fa",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task199.onnx"
+  },
+  {
+   "task": "task202",
+   "ready": true,
+   "points": 13.258,
+   "bytes": null,
+   "params": null,
+   "sha256": "548ea01a96ba723d596f57386963dc208eac1c74ee9c8ad978597704d8065f5d",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task202.onnx"
+  },
+  {
+   "task": "task203",
+   "ready": true,
+   "points": 13.602,
+   "bytes": null,
+   "params": null,
+   "sha256": "934167d7108d311321e5ae31de256c5ed18dd19290cc3cea7456337d8f1a1d04",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task203.onnx"
+  },
+  {
+   "task": "task198",
+   "ready": true,
+   "points": 13.45,
+   "bytes": null,
+   "params": null,
+   "sha256": "a1cd099e3d965fb4506eded8d4bde77ea202357df70e9212b36911ca002c8cb1",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task198.onnx"
+  },
+  {
+   "task": "task207",
+   "ready": true,
+   "points": 17.464,
+   "bytes": null,
+   "params": null,
+   "sha256": "eb31b69d46ecc34c73b17ad80493c10002468aa9196475e6c9e12fcf46ff8235",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task207.onnx"
+  },
+  {
+   "task": "task201",
+   "ready": true,
+   "points": 13.554,
+   "bytes": null,
+   "params": null,
+   "sha256": "45f10ca88d12df7175c80895aca63ccdf595c12c3c580a4581c0a70fa6eb8d06",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task201.onnx"
+  },
+  {
+   "task": "task185",
+   "ready": true,
+   "points": 14.004,
+   "bytes": null,
+   "params": null,
+   "sha256": "1bf2a27a8029d542e74bc972065625efbb203ffb2f6fb5d0bb27885270cfd988",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task185.onnx"
+  },
+  {
+   "task": "task210",
+   "ready": true,
+   "points": 21.599,
+   "bytes": null,
+   "params": null,
+   "sha256": "aa923630b6479cf1a1f5e7b7bfe2e4947e1c8ba8edba4f31d250b0b2f0c98dde",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task210.onnx"
+  },
+  {
+   "task": "task211",
+   "ready": true,
+   "points": 17.504,
+   "bytes": null,
+   "params": null,
+   "sha256": "3c58a51ab06ee25bf3c54539284f6def4bc6e10c364246d45f5533df0905fd17",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task211.onnx"
+  },
+  {
+   "task": "task157",
+   "ready": true,
+   "points": 9.817,
+   "bytes": null,
+   "params": null,
+   "sha256": "3bc1c470fcf83af4b923ce94380c5256685383a573b947ef6ad357a8d5129ba3",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task157.onnx"
+  },
+  {
+   "task": "task212",
+   "ready": true,
+   "points": 15.793,
+   "bytes": null,
+   "params": null,
+   "sha256": "b1f271155596ce1ff46cb89a2a9c05d5033b8d36d863d7694a2bfa19c3bb363c",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task212.onnx"
+  },
+  {
+   "task": "task191",
+   "ready": false,
+   "points": 0.0,
+   "bytes": null,
+   "params": null,
+   "sha256": "3e3ea66f05444e9801586398edeb7cb3b3ac417fddb428894e250f47c553c7f7",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task191.onnx"
+  },
+  {
+   "task": "task214",
+   "ready": true,
+   "points": 17.504,
+   "bytes": null,
+   "params": null,
+   "sha256": "476030b9c3c916862c896b22ae9f1ee46d6bedd703bd39deeb4fe1a9a7cf6c54",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task214.onnx"
+  },
+  {
+   "task": "task204",
+   "ready": true,
+   "points": 13.1,
+   "bytes": null,
+   "params": null,
+   "sha256": "9f38dc5ba1a07e4623a1cb70b99d3f1d5596e7ee376217808c15456a76669711",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task204.onnx"
+  },
+  {
+   "task": "task215",
+   "ready": true,
+   "points": 14.321,
+   "bytes": null,
+   "params": null,
+   "sha256": "7944efd69db01622acc90aec13cbcd6480dfbc192943a608603e8af711bd84a2",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task215.onnx"
+  },
+  {
+   "task": "task217",
+   "ready": true,
+   "points": 13.748,
+   "bytes": null,
+   "params": null,
+   "sha256": "58f2ed503258d9c007e4e93b086250cd0e66b2871fbc7602a1fa7d6869dadd1e",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task217.onnx"
+  },
+  {
+   "task": "task066",
+   "ready": true,
+   "points": 12.398,
+   "bytes": null,
+   "params": null,
+   "sha256": "11bcb593542e42e9fc01bbffff7767f781f328247ada1d38b11e32ad826930fb",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task066.onnx"
+  },
+  {
+   "task": "task220",
+   "ready": true,
+   "points": 18.198,
+   "bytes": null,
+   "params": null,
+   "sha256": "924ca3ff6b3c2190ebdd92b73e0c33ac441a7e64b5924bb34b2faa596a40dd55",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task220.onnx"
+  },
+  {
+   "task": "task182",
+   "ready": true,
+   "points": 11.5,
+   "bytes": null,
+   "params": null,
+   "sha256": "60cb00d6415f1155bbc14c47d411fb7490e91a2ddb2b03ae8f6c9616cbf0363b",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task182.onnx"
+  },
+  {
+   "task": "task218",
+   "ready": true,
+   "points": 14.948,
+   "bytes": null,
+   "params": null,
+   "sha256": "14bb6c5e5fa3712e4f556142985fa03de40ba2accd475bb596ee538d3c10c60e",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task218.onnx"
+  },
+  {
+   "task": "task223",
+   "ready": true,
+   "points": 17.504,
+   "bytes": null,
+   "params": null,
+   "sha256": "51cd95a032c661ce28fa653ad0e727fb33cf6a709a5747e02a8ab323190ae968",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task223.onnx"
+  },
+  {
+   "task": "task206",
+   "ready": true,
+   "points": 13.895,
+   "bytes": null,
+   "params": null,
+   "sha256": "a9a48933d73ab0ca96c39812eaf2d7cc02be75d240f640166a9e5b4a88f1a1ea",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task206.onnx"
+  },
+  {
+   "task": "task208",
+   "ready": true,
+   "points": 13.567,
+   "bytes": null,
+   "params": null,
+   "sha256": "d0d8ece63c8bc8fcbf0d3aaffe8e19beeb3631e34ae885a0bc47d879dd094d1d",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task208.onnx"
+  },
+  {
+   "task": "task221",
+   "ready": true,
+   "points": 14.069,
+   "bytes": null,
+   "params": null,
+   "sha256": "fc40a9c864b222aaeab1d16ab69b17f524fd95dc657baa701b144f4288e5bcb5",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task221.onnx"
+  },
+  {
+   "task": "task227",
+   "ready": true,
+   "points": 17.018,
+   "bytes": null,
+   "params": null,
+   "sha256": "1c70db9caee31b32d02ae1630c5ef3991ddbf82fedb750d43b515fab048d6dec",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task227.onnx"
+  },
+  {
+   "task": "task224",
+   "ready": true,
+   "points": 14.275,
+   "bytes": null,
+   "params": null,
+   "sha256": "30eef2f542fdb5bbe18b230c6d294b136197beed63e963e56779281e678d2de4",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task224.onnx"
+  },
+  {
+   "task": "task222",
+   "ready": true,
+   "points": 14.031,
+   "bytes": null,
+   "params": null,
+   "sha256": "f82b35de1de8377a5dd17f94de623872a1021443ff972be6e0765c6d21c5595a",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task222.onnx"
+  },
+  {
+   "task": "task170",
+   "ready": true,
+   "points": 13.684,
+   "bytes": null,
+   "params": null,
+   "sha256": "9f919ea1d3fae6c43dfb70c30fe5ce04e453a44324f39755cb00850f150578bb",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task170.onnx"
+  },
+  {
+   "task": "task229",
+   "ready": true,
+   "points": 17.749,
+   "bytes": null,
+   "params": null,
+   "sha256": "acbf2dc745d4a717148c274f1e25cdd3fce8e718787f72530d661d60044ad805",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task229.onnx"
+  },
+  {
+   "task": "task230",
+   "ready": true,
+   "points": 18.198,
+   "bytes": null,
+   "params": null,
+   "sha256": "1444325f9990947c4e2b6bd66f2ce611d8efc4be97b595c4bf2ad63e9e166ad0",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task230.onnx"
+  },
+  {
+   "task": "task226",
+   "ready": true,
+   "points": 16.377,
+   "bytes": null,
+   "params": null,
+   "sha256": "5d115fec7e34ea6013b743620d1addba979258bf37902350608a4c3438346438",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task226.onnx"
+  },
+  {
+   "task": "task225",
+   "ready": true,
+   "points": 15.687,
+   "bytes": null,
+   "params": null,
+   "sha256": "29a76e5536c419ef3e3747f899f51614ee6699ad35ad5fb9b073ba5d5f52d257",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task225.onnx"
+  },
+  {
+   "task": "task232",
+   "ready": true,
+   "points": 14.708,
+   "bytes": null,
+   "params": null,
+   "sha256": "b416c4b9864f9c0ee3021d3e0d536638459295310003e1612ea60837e5e1fc02",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task232.onnx"
+  },
+  {
+   "task": "task236",
+   "ready": true,
+   "points": 18.418,
+   "bytes": null,
+   "params": null,
+   "sha256": "f31f10a231dee6623a8f92097bfe067ab563fa38c8846924b5f2a5ab17a6009d",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task236.onnx"
+  },
+  {
+   "task": "task235",
+   "ready": true,
+   "points": 17.801,
+   "bytes": null,
+   "params": null,
+   "sha256": "046373c88008b543046f990f0cde3f5c161d21e0835fb8ca9ada066a6fc504d1",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task235.onnx"
+  },
+  {
+   "task": "task237",
+   "ready": true,
+   "points": 15.43,
+   "bytes": null,
+   "params": null,
+   "sha256": "9d3baf9e04284ace2238abe88eae62477296ee34499efa7b0146d799717804fc",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task237.onnx"
+  },
+  {
+   "task": "task239",
+   "ready": true,
+   "points": 13.544,
+   "bytes": null,
+   "params": null,
+   "sha256": "1bb32963e7cb07aed708c1c9c2e30991506b48570898ddade7fec2515559fc95",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task239.onnx"
+  },
+  {
+   "task": "task231",
+   "ready": true,
+   "points": 14.446,
+   "bytes": null,
+   "params": null,
+   "sha256": "0c1e71372911c46c9c64b66ca2cb0069688208ae594f8bbcb5c63f8cce07a8f2",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task231.onnx"
+  },
+  {
+   "task": "task241",
+   "ready": true,
+   "points": 25.0,
+   "bytes": null,
+   "params": null,
+   "sha256": "bde695a21a93b9e2084a9b7e8a8bee5f2cdc694baa71a12d1c34ae921a89cb87",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task241.onnx"
+  },
+  {
+   "task": "task240",
+   "ready": true,
+   "points": 14.227,
+   "bytes": null,
+   "params": null,
+   "sha256": "517aa226f17f9719f23361c73ac446784b46dcab2e0b0b74e53a330d06a47ed3",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task240.onnx"
+  },
+  {
+   "task": "task228",
+   "ready": true,
+   "points": 14.87,
+   "bytes": null,
+   "params": null,
+   "sha256": "a8a923f21fecee5512861159a89a0ecf2a9f276985c45face926d3b953bdb4fe",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task228.onnx"
+  },
+  {
+   "task": "task242",
+   "ready": true,
+   "points": 14.896,
+   "bytes": null,
+   "params": null,
+   "sha256": "d7384fd7ba8ec4129d2616b9748fc5716d95db369aebf7d01b274b6d16dd0517",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task242.onnx"
+  },
+  {
+   "task": "task234",
+   "ready": true,
+   "points": 13.151,
+   "bytes": null,
+   "params": null,
+   "sha256": "2155e2ff4b0176f096a434be9231dfe06a6833e910cb0adfbc37af07279986b7",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task234.onnx"
+  },
+  {
+   "task": "task216",
+   "ready": true,
+   "points": 13.452,
+   "bytes": null,
+   "params": null,
+   "sha256": "47538c17f1e6ed157ba6d4effe2cbfc8d098af219d3896cbb6d92e0989333de8",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task216.onnx"
+  },
+  {
+   "task": "task245",
+   "ready": true,
+   "points": 13.601,
+   "bytes": null,
+   "params": null,
+   "sha256": "d04e7eade65728852787ce1f17fd87271f8553f9adab1f0859000bf44a750b54",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task245.onnx"
+  },
+  {
+   "task": "task244",
+   "ready": true,
+   "points": 14.607,
+   "bytes": null,
+   "params": null,
+   "sha256": "c6ea97ebaf15343165f200b1115282ed7736fc6b68fca0f3771d0f67cb4304e5",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task244.onnx"
+  },
+  {
+   "task": "task248",
+   "ready": true,
+   "points": 16.208,
+   "bytes": null,
+   "params": null,
+   "sha256": "c420e7e45fb63abafafae2e372ec7f15ac18e7e7749ae0026a3c7b489154b864",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task248.onnx"
+  },
+  {
+   "task": "task174",
+   "ready": true,
+   "points": 14.12,
+   "bytes": null,
+   "params": null,
+   "sha256": "a6f543067be128376f67b828b67c2b02a893fd3d4b5341054c090b91d89ec12d",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task174.onnx"
+  },
+  {
+   "task": "task247",
+   "ready": true,
+   "points": 15.0,
+   "bytes": null,
+   "params": null,
+   "sha256": "571f2a511fab78023d1a7f2d9abeb4db3fe79eee85255f84a00ea5cbcfc49400",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task247.onnx"
+  },
+  {
+   "task": "task246",
+   "ready": true,
+   "points": 15.498,
+   "bytes": null,
+   "params": null,
+   "sha256": "379b5a73e3dee6f56eedab3ab0bd0ed8414179c6e7ae1edd0a948060d6401309",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task246.onnx"
+  },
+  {
+   "task": "task249",
+   "ready": true,
+   "points": 15.895,
+   "bytes": null,
+   "params": null,
+   "sha256": "dde855774ef1a32a1960a4696e54abf617eebe91340c70355f303440b7758f6b",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task249.onnx"
+  },
+  {
+   "task": "task238",
+   "ready": true,
+   "points": 13.928,
+   "bytes": null,
+   "params": null,
+   "sha256": "3208dbc8cec5a6a6874fb45bdf74920c0447b6b2745454a2ca76efdd5aa83d45",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task238.onnx"
+  },
+  {
+   "task": "task213",
+   "ready": true,
+   "points": 14.132,
+   "bytes": null,
+   "params": null,
+   "sha256": "bea0e13014694681f4277e3fb242b16729cd609cd076e31b8eba6201f2c78841",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task213.onnx"
+  },
+  {
+   "task": "task253",
+   "ready": true,
+   "points": 14.215,
+   "bytes": null,
+   "params": null,
+   "sha256": "2538ea53b1aad1e6365055ee14f48dccb49ef632cce416086075b33d42366bad",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task253.onnx"
+  },
+  {
+   "task": "task257",
+   "ready": true,
+   "points": 18.018,
+   "bytes": null,
+   "params": null,
+   "sha256": "316eaaf4e1a47569341378a8a58e40559f938a7fe5ae659867c0f2117bf8e021",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task257.onnx"
+  },
+  {
+   "task": "task254",
+   "ready": true,
+   "points": 16.018,
+   "bytes": null,
+   "params": null,
+   "sha256": "cce96782d9b4b1065b63ebb4a84c1ba6253724c3cd2a387838d205cf71eaae5f",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task254.onnx"
+  },
+  {
+   "task": "task258",
+   "ready": true,
+   "points": 19.925,
+   "bytes": null,
+   "params": null,
+   "sha256": "9cf85f5ef87760197eaab665af872adc9c2a38a6b9c2133f506deb1e51402d09",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task258.onnx"
+  },
+  {
+   "task": "task251",
+   "ready": true,
+   "points": 13.472,
+   "bytes": null,
+   "params": null,
+   "sha256": "054a1310978ea762a181de2ac68b1c10e5d9e706e70a593b68af3d1f26ff74b3",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task251.onnx"
+  },
+  {
+   "task": "task243",
+   "ready": true,
+   "points": 11.722,
+   "bytes": null,
+   "params": null,
+   "sha256": "3cb9a3f1be39a37bbb87bd73134067626dc1327ff4fa3c2e17d2001f6202bf70",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task243.onnx"
+  },
+  {
+   "task": "task261",
+   "ready": true,
+   "points": 19.702,
+   "bytes": null,
+   "params": null,
+   "sha256": "6104690685d52f02ca149095658b51c2d448d252f763922efdb0fd69749b630f",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task261.onnx"
+  },
+  {
+   "task": "task262",
+   "ready": true,
+   "points": 16.086,
+   "bytes": null,
+   "params": null,
+   "sha256": "c4714ec84de4fa51ba3751b69dbf34ecf5bdaeb8026531c6a3a6a7fc3e22e9d9",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task262.onnx"
+  },
+  {
+   "task": "task256",
+   "ready": true,
+   "points": 15.034,
+   "bytes": null,
+   "params": null,
+   "sha256": "37aebb653619bb91ba21ea10374a3288d619e99b3f9bc7709dc4fe7175bbb765",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task256.onnx"
+  },
+  {
+   "task": "task259",
+   "ready": true,
+   "points": 16.163,
+   "bytes": null,
+   "params": null,
+   "sha256": "27456ae69408af22c00268a792cbad0f23c2f425a2c4e88336920536b67e0cea",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task259.onnx"
+  },
+  {
+   "task": "task260",
+   "ready": true,
+   "points": 15.569,
+   "bytes": null,
+   "params": null,
+   "sha256": "a0c625eeabd30f89f6f16ae6be445f721bbc7059d940e63069a03d74b0fc06a4",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task260.onnx"
+  },
+  {
+   "task": "task250",
+   "ready": true,
+   "points": 15.497,
+   "bytes": null,
+   "params": null,
+   "sha256": "b29f5ac7d4700ac0a652a345ecbbaae31234a076a653038c6046e5ca010cbec0",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task250.onnx"
+  },
+  {
+   "task": "task267",
+   "ready": true,
+   "points": 17.865,
+   "bytes": null,
+   "params": null,
+   "sha256": "410b39084246024b149c984e95489e0660a8825a25ca70475cf339e5914a1074",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task267.onnx"
+  },
+  {
+   "task": "task252",
+   "ready": true,
+   "points": 14.447,
+   "bytes": null,
+   "params": null,
+   "sha256": "bec02ef719f5aa5209ea640ba969d88d01e965556716e3d9310082c47b2c0d19",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task252.onnx"
+  },
+  {
+   "task": "task269",
+   "ready": true,
+   "points": 15.94,
+   "bytes": null,
+   "params": null,
+   "sha256": "947f2c17a6b1d44a9f4ad789f9351b4edfb84e0298e879c258d5034b09e12f72",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task269.onnx"
+  },
+  {
+   "task": "task205",
+   "ready": true,
+   "points": 12.286,
+   "bytes": null,
+   "params": null,
+   "sha256": "878a31dd213aee56495ca8d2724f913b228846d019338e34ff2878a76f37d8e6",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task205.onnx"
+  },
+  {
+   "task": "task266",
+   "ready": true,
+   "points": 18.187,
+   "bytes": null,
+   "params": null,
+   "sha256": "491258de81aba00b6aa06f223356e30346665751690278693288e858450c8563",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task266.onnx"
+  },
+  {
+   "task": "task272",
+   "ready": true,
+   "points": 18.187,
+   "bytes": null,
+   "params": null,
+   "sha256": "bb44a1717b5f9b6f1cd8f6bdd32aa6a40d88b17db3e200a8cb6f7806bb2c658d",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task272.onnx"
+  },
+  {
+   "task": "task271",
+   "ready": true,
+   "points": 14.725,
+   "bytes": null,
+   "params": null,
+   "sha256": "1d303e94d417fc4786c4e80dee5be764e57f981905d0bf8f5e5fdf48595b19ed",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task271.onnx"
+  },
+  {
+   "task": "task274",
+   "ready": true,
+   "points": 15.922,
+   "bytes": null,
+   "params": null,
+   "sha256": "16c49e95823e84f06ed23b008793cf2734b79a98dc2eec7948735d763d5ec465",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task274.onnx"
+  },
+  {
+   "task": "task273",
+   "ready": true,
+   "points": 16.311,
+   "bytes": null,
+   "params": null,
+   "sha256": "590750bab5e6ceadb53d2a7aaab53b648f679b8070b90d7b9f76e86d7e1b9199",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task273.onnx"
+  },
+  {
+   "task": "task270",
+   "ready": true,
+   "points": 14.75,
+   "bytes": null,
+   "params": null,
+   "sha256": "71e2079e705f158456df93b482072338ac3d25a44700db7c691c5b6e8f4e2c69",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task270.onnx"
+  },
+  {
+   "task": "task276",
+   "ready": true,
+   "points": 22.697,
+   "bytes": null,
+   "params": null,
+   "sha256": "2a3e881ae92099c36f1955bdf96ca1e9f77a4ef3d1d3eb58c63eccc80a655c7e",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task276.onnx"
+  },
+  {
+   "task": "task263",
+   "ready": true,
+   "points": 16.006,
+   "bytes": null,
+   "params": null,
+   "sha256": "b4da10b186a4fb387881e29ff1baddf4802e52a6b7cfa6d7ff28929d3e741c21",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task263.onnx"
+  },
+  {
+   "task": "task265",
+   "ready": true,
+   "points": 14.425,
+   "bytes": null,
+   "params": null,
+   "sha256": "793c90930f0d6bb81694213900773baf05b0f6a7e4269f05aa80bcb0d1b6e454",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task265.onnx"
+  },
+  {
+   "task": "task264",
+   "ready": true,
+   "points": 13.155,
+   "bytes": null,
+   "params": null,
+   "sha256": "01ac406f30f0ffced1625ed8050b91086a8967573523be0ac1583a6eef0e4dbb",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task264.onnx"
+  },
+  {
+   "task": "task282",
+   "ready": false,
+   "points": 0.0,
+   "bytes": null,
+   "params": null,
+   "sha256": "3b69ffb73c79f09e8523073931061610e74b3e0d32534378317960c9557acd0d",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task282.onnx"
+  },
+  {
+   "task": "task283",
+   "ready": true,
+   "points": 18.187,
+   "bytes": null,
+   "params": null,
+   "sha256": "b0e2a1e5a77dc63e5c2faa69d44120f7fe0e8773160760e68b7f5912591f4c60",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task283.onnx"
+  },
+  {
+   "task": "task279",
+   "ready": true,
+   "points": 14.781,
+   "bytes": null,
+   "params": null,
+   "sha256": "9da9837f628935b332e77f1f2722fc9a6c24137021584f85bc276e033ed394be",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task279.onnx"
+  },
+  {
+   "task": "task277",
+   "ready": true,
+   "points": 13.835,
+   "bytes": null,
+   "params": null,
+   "sha256": "cebc38159bea1686857c4d29e62c4011569904d69484bff4e6b909ff06d86e48",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task277.onnx"
+  },
+  {
+   "task": "task268",
+   "ready": true,
+   "points": 14.984,
+   "bytes": null,
+   "params": null,
+   "sha256": "d6e7655471c32dea89573357bb31df7dc7c23396d2d8a7318ea2e17508b7d609",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task268.onnx"
+  },
+  {
+   "task": "task284",
+   "ready": true,
+   "points": 13.467,
+   "bytes": null,
+   "params": null,
+   "sha256": "fad3c53111b5ac6b7d99756ade0b122be5399f69539b335f8d35bea450647745",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task284.onnx"
+  },
+  {
+   "task": "task278",
+   "ready": true,
+   "points": 14.555,
+   "bytes": null,
+   "params": null,
+   "sha256": "0c14b78590ad46420b694424fb879d1c8bdef545b3a92cd9ef5a15278e77cf1e",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task278.onnx"
+  },
+  {
+   "task": "task287",
+   "ready": true,
+   "points": 14.976,
+   "bytes": null,
+   "params": null,
+   "sha256": "4cdbdb8ebc51362af348b4c6b27acc968618f39eb23639e05932f58cfd196831",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task287.onnx"
+  },
+  {
+   "task": "task219",
+   "ready": true,
+   "points": 8.64,
+   "bytes": null,
+   "params": null,
+   "sha256": "11a758e659d2bb09904d1bd48165847c4bb78f8ac4e5485a3e23c3b668674398",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task219.onnx"
+  },
+  {
+   "task": "task288",
+   "ready": true,
+   "points": 14.633,
+   "bytes": null,
+   "params": null,
+   "sha256": "0e48931aebec1eb0659c9be80508c8650400244b0f49af19d8698dd8b162a3cb",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task288.onnx"
+  },
+  {
+   "task": "task292",
+   "ready": true,
+   "points": 16.245,
+   "bytes": null,
+   "params": null,
+   "sha256": "6c237acbb63e47906509de051f734a3f91dfe624a99e62a94fd65270b5824929",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task292.onnx"
+  },
+  {
+   "task": "task289",
+   "ready": true,
+   "points": 14.874,
+   "bytes": null,
+   "params": null,
+   "sha256": "7ca96174b4a941b275a41cc40d61f27ff2368e54301cd507ca3420b0ed5620a3",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task289.onnx"
+  },
+  {
+   "task": "task290",
+   "ready": true,
+   "points": 15.632,
+   "bytes": null,
+   "params": null,
+   "sha256": "f1086fcddc1287e8f751349bbcc1c1bc72e816011cd787def2fc61971684f688",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task290.onnx"
+  },
+  {
+   "task": "task291",
+   "ready": true,
+   "points": 16.627,
+   "bytes": null,
+   "params": null,
+   "sha256": "f97257c9bae5cbdf0614cf4f6d0aeda2c0db164b44f4861fc829c00eae636b67",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task291.onnx"
+  },
+  {
+   "task": "task281",
+   "ready": true,
+   "points": 13.608,
+   "bytes": null,
+   "params": null,
+   "sha256": "082339765f10db32abbb7ac3454eafdfdb6b0be3a82ec60d9e69c2facad4423f",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task281.onnx"
+  },
+  {
+   "task": "task280",
+   "ready": true,
+   "points": 13.156,
+   "bytes": null,
+   "params": null,
+   "sha256": "82b670978372ce1c23e03297fac4c9a8b660a0ab794420b6151459faffdbd466",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task280.onnx"
+  },
+  {
+   "task": "task296",
+   "ready": true,
+   "points": 16.678,
+   "bytes": null,
+   "params": null,
+   "sha256": "4306af04547e103c395a41f15f7829592897a368a36d02047b54c256c5e54b13",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task296.onnx"
+  },
+  {
+   "task": "task295",
+   "ready": true,
+   "points": 15.589,
+   "bytes": null,
+   "params": null,
+   "sha256": "5a049215df9c118110ba1217eb55447b5d335f09e93a9526e6862ff5b585b365",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task295.onnx"
+  },
+  {
+   "task": "task299",
+   "ready": true,
+   "points": 17.51,
+   "bytes": null,
+   "params": null,
+   "sha256": "1e9708846864c2782d5c9d4b378034e7f20bd2a610abbcfb0712b83b3179cd2a",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task299.onnx"
+  },
+  {
+   "task": "task293",
+   "ready": true,
+   "points": 14.862,
+   "bytes": null,
+   "params": null,
+   "sha256": "b05ff58c4666c1ec2d35a77dffb3d72b56acaf5e80f36e88f0162019592c30fa",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task293.onnx"
+  },
+  {
+   "task": "task297",
+   "ready": true,
+   "points": 15.876,
+   "bytes": null,
+   "params": null,
+   "sha256": "d627eca68b90f28a02781a8682497d5d894ddf8ff7e163243e795361ab962953",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task297.onnx"
+  },
+  {
+   "task": "task298",
+   "ready": true,
+   "points": 15.388,
+   "bytes": null,
+   "params": null,
+   "sha256": "9b77b58a90defa3f7eb249e787dd574f52ad8319b503b79e3dba3b4d5b11eea3",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task298.onnx"
+  },
+  {
+   "task": "task294",
+   "ready": true,
+   "points": 18.187,
+   "bytes": null,
+   "params": null,
+   "sha256": "247179b0cb2fab9e792e9f91da564f6ee1f8d4059046fabd7bfd7e7d3d010cd9",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task294.onnx"
+  },
+  {
+   "task": "task304",
+   "ready": true,
+   "points": 15.413,
+   "bytes": null,
+   "params": null,
+   "sha256": "da36b408e1af537d161fbb14dbba577380417c72233e4a1458970d507c43ae7d",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task304.onnx"
+  },
+  {
+   "task": "task302",
+   "ready": true,
+   "points": 15.032,
+   "bytes": null,
+   "params": null,
+   "sha256": "471e2a01c1e679ddbe830f667d30f05ed231550742027b941e27dce515ed0b2c",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task302.onnx"
+  },
+  {
+   "task": "task307",
+   "ready": true,
+   "points": 17.504,
+   "bytes": null,
+   "params": null,
+   "sha256": "badc5326d1acd892c77212fc876a3f3192e5b67a9806ab111d1e9589eff70706",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task307.onnx"
+  },
+  {
+   "task": "task305",
+   "ready": true,
+   "points": 16.718,
+   "bytes": null,
+   "params": null,
+   "sha256": "9f735899c445d2de0753685201dbbaa448ff1306c5f52d568270b4588d8e242d",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task305.onnx"
+  },
+  {
+   "task": "task309",
+   "ready": true,
+   "points": 22.697,
+   "bytes": null,
+   "params": null,
+   "sha256": "c47b834e65872a11ec0cda3c8246948b8365f81f916610b49ed07267815733d9",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task309.onnx"
+  },
+  {
+   "task": "task300",
+   "ready": true,
+   "points": 13.741,
+   "bytes": null,
+   "params": null,
+   "sha256": "e81ff2bf51d9621b8df8ff754c0d4ff4270d17f336e625bedb5fba417a57b7e6",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task300.onnx"
+  },
+  {
+   "task": "task311",
+   "ready": true,
+   "points": 21.599,
+   "bytes": null,
+   "params": null,
+   "sha256": "250771b94d3db4658d4ac04e3bd9a0740f2af0f3aba0bb9b5df4d6181bb470d4",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task311.onnx"
+  },
+  {
+   "task": "task286",
+   "ready": true,
+   "points": 12.966,
+   "bytes": null,
+   "params": null,
+   "sha256": "452c89917bd81728f5db1bd4efb133d57ea0ad7603343cb823fc1e7402cf8b6e",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task286.onnx"
+  },
+  {
+   "task": "task312",
+   "ready": true,
+   "points": 15.792,
+   "bytes": null,
+   "params": null,
+   "sha256": "5f8662413159b881c8dff97e5c51ca63270ea3b1609d0f333539af73166348ff",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task312.onnx"
+  },
+  {
+   "task": "task306",
+   "ready": true,
+   "points": 13.597,
+   "bytes": null,
+   "params": null,
+   "sha256": "624aeb80c0b4275264dea7aa0a7b4dd539f60c127780bf7cdf3ce0e60d3fcc5c",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task306.onnx"
+  },
+  {
+   "task": "task315",
+   "ready": true,
+   "points": 15.469,
+   "bytes": null,
+   "params": null,
+   "sha256": "1bf0b18c996602619e9fd51d9c5b13d00e57feaab87cc78fd43463a38ba05c04",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task315.onnx"
+  },
+  {
+   "task": "task313",
+   "ready": true,
+   "points": 13.655,
+   "bytes": null,
+   "params": null,
+   "sha256": "53e2ab0be4c673d804678ddf2f3818527eef5ba1762619d1b41891c5c71ffc0c",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task313.onnx"
+  },
+  {
+   "task": "task275",
+   "ready": true,
+   "points": 13.663,
+   "bytes": null,
+   "params": null,
+   "sha256": "749f9601004e452d7eefecd8387bd82ef4d30c73a87566d263f5ea4895b9406e",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task275.onnx"
+  },
+  {
+   "task": "task310",
+   "ready": true,
+   "points": 14.817,
+   "bytes": null,
+   "params": null,
+   "sha256": "f62c4b13a3bf16f8d88fd1a9fc7908fec19e207110f5be869c7829ec522a2dc7",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task310.onnx"
+  },
+  {
+   "task": "task317",
+   "ready": true,
+   "points": 18.198,
+   "bytes": null,
+   "params": null,
+   "sha256": "54ad9bc9831f0f3a781e65116809c2c60f3246bbdc84fc6c0fa8064fecb5d8c5",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task317.onnx"
+  },
+  {
+   "task": "task308",
+   "ready": true,
+   "points": 14.2,
+   "bytes": null,
+   "params": null,
+   "sha256": "5e7bdaba388ab877db0010ed5d78e24dc3e237847acd5c3d7e0662d2c10ba480",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task308.onnx"
+  },
+  {
+   "task": "task303",
+   "ready": true,
+   "points": 13.701,
+   "bytes": null,
+   "params": null,
+   "sha256": "f1388ccd300d0326ef77e32e80a1bdcb15c39bd24649153f5208eb8cc0962cc6",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task303.onnx"
+  },
+  {
+   "task": "task316",
+   "ready": true,
+   "points": 16.658,
+   "bytes": null,
+   "params": null,
+   "sha256": "5e82d2f4d921ec964cee6c6f5addcde1c2c6b5357eb053ab7b6298f933f71b0a",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task316.onnx"
+  },
+  {
+   "task": "task318",
+   "ready": true,
+   "points": 18.375,
+   "bytes": null,
+   "params": null,
+   "sha256": "4a45c25db81ca4e037be544f7e0cab0a5bb1910d2f6325fc83e02af3a79282b9",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task318.onnx"
+  },
+  {
+   "task": "task301",
+   "ready": true,
+   "points": 13.803,
+   "bytes": null,
+   "params": null,
+   "sha256": "8e36e9e0e074b629991fc361b645ff76ea490e75d572bf8b73c879d801f6689b",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task301.onnx"
+  },
+  {
+   "task": "task322",
+   "ready": true,
+   "points": 18.046,
+   "bytes": null,
+   "params": null,
+   "sha256": "70c7baa8d1fe542431688ec733cdaba2e65799d4882bf71a9be96acb4f6247bf",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task322.onnx"
+  },
+  {
+   "task": "task326",
+   "ready": true,
+   "points": 19.888,
+   "bytes": null,
+   "params": null,
+   "sha256": "b95776b4618ae80d707674425b68a1b903cfc9925a01d24b03b330ce97a9c421",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task326.onnx"
+  },
+  {
+   "task": "task320",
+   "ready": true,
+   "points": 16.446,
+   "bytes": null,
+   "params": null,
+   "sha256": "b5f9d264034aafc2780289baeb60a45e338fd6478233a720f13b79faa2d6b39f",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task320.onnx"
+  },
+  {
+   "task": "task321",
+   "ready": true,
+   "points": 16.385,
+   "bytes": null,
+   "params": null,
+   "sha256": "2e36977fc386c76ebb921b21626cb0733b08b8f40969cc3ff8635f327f718f5e",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task321.onnx"
+  },
+  {
+   "task": "task327",
+   "ready": true,
+   "points": 16.071,
+   "bytes": null,
+   "params": null,
+   "sha256": "28e407c04689606a975670fd8f7da26d5ce7a9a10400265cc54eca46e5504bed",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task327.onnx"
+  },
+  {
+   "task": "task323",
+   "ready": true,
+   "points": 14.689,
+   "bytes": null,
+   "params": null,
+   "sha256": "846d79d827817db063434b8edf70edf61bd5aa72535d264191f4b7d9354ca2b7",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task323.onnx"
+  },
+  {
+   "task": "task329",
+   "ready": true,
+   "points": 15.764,
+   "bytes": null,
+   "params": null,
+   "sha256": "b3983c3bd8c099ce71cb48e09938e0328cc29853d73d956c35e125db9bcd43ef",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task329.onnx"
+  },
+  {
+   "task": "task331",
+   "ready": true,
+   "points": 18.187,
+   "bytes": null,
+   "params": null,
+   "sha256": "159b7db4377d2a7d75a15aa8f84344e6d919741566944220da8f361aa1da572a",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task331.onnx"
+  },
+  {
+   "task": "task325",
+   "ready": true,
+   "points": 14.331,
+   "bytes": null,
+   "params": null,
+   "sha256": "703958452270456b7d0aa9d4685a3bb4279c1a189050c3b1c4c5c0ef26767373",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task325.onnx"
+  },
+  {
+   "task": "task330",
+   "ready": true,
+   "points": 14.014,
+   "bytes": null,
+   "params": null,
+   "sha256": "dbc7679695daf45dfac10fa7c90febf4170e506e3dc665b669a014d5ce2faf2a",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task330.onnx"
+  },
+  {
+   "task": "task334",
+   "ready": true,
+   "points": 18.157,
+   "bytes": null,
+   "params": null,
+   "sha256": "70f0ea7b8d62bc086c535d3fec97140ed99ccf9500dd74492434de15cb2667ee",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task334.onnx"
+  },
+  {
+   "task": "task336",
+   "ready": true,
+   "points": 16.295,
+   "bytes": null,
+   "params": null,
+   "sha256": "66605e39204e06dd97980e812e93d14e7dab3eb0d815b075ac29202827cc6a4e",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task336.onnx"
+  },
+  {
+   "task": "task337",
+   "ready": true,
+   "points": 22.697,
+   "bytes": null,
+   "params": null,
+   "sha256": "c276f5799bf0f2f77bbc0c31f5ed97472afbff9a946326286e229929029e2484",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task337.onnx"
+  },
+  {
+   "task": "task332",
+   "ready": true,
+   "points": 15.844,
+   "bytes": null,
+   "params": null,
+   "sha256": "5301ba6cd8685b2de8c21e01905817ea61a3d8f2054bc6eef7b8e2a201b40b77",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task332.onnx"
+  },
+  {
+   "task": "task209",
+   "ready": true,
+   "points": 10.539,
+   "bytes": null,
+   "params": null,
+   "sha256": "a1b48954523b7eff05d2f64898a372e85801e078133c0dd1e2e4d8cb5f594bab",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task209.onnx"
+  },
+  {
+   "task": "task339",
+   "ready": true,
+   "points": 18.216,
+   "bytes": null,
+   "params": null,
+   "sha256": "23c555a9d5193597ba509db3b965cb39be9f02febeded3f074acb8768e013f1b",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task339.onnx"
+  },
+  {
+   "task": "task333",
+   "ready": true,
+   "points": 14.878,
+   "bytes": null,
+   "params": null,
+   "sha256": "056322558aa8fa4149af6ce9821d3273f0b403e4408e461963db3d70864f1adc",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task333.onnx"
+  },
+  {
+   "task": "task335",
+   "ready": true,
+   "points": 14.218,
+   "bytes": null,
+   "params": null,
+   "sha256": "7ba6a84c0a7dad500b62a6cd386f6069ef1453c71efc9a8548d555cd29f8e0dc",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task335.onnx"
+  },
+  {
+   "task": "task338",
+   "ready": true,
+   "points": 14.271,
+   "bytes": null,
+   "params": null,
+   "sha256": "b35b8a9c786b6c618d442f8072720d3dd2ed919de6726b80b6d1801d3cdbafea",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task338.onnx"
+  },
+  {
+   "task": "task344",
+   "ready": true,
+   "points": 17.172,
+   "bytes": null,
+   "params": null,
+   "sha256": "a23999c886c62393d115371628fbee6b6043de7a35bed72285639240d6def4fd",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task344.onnx"
+  },
+  {
+   "task": "task342",
+   "ready": true,
+   "points": 15.595,
+   "bytes": null,
+   "params": null,
+   "sha256": "cd69f1c3c3bd5d7c51afa7008425c54e8c0a232fd18449de9a9bff304cea90ec",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task342.onnx"
+  },
+  {
+   "task": "task328",
+   "ready": true,
+   "points": 13.846,
+   "bytes": null,
+   "params": null,
+   "sha256": "5e577adeb141a5a522c273f891701d12837320df953707180471e62c0f45f621",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task328.onnx"
+  },
+  {
+   "task": "task346",
+   "ready": true,
+   "points": 15.875,
+   "bytes": null,
+   "params": null,
+   "sha256": "11e08c307d334e0429612fd7a8873ecf53260f716ca9da99b6693e6d9b369548",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task346.onnx"
+  },
+  {
+   "task": "task345",
+   "ready": true,
+   "points": 14.282,
+   "bytes": null,
+   "params": null,
+   "sha256": "98b96547906b58a5b407869397241ead9df4912bc616a99f5e7fbcc2cd6a0aa8",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task345.onnx"
+  },
+  {
+   "task": "task347",
+   "ready": true,
+   "points": 17.603,
+   "bytes": null,
+   "params": null,
+   "sha256": "7fe7a34b9a1ba2444eaaef7509f3c0395bca3ad15a45d122dfb79aa3e546d899",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task347.onnx"
+  },
+  {
+   "task": "task340",
+   "ready": true,
+   "points": 13.839,
+   "bytes": null,
+   "params": null,
+   "sha256": "892b1449677f29b5e2c0324876a82ba38a3a3e36c1be7f6f9ee864ac3982f251",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task340.onnx"
+  },
+  {
+   "task": "task343",
+   "ready": true,
+   "points": 14.737,
+   "bytes": null,
+   "params": null,
+   "sha256": "22bba87288f395f6b3eeb423bb0210878c82ff36b2234bcdb7b156c2ec6f7876",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task343.onnx"
+  },
+  {
+   "task": "task348",
+   "ready": true,
+   "points": 16.117,
+   "bytes": null,
+   "params": null,
+   "sha256": "2352e5feb515f6c83125588b2fb6aedd2528a35bc1c57495f797cae172581d45",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task348.onnx"
+  },
+  {
+   "task": "task314",
+   "ready": true,
+   "points": 15.941,
+   "bytes": null,
+   "params": null,
+   "sha256": "6de48aa8380bfa9f60145881280cb81f0649f178f1a74456c5c40334004417b4",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task314.onnx"
+  },
+  {
+   "task": "task352",
+   "ready": true,
+   "points": 16.201,
+   "bytes": null,
+   "params": null,
+   "sha256": "f3b9bb985cfb0478df981c689aab9f22dc5bb177e02b6f3b6a3b330669eef601",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task352.onnx"
+  },
+  {
+   "task": "task350",
+   "ready": true,
+   "points": 14.734,
+   "bytes": null,
+   "params": null,
+   "sha256": "0ca24c325e540a593cb73c128715599c58a4d7bdd9134503c6991423b2840001",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task350.onnx"
+  },
+  {
+   "task": "task351",
+   "ready": true,
+   "points": 14.533,
+   "bytes": null,
+   "params": null,
+   "sha256": "c17c4a24fd333fa82a77f43e4a5127d7eb81187a15ad4b7f8a1bb21664a5d49d",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task351.onnx"
+  },
+  {
+   "task": "task353",
+   "ready": true,
+   "points": 16.404,
+   "bytes": null,
+   "params": null,
+   "sha256": "1639de1c1d4d3ee61a8454a02d3b5af4d359f13f2fb1c963687d4cd76b280a8b",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task353.onnx"
+  },
+  {
+   "task": "task357",
+   "ready": true,
+   "points": 16.208,
+   "bytes": null,
+   "params": null,
+   "sha256": "cc366b4766cdd325ba38237c73f7cc738107310df4e4c386c5673e74f015a531",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task357.onnx"
+  },
+  {
+   "task": "task354",
+   "ready": true,
+   "points": 15.259,
+   "bytes": null,
+   "params": null,
+   "sha256": "72097d91360fee677a7cedfcb6a9f81d203f7ed48b510491a32767048d687447",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task354.onnx"
+  },
+  {
+   "task": "task356",
+   "ready": true,
+   "points": 16.482,
+   "bytes": null,
+   "params": null,
+   "sha256": "551900e26ac21ba20631069f1a4268e5b9992eabbfd9cde50643affea19fc2f0",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task356.onnx"
+  },
+  {
+   "task": "task360",
+   "ready": true,
+   "points": 15.681,
+   "bytes": null,
+   "params": null,
+   "sha256": "8216475b8f3063764bb86d838de60dc9c23365d30e0e69a100fed2dbd1259833",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task360.onnx"
+  },
+  {
+   "task": "task355",
+   "ready": true,
+   "points": 15.625,
+   "bytes": null,
+   "params": null,
+   "sha256": "ad09d6515b0ea120e8214015b5a7dd13fe14644812fd3be9b33471c171932a2f",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task355.onnx"
+  },
+  {
+   "task": "task359",
+   "ready": true,
+   "points": 14.157,
+   "bytes": null,
+   "params": null,
+   "sha256": "5402e526d36f56006e6fe3438c6875e02057cade74e68784d892dc9c4510bdb1",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task359.onnx"
+  },
+  {
+   "task": "task324",
+   "ready": true,
+   "points": 11.708,
+   "bytes": null,
+   "params": null,
+   "sha256": "f647071e2ce1f7a58bfe472d6d0f53fdc252e56d802bb6591bc40ad49adfcf89",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task324.onnx"
+  },
+  {
+   "task": "task362",
+   "ready": true,
+   "points": 15.604,
+   "bytes": null,
+   "params": null,
+   "sha256": "1a6d4abda7902dcaff9fa7f35113d583d959eedff71779c783ed651a5c496833",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task362.onnx"
+  },
+  {
+   "task": "task341",
+   "ready": true,
+   "points": 15.155,
+   "bytes": null,
+   "params": null,
+   "sha256": "564fae20dee0f5a54330c3170bfad5824556165d5a206e82a19c9264faaaaf05",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task341.onnx"
+  },
+  {
+   "task": "task349",
+   "ready": true,
+   "points": 13.116,
+   "bytes": null,
+   "params": null,
+   "sha256": "5aeb95f7bc509370681e999df93950c8c5c34496c7e605ce0635040ddc427efd",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task349.onnx"
+  },
+  {
+   "task": "task319",
+   "ready": true,
+   "points": 10.706,
+   "bytes": null,
+   "params": null,
+   "sha256": "78b48c1b222a95a793fb68bbfee38c1895a7e8c30e25ea197e21a982280cb862",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task319.onnx"
+  },
+  {
+   "task": "task361",
+   "ready": true,
+   "points": 15.276,
+   "bytes": null,
+   "params": null,
+   "sha256": "4951e0af83dcf9d912be625290dc218d8f599dca7531e5cdef1d7b3893d85fd3",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task361.onnx"
+  },
+  {
+   "task": "task285",
+   "ready": true,
+   "points": 11.493,
+   "bytes": null,
+   "params": null,
+   "sha256": "09b97972dee87890713c6fa63842bb088f1daffac6dab0273514dcacf29a5f43",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task285.onnx"
+  },
+  {
+   "task": "task255",
+   "ready": true,
+   "points": 8.479,
+   "bytes": null,
+   "params": null,
+   "sha256": "51d5955f294f42c4ef2f642062e37df4916ce3267009ec74ee6c432b3f014f64",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task255.onnx"
+  },
+  {
+   "task": "task369",
+   "ready": true,
+   "points": 16.047,
+   "bytes": null,
+   "params": null,
+   "sha256": "41510d5508f7ee00bea219692bf4efbbac40ae5b20300daa5ec4f01d4b6816a5",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task369.onnx"
+  },
+  {
+   "task": "task373",
+   "ready": true,
+   "points": 18.559,
+   "bytes": null,
+   "params": null,
+   "sha256": "b38778eb8fe20593e514665f61bdfe17367d56aa45d220c2cc5a0bd298889d2d",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task373.onnx"
+  },
+  {
+   "task": "task372",
+   "ready": true,
+   "points": 15.634,
+   "bytes": null,
+   "params": null,
+   "sha256": "422d94f798102349b81b669a5bd447b6e246aec065b6916c8b6efd14a7a0fc7f",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task372.onnx"
+  },
+  {
+   "task": "task375",
+   "ready": true,
+   "points": 15.373,
+   "bytes": null,
+   "params": null,
+   "sha256": "509686d607b3126316a284357799deb369829fe56865a1b05609fa3447c4c5d7",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task375.onnx"
+  },
+  {
+   "task": "task371",
+   "ready": true,
+   "points": 15.039,
+   "bytes": null,
+   "params": null,
+   "sha256": "55f3e4edea862a77001eaa66f9ce4cd37bbc3eaaaad9315a16360ce4d1d01bfe",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task371.onnx"
+  },
+  {
+   "task": "task233",
+   "ready": false,
+   "points": 0.0,
+   "bytes": null,
+   "params": null,
+   "sha256": "0c7867386dbfd3e77c3da481800bc4a993f14d1e50424de84392f5db73418f5e",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task233.onnx"
+  },
+  {
+   "task": "task376",
+   "ready": true,
+   "points": 14.389,
+   "bytes": null,
+   "params": null,
+   "sha256": "b2640d804a9afb26f82264279d701879530ca1df53007928473201f92b346b03",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task376.onnx"
+  },
+  {
+   "task": "task358",
+   "ready": true,
+   "points": 13.356,
+   "bytes": null,
+   "params": null,
+   "sha256": "cd5df694270b443fd67739a2c4861762e269841a08d214644221206222ef004b",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task358.onnx"
+  },
+  {
+   "task": "task380",
+   "ready": true,
+   "points": 18.397,
+   "bytes": null,
+   "params": null,
+   "sha256": "b23f227e055e494818df0587e34418a5054807bd258a80e00f9170bcedfd819c",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task380.onnx"
+  },
+  {
+   "task": "task364",
+   "ready": true,
+   "points": 13.069,
+   "bytes": null,
+   "params": null,
+   "sha256": "4cda86b7e8a34893b29b44fc00b525f4d79f9e549ebc12cb3a077f2965dfd389",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task364.onnx"
+  },
+  {
+   "task": "task381",
+   "ready": true,
+   "points": 14.349,
+   "bytes": null,
+   "params": null,
+   "sha256": "341af617bc4d485ea4ad62bf29883b80668b268876d8d3da0b0f97e24a69fb21",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task381.onnx"
+  },
+  {
+   "task": "task377",
+   "ready": true,
+   "points": 13.923,
+   "bytes": null,
+   "params": null,
+   "sha256": "b436c4118d105062f16cbd11418badddedd1612259c661ba053102642be938dc",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task377.onnx"
+  },
+  {
+   "task": "task378",
+   "ready": true,
+   "points": 14.379,
+   "bytes": null,
+   "params": null,
+   "sha256": "e1719f9950e83dc1889743f4737d7c5c8a2606c75b8f2f2f0d26dee49079c766",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task378.onnx"
+  },
+  {
+   "task": "task385",
+   "ready": true,
+   "points": 21.599,
+   "bytes": null,
+   "params": null,
+   "sha256": "629a5673b6a8e745a4c5b1b5afcf3c5e7214f2fd7c54d7f5da27eb3e788ea5d1",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task385.onnx"
+  },
+  {
+   "task": "task384",
+   "ready": true,
+   "points": 13.778,
+   "bytes": null,
+   "params": null,
+   "sha256": "57089beccc7a95bb03cb7bd0a9d6841faa06a32f84b126df9802e34c8b175e3b",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task384.onnx"
+  },
+  {
+   "task": "task374",
+   "ready": true,
+   "points": 14.14,
+   "bytes": null,
+   "params": null,
+   "sha256": "29c99ccb14d1600e97d7b8c3c292672fed67326cc713432a0fd26edcbd5c2182",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task374.onnx"
+  },
+  {
+   "task": "task386",
+   "ready": true,
+   "points": 17.301,
+   "bytes": null,
+   "params": null,
+   "sha256": "89f80a62cefd32ddc113e1e3222977816d8c9e651c9e7efab94922c5878b22c3",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task386.onnx"
+  },
+  {
+   "task": "task365",
+   "ready": true,
+   "points": 14.016,
+   "bytes": null,
+   "params": null,
+   "sha256": "96c740484d2185465c9f923eeca768671161c92e63d197e0cc66281f9039bbd6",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task365.onnx"
+  },
+  {
+   "task": "task389",
+   "ready": true,
+   "points": 17.451,
+   "bytes": null,
+   "params": null,
+   "sha256": "5d19a4d137ddfa5d5e278378f5210bdd9ffd9225b6b7ca3cfb0a823a86ca0be9",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task389.onnx"
+  },
+  {
+   "task": "task383",
+   "ready": true,
+   "points": 13.239,
+   "bytes": null,
+   "params": null,
+   "sha256": "e41cf986b8a4a2e8bc7bdeacd0f41a4326a94ee1b1f56859ada4d2f7468a53af",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task383.onnx"
+  },
+  {
+   "task": "task368",
+   "ready": true,
+   "points": 14.616,
+   "bytes": null,
+   "params": null,
+   "sha256": "fb13ef89494b35d91e797f4295a7a89ef8111ed8b5d8f62974f2ce5be08e16a8",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task368.onnx"
+  },
+  {
+   "task": "task363",
+   "ready": true,
+   "points": 11.945,
+   "bytes": null,
+   "params": null,
+   "sha256": "682ad4439f2fb818f20830c9b4ec329634a76c0dd064483f8c3b9f4d929835a0",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task363.onnx"
+  },
+  {
+   "task": "task391",
+   "ready": true,
+   "points": 15.788,
+   "bytes": null,
+   "params": null,
+   "sha256": "1582c8e52095b42ea4800ff8753f6e9fcb62f2e7b65b1642a469835c6548bf80",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task391.onnx"
+  },
+  {
+   "task": "task393",
+   "ready": true,
+   "points": 16.322,
+   "bytes": null,
+   "params": null,
+   "sha256": "2f236f0f741468312b3933de81bd4f1f7d36a96e624a1545d1986160d95c466a",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task393.onnx"
+  },
+  {
+   "task": "task395",
+   "ready": true,
+   "points": 17.581,
+   "bytes": null,
+   "params": null,
+   "sha256": "19fd478858c781c596e2ca2f7e34d4e1bcfa8798379225afbe1efd44d2841ac0",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task395.onnx"
+  },
+  {
+   "task": "task390",
+   "ready": true,
+   "points": 14.885,
+   "bytes": null,
+   "params": null,
+   "sha256": "23a81cb475e4cd1231db06a0e09440eaa13dc4353f3891aaf53c86700efbfa91",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task390.onnx"
+  },
+  {
+   "task": "task388",
+   "ready": true,
+   "points": 16.225,
+   "bytes": null,
+   "params": null,
+   "sha256": "8afccfc448cdf82a4975b45c7b556477083e29728ac00da51d92d2da1aefe4cc",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task388.onnx"
+  },
+  {
+   "task": "task387",
+   "ready": true,
+   "points": 12.957,
+   "bytes": null,
+   "params": null,
+   "sha256": "26bf34fce1e97119b1e4284fab4d6284d127afe3be31686040922933ee8a6ef0",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task387.onnx"
+  },
+  {
+   "task": "task379",
+   "ready": true,
+   "points": 13.809,
+   "bytes": null,
+   "params": null,
+   "sha256": "b5d2b20c584301f7abc010c463188b248a1cf46e8115c8d81cb5f0e30db38e33",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task379.onnx"
+  },
+  {
+   "task": "task392",
+   "ready": true,
+   "points": 14.662,
+   "bytes": null,
+   "params": null,
+   "sha256": "286bbe96e893d8985bbc76084a277ad5864297316cf38f4ba6edf4007112e4c5",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task392.onnx"
+  },
+  {
+   "task": "task399",
+   "ready": true,
+   "points": 17.483,
+   "bytes": null,
+   "params": null,
+   "sha256": "f8e72c2228ae91a54d38c5a7f101356edc42d906cda234321b13bfc87a5ff38f",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task399.onnx"
+  },
+  {
+   "task": "task394",
+   "ready": true,
+   "points": 16.533,
+   "bytes": null,
+   "params": null,
+   "sha256": "6f9e76b487f97c594199199e75fc55402957e97ede7b3c08c5059ae6412a4a45",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task394.onnx"
+  },
+  {
+   "task": "task398",
+   "ready": true,
+   "points": 13.658,
+   "bytes": null,
+   "params": null,
+   "sha256": "9bc3ab8e8d057ba1d59681824fb89937bcea44d3056731d448f703c55156e86d",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task398.onnx"
+  },
+  {
+   "task": "task370",
+   "ready": true,
+   "points": 12.329,
+   "bytes": null,
+   "params": null,
+   "sha256": "2d3b896a9a75515c8117c029b16b7c08a7c705f3cbc937d5831b1ed4a1dec556",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task370.onnx"
+  },
+  {
+   "task": "task400",
+   "ready": true,
+   "points": 14.533,
+   "bytes": null,
+   "params": null,
+   "sha256": "a6723aa91f00b4ea42edf81e211bc34d3242e7374c731bc4b42f69d14adc93f5",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task400.onnx"
+  },
+  {
+   "task": "task397",
+   "ready": true,
+   "points": 15.046,
+   "bytes": null,
+   "params": null,
+   "sha256": "6bec01ff9716ef2cfce531990ea08c499d66034e4b16e8919d46f33da3bd2009",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task397.onnx"
+  },
+  {
+   "task": "task382",
+   "ready": true,
+   "points": 12.862,
+   "bytes": null,
+   "params": null,
+   "sha256": "f19b383433663ff8f6cd4b8308cf4efc7a23f5ea5d9fe4c39699a77756357c42",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task382.onnx"
+  },
+  {
+   "task": "task396",
+   "ready": true,
+   "points": 12.968,
+   "bytes": null,
+   "params": null,
+   "sha256": "deecb12bf534491a8adbe29e9b1927ba002fffacc6253071aeeb6bef2ef188a4",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task396.onnx"
+  },
+  {
+   "task": "task367",
+   "ready": true,
+   "points": 11.343,
+   "bytes": null,
+   "params": null,
+   "sha256": "0e0b632412ef918f5bc17907b122ff0ece28f94212ad9b95212f0204cd0e5753",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task367.onnx"
+  },
+  {
+   "task": "task366",
+   "ready": true,
+   "points": 7.415,
+   "bytes": null,
+   "params": null,
+   "sha256": "c89022455945f2f90d042b0929e120d6373727845cb686b56bdb1912e28c2279",
+   "file": "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/bundles/neurogolf-5689-51-current-rules-open-artifact/task366.onnx"
+  }
+ ]
+}

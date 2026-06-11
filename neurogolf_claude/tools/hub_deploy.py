@@ -21,7 +21,7 @@ import onnx  # noqa: E402
 import requests  # noqa: E402
 
 ng._NEUROGOLF_DIR = "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf/data/raw/"
-HUB = "http://192.168.137.215:8000/api/project_plugin/neurogolf"
+HUB = "http://127.0.0.1:8000/api/project_plugin/neurogolf"  # localhost: robust to LAN-IP changes (was 192.168.137.215, now 192.168.40.70)
 SOLUTIONS = "/Users/kanxiao/IdeaProjects/kaggletest/neurogolf_claude/solutions"
 AGENT = "Claude"
 
