@@ -51,6 +51,29 @@ let activeStatus = 'all';
 let activeFamily = 'all';
 let activeAgent = 'all';
 let sortBy = 'id';   // id | score | recent
+let kagglePage = 1;
+let taskPage = 1;
+const KAGGLE_PER_PAGE = 10;
+const TASK_PER_PAGE = 20;
+
+// 通用分页控件：当前页/总条数/每页/翻页函数名 -> HTML
+function pagerHtml(page, total, perPage, fnName) {
+    const pages = Math.max(1, Math.ceil(total / perPage));
+    page = Math.min(Math.max(1, page), pages);
+    if (pages <= 1) return '';
+    const btn = (label, target, disabled) =>
+        `<button onclick="${fnName}(${target})" ${disabled ? 'disabled' : ''}
+            style="padding:0.22rem 0.6rem;border:1px solid var(--border-color);border-radius:5px;
+                   background:var(--bg-card);color:var(--text-primary);font-size:0.78rem;
+                   cursor:${disabled ? 'not-allowed' : 'pointer'};opacity:${disabled ? 0.4 : 1};">${label}</button>`;
+    return `<div style="display:flex;gap:0.5rem;align-items:center;justify-content:center;margin-top:0.75rem;">
+        ${btn('‹ 上一页', page - 1, page <= 1)}
+        <span style="color:var(--text-muted);font-size:0.8rem;">第 ${page} / ${pages} 页 · 共 ${total} 条</span>
+        ${btn('下一页 ›', page + 1, page >= pages)}
+    </div>`;
+}
+function setKagglePage(p) { kagglePage = p; renderKaggleHistory(); }
+function setTaskPage(p) { taskPage = p; renderNeuroTasks(); }
 
 function refreshNeuroGolf(btn) {
     if (btn) { btn.textContent = '⏳'; btn.disabled = true; }
@@ -122,12 +145,13 @@ function renderFamilyBar() {
         families.map(([f, n]) => btnWrap(f, `${f} <span style="opacity:0.7">(${n})</span>`)).join('');
 }
 
-function setNeuroStatus(status) { activeStatus = status; renderTaskControls(); renderNeuroTasks(); }
-function setNeuroAgent(agent) { activeAgent = agent; renderTaskControls(); renderNeuroTasks(); }
-function setNeuroSort(sort) { sortBy = sort; renderTaskControls(); renderNeuroTasks(); }
+function setNeuroStatus(status) { activeStatus = status; taskPage = 1; renderTaskControls(); renderNeuroTasks(); }
+function setNeuroAgent(agent) { activeAgent = agent; taskPage = 1; renderTaskControls(); renderNeuroTasks(); }
+function setNeuroSort(sort) { sortBy = sort; taskPage = 1; renderTaskControls(); renderNeuroTasks(); }
 
 function setNeuroFamily(family) {
     activeFamily = family;
+    taskPage = 1;
     renderFamilyBar();
     renderNeuroTasks();
 }
@@ -235,7 +259,10 @@ function renderKaggleHistory() {
         el.innerHTML = '<div style="color:var(--text-muted);font-size:0.8rem;">暂无历史提交记录</div>';
         return;
     }
-    const rows = kaggleSubmissions.map(s => {
+    const kPages = Math.max(1, Math.ceil(kaggleSubmissions.length / KAGGLE_PER_PAGE));
+    if (kagglePage > kPages) kagglePage = kPages;
+    const pageItems = kaggleSubmissions.slice((kagglePage - 1) * KAGGLE_PER_PAGE, kagglePage * KAGGLE_PER_PAGE);
+    const rows = pageItems.map(s => {
         const scoreCell = s.public_score != null
             ? `<strong>${s.public_score.toFixed(3)}</strong>`
             : (s.status === 'pending' ? '<span style="color:var(--text-muted)">评分中…</span>' : '—');
@@ -265,7 +292,7 @@ function renderKaggleHistory() {
             <th style="padding:0.3rem 0.6rem;text-align:center;font-weight:500;">提交人</th>
         </tr></thead>
         <tbody>${rows}</tbody>
-    </table>`;
+    </table>` + pagerHtml(kagglePage, kaggleSubmissions.length, KAGGLE_PER_PAGE, 'setKagglePage');
 }
 
 function renderNeuroTasks() {
@@ -369,7 +396,11 @@ function renderNeuroTasks() {
         return;
     }
 
-    const rows = sorted.map(t => {
+    const tPages = Math.max(1, Math.ceil(sorted.length / TASK_PER_PAGE));
+    if (taskPage > tPages) taskPage = tPages;
+    const pageItems = sorted.slice((taskPage - 1) * TASK_PER_PAGE, taskPage * TASK_PER_PAGE);
+
+    const rows = pageItems.map(t => {
         const st = t.status === 'solved'
             ? { icon: '✅', text: t.ledger_verified ? '已完成' : '已完成·未过账', color: '#10b981' }
             : t.status === 'claimed'
@@ -401,7 +432,7 @@ function renderNeuroTasks() {
             <th style="text-align:right;">最高分</th><th>提交人</th><th>更新</th><th>帖子</th>
         </tr></thead>
         <tbody>${rows}</tbody>
-    </table>`;
+    </table>` + pagerHtml(taskPage, sorted.length, TASK_PER_PAGE, 'setTaskPage');
 
     // 未过账悬浮框
     document.querySelectorAll('.unledgered-trigger').forEach(trigger => {
