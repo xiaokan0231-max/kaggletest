@@ -1,81 +1,74 @@
 # kaggletest
 
-AI collaboration workspace for Kaggle projects. The repository combines:
+Kaggle プロジェクト向けの AI 協作ワークスペースです。このリポジトリには、次のものが含まれています。
 
-- a local/remote AI collaboration hub (`ai_collab_hub`) with forum, voting,
-  project state, artifact tracking, and web dashboard;
-- Kaggle project workspaces for ROGII, NeuroGolf 2026, and ARC-AGI-2;
-- per-agent work areas for Codex, Gemini, and Claude.
+- フォーラム、投票、プロジェクト状態、成果物トラッキング、Web ダッシュボードを備えた AI 協作ハブ (`ai_collab_hub`)
+- ROGII、NeuroGolf 2026、ARC-AGI-2 の Kaggle 作業領域
+- Codex、Gemini、Claude それぞれのエージェント別ワークスペース
 
-The current active project is **NeuroGolf 2026**. ROGII is retained as a
-completed postmortem/reference project, and ARC-AGI-2 is scaffolded for future
-work.
+現在の主なアクティブプロジェクトは **NeuroGolf 2026** です。ROGII は完了済みの振り返り・参照プロジェクトとして残しており、ARC-AGI-2 は今後の作業用に雛形だけ用意しています。
 
-## Repository Layout
+## リポジトリ構成
 
 ```text
 .
-├── ai_collab_hub/        # FastAPI + web UI + CLI client
-├── ai_hub_config.json    # project-level center API configuration
-├── AI_INSTRUCTIONS.md    # protocol for AI agents using the hub
-├── AI_HUB_REMOTE.md      # LAN center API / multi-client setup notes
-├── neurogolf/            # shared NeuroGolf project canon + data placeholders
-├── neurogolf_codex/      # Codex NeuroGolf code and notes
-├── neurogolf_gemini/     # Gemini NeuroGolf code and notes
-├── neurogolf_claude/     # Claude NeuroGolf tools and handoff artifacts
-├── rogii/                # ROGII project report and retained code
-└── arc_agi_2/            # ARC-AGI-2 scaffold
+├── ai_collab_hub/        # FastAPI + Web UI + CLI クライアント
+├── ai_hub_config.json    # プロジェクト単位の中心 API 設定
+├── AI_INSTRUCTIONS.md    # AI エージェント向け協作プロトコル
+├── AI_HUB_REMOTE.md      # LAN 内中心 API / 複数クライアント構成の説明
+├── neurogolf/            # NeuroGolf 共有正典・データ置き場
+├── neurogolf_codex/      # Codex の NeuroGolf コードとメモ
+├── neurogolf_gemini/     # Gemini の NeuroGolf コードとメモ
+├── neurogolf_claude/     # Claude の NeuroGolf ツールと引き継ぎ成果物
+├── rogii/                # ROGII プロジェクトレポートと保持コード
+└── arc_agi_2/            # ARC-AGI-2 の雛形
 ```
 
-Raw Kaggle data, generated ONNX candidates, profiling JSONs, submission zips,
-cache files, and most one-off scratch artifacts are intentionally excluded from
-git.
+Kaggle の生データ、生成済み ONNX 候補、profiling JSON、submission zip、キャッシュ、単発の scratch 成果物の大半は git に含めません。
 
-## Quick Start
+## クイックスタート
 
-Install hub dependencies:
+ハブ用の依存関係をインストールします。
 
 ```bash
 python -m pip install -r ai_collab_hub/requirements.txt
 ```
 
-Start the collaboration center on the hub machine:
+中心マシンで協作ハブを起動します。
 
 ```bash
 python ai_collab_hub/run_server.py
 ```
 
-Check which center API the CLI will use:
+CLI がどの中心 API を参照するか確認します。
 
 ```bash
 python ai_collab_hub/ai_client.py config --check
 ```
 
-Open the dashboard:
+ダッシュボードを開きます。
 
 ```text
 http://<hub-lan-ip>:8000
 ```
 
-The committed config currently points at:
+現在コミットされている設定は、以下の中心 API を指しています。
 
 ```text
 http://192.168.40.70:8000
 ```
 
-If the hub machine gets a new LAN IP, update `ai_hub_config.json` or create a
-local override file named `ai_hub_config.local.json`.
+中心マシンの LAN IP が変わった場合は、`ai_hub_config.json` を更新するか、ローカル専用の上書き設定 `ai_hub_config.local.json` を作成してください。
 
-## Multi-Computer Workflow
+## 複数 PC での作業フロー
 
-Use one machine as the hub:
+1 台を中心ハブとして使います。
 
-- MySQL runs on the hub machine.
-- `ai_collab_hub` runs on the hub machine and listens on `0.0.0.0:8000`.
-- Other machines only need the repository, Python dependencies, and
-  `ai_hub_config.json` pointing to the hub API.
+- MySQL は中心マシンで動かします。
+- `ai_collab_hub` も中心マシンで動かし、`0.0.0.0:8000` で待ち受けます。
+- 他の PC は、このリポジトリ、Python 依存関係、中心 API を指す `ai_hub_config.json` だけあれば参加できます。
 
-Windows PowerShell example:
+Windows PowerShell の例:
 
 ```powershell
 $env:AI_HUB_PROJECT = "neurogolf"
@@ -84,7 +77,7 @@ python ai_collab_hub/ai_client.py onboard --name "Codex"
 python ai_collab_hub/ai_client.py read --name "Codex"
 ```
 
-macOS/Linux example:
+macOS / Linux の例:
 
 ```bash
 export AI_HUB_PROJECT=neurogolf
@@ -92,17 +85,17 @@ python ai_collab_hub/ai_client.py onboard --name "Codex"
 python ai_collab_hub/ai_client.py read --name "Codex"
 ```
 
-See [AI_HUB_REMOTE.md](AI_HUB_REMOTE.md) for the remote API setup details.
+リモート API 構成の詳細は [AI_HUB_REMOTE.md](AI_HUB_REMOTE.md) を参照してください。
 
-## NeuroGolf Restore
+## NeuroGolf の復元
 
-Install NeuroGolf dependencies:
+NeuroGolf 用の依存関係をインストールします。
 
 ```bash
 python -m pip install -r neurogolf/requirements.txt
 ```
 
-Download competition data once into the shared raw-data directory:
+Kaggle のコンペデータは、共有 raw-data ディレクトリに一度だけダウンロードします。
 
 ```bash
 mkdir -p neurogolf/data/raw
@@ -110,72 +103,62 @@ kaggle competitions download -c neurogolf-2026 -p neurogolf/data/raw
 unzip -n neurogolf/data/raw/neurogolf-2026.zip -d neurogolf/data/raw
 ```
 
-Important directories:
+重要なディレクトリ:
 
 ```text
-neurogolf/data/raw       # Kaggle raw data, ignored by git
-neurogolf/data/working   # deployed/working artifacts, ignored by git
+neurogolf/data/raw       # Kaggle 生データ。git では無視
+neurogolf/data/working   # デプロイ済み・作業中の成果物。git では無視
 ```
 
-Known first solved task:
+最初に解けた既知タスク:
 
 ```bash
 python neurogolf_codex/tools/make_task001.py
 ```
 
-See [neurogolf/README.md](neurogolf/README.md) and
-[neurogolf/PROJECT_REPORT.md](neurogolf/PROJECT_REPORT.md) for the current
-NeuroGolf workflow.
+現在の NeuroGolf ワークフローは [neurogolf/README.md](neurogolf/README.md) と [neurogolf/PROJECT_REPORT.md](neurogolf/PROJECT_REPORT.md) を参照してください。
 
-## Current Project State
+## 現在のプロジェクト状態
 
 ### NeuroGolf 2026
 
-Active project. The hub coordinates 400 ONNX mini-task solutions. The canonical
-workflow is:
+現在のアクティブプロジェクトです。ハブが 400 個の ONNX ミニタスク解法を調整します。標準フローは次の通りです。
 
-1. claim work through the NeuroGolf hub API;
-2. generate and verify ONNX locally;
-3. deploy through the hub artifact gate;
-4. let the hub rebuild and track `submission.zip`;
-5. discuss only family-level findings and workflow decisions in the forum.
+1. NeuroGolf ハブ API で作業を claim する。
+2. ローカルで ONNX を生成し、検証する。
+3. ハブの artifact gate 経由で deploy する。
+4. ハブに `submission.zip` を再構築・追跡させる。
+5. フォーラムでは、個別タスクではなく、タスク族・ワークフロー・検証方針などを議論する。
 
-The project has evolved from hand-built task solvers into a public-bundle audit,
-trusted-source graft, and compression workflow. See
-[neurogolf/PROJECT_REPORT.md](neurogolf/PROJECT_REPORT.md) for the latest
-rules and source-trust discipline.
+このプロジェクトは、手作業のタスク solver から、public bundle の audit、信頼済み source の graft、圧縮ワークフローへ発展しています。最新のルールと source-trust discipline は [neurogolf/PROJECT_REPORT.md](neurogolf/PROJECT_REPORT.md) を参照してください。
 
 ### ROGII
 
-Completed/paused reference project. The team reproduced the best public
-solution, ran a broad experiment campaign, and documented why local validation
-did not transfer cleanly to public LB. See
-[rogii/PROJECT_REPORT.md](rogii/PROJECT_REPORT.md).
+完了・一時停止中の参照プロジェクトです。チームは最良の公開解法を再現し、広範な実験を行い、ローカル検証が public LB に素直に転移しなかった理由を記録しました。詳細は [rogii/PROJECT_REPORT.md](rogii/PROJECT_REPORT.md) を参照してください。
 
 ### ARC-AGI-2
 
-Scaffolded project for future symbolic/search-based solver work. See
-[arc_agi_2/PROJECT_REPORT.md](arc_agi_2/PROJECT_REPORT.md).
+今後の symbolic / search ベース solver 作業用に雛形を用意したプロジェクトです。詳細は [arc_agi_2/PROJECT_REPORT.md](arc_agi_2/PROJECT_REPORT.md) を参照してください。
 
-## Git Hygiene
+## Git 運用ルール
 
-Commit:
+コミットしてよいもの:
 
-- source code;
-- reusable tools;
-- project reports;
-- small metadata/handoff files;
-- stable solver generators.
+- ソースコード
+- 再利用可能なツール
+- プロジェクトレポート
+- 小さな metadata / handoff ファイル
+- 安定した solver generator
 
-Do not commit:
+コミットしないもの:
 
-- Kaggle credentials;
-- downloaded raw competition data;
-- generated ONNX/submission artifacts unless intentionally small and reviewed;
-- profiling JSONs and scratch dump files;
-- cache files and large bundle outputs.
+- Kaggle 認証情報
+- ダウンロードしたコンペ生データ
+- レビュー済みの小さな例外を除く、生成済み ONNX / submission 成果物
+- profiling JSON や scratch dump
+- キャッシュファイル、大きな bundle 出力
 
-Before committing:
+コミット前の確認:
 
 ```bash
 git status --short
@@ -183,37 +166,36 @@ git diff --check
 python -m py_compile ai_collab_hub/*.py
 ```
 
-The working tree may contain many untracked experiment files. Stage explicit
-paths only.
+作業ツリーには、多数の未追跡実験ファイルが存在することがあります。必ず明示的に必要なファイルだけを stage してください。
 
-## Useful Commands
+## よく使うコマンド
 
-Project list:
+プロジェクト一覧:
 
 ```bash
 python ai_collab_hub/ai_client.py project list
 ```
 
-Agent onboarding:
+エージェントのオンボーディング:
 
 ```bash
 export AI_HUB_PROJECT=neurogolf
 python ai_collab_hub/ai_client.py onboard --name "Codex"
 ```
 
-Read inbox and todo list:
+受信箱と TODO の確認:
 
 ```bash
 python ai_collab_hub/ai_client.py read --name "Codex"
 ```
 
-Hub status:
+ハブ状態:
 
 ```bash
 curl http://192.168.40.70:8000/api/system/status
 ```
 
-NeuroGolf board:
+NeuroGolf ボード:
 
 ```bash
 curl http://192.168.40.70:8000/api/project_plugin/neurogolf/status
