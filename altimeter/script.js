@@ -702,29 +702,69 @@
      PWA — service worker + install
      ============================================================ */
   let deferredPrompt = null;
+  // 是否为 iOS（iPhone / iPad / iPod）
+  function isIOS() {
+    return (/iphone|ipad|ipod/i.test(navigator.userAgent) ||
+            // iPadOS 13+ 伪装成 Mac，但带触摸点
+            (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) &&
+           !window.MSStream;
+  }
+  // 是否已作为独立应用（已添加到主屏幕）运行
+  function isStandalone() {
+    return window.matchMedia('(display-mode: standalone)').matches ||
+           navigator.standalone === true;
+  }
   function initPWA() {
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('service-worker.js').catch(() => { /* ignore */ });
+        navigator.serviceWorker.register('service-worker.js').catch(() => { /* 忽略 */ });
       });
     }
+
+    // Android / 桌面版 Chrome、Edge：拦截原生安装提示
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       deferredPrompt = e;
+      if (!isStandalone()) el.installBanner.hidden = false;
+    });
+
+    // iOS Safari 不支持 beforeinstallprompt，只能手动「添加到主屏幕」，
+    // 这里把横幅改成图文引导。
+    if (isIOS() && !isStandalone()) {
+      const tip = el.installBanner.querySelector('span');
+      if (tip) tip.textContent = '点按底部「分享」按钮，选择「添加到主屏幕」即可安装。';
+      el.installBtn.textContent = '如何安装';
       el.installBanner.hidden = false;
-    });
+    }
+
     el.installBtn.addEventListener('click', async () => {
-      if (!deferredPrompt) return;
-      deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
-      if (outcome === 'accepted') toast('正在安装…');
-      deferredPrompt = null;
-      el.installBanner.hidden = true;
+      // 支持原生安装提示（Android / 桌面 Chrome 等）
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === 'accepted') toast('正在安装…');
+        deferredPrompt = null;
+        el.installBanner.hidden = true;
+        return;
+      }
+      // 没有原生安装能力时给出明确指引，避免「点了没反应」
+      if (isStandalone()) {
+        toast('应用已安装');
+      } else if (isIOS()) {
+        toast('请点按 Safari 底部「分享」→「添加到主屏幕」');
+        vibrate(10);
+      } else {
+        toast('请用浏览器菜单选择「安装应用 / 添加到主屏幕」');
+      }
     });
+
     window.addEventListener('appinstalled', () => {
       el.installBanner.hidden = true;
       toast('海拔仪已安装');
     });
+
+    // 已安装独立运行时不再显示安装横幅
+    if (isStandalone()) el.installBanner.hidden = true;
   }
 
   /* ============================================================
