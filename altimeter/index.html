@@ -1,38 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <!-- Responsive + safe-area (notch / Dynamic Island) support -->
+  <!-- 响应式 + 安全区域（刘海 / 灵动岛）支持 -->
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
   <meta name="theme-color" content="#f2f2f7" media="(prefers-color-scheme: light)" />
-  <meta name="description" content="A professional, native-feeling altimeter PWA that measures your altitude using GPS." />
+  <meta name="description" content="一款专业、媲美原生体验的海拔仪 PWA，使用 GPS 测量你的当前海拔。" />
 
-  <!-- iOS Web App / Home Screen support -->
+  <!-- iOS 网页 App / 主屏幕支持 -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-title" content="Altimeter" />
+  <meta name="apple-mobile-web-app-title" content="海拔仪" />
 
-  <title>Altimeter — GPS Altitude</title>
+  <title>海拔仪 — GPS 海拔</title>
 
-  <!-- PWA manifest -->
+  <!-- PWA 清单 -->
   <link rel="manifest" href="manifest.json" />
 
-  <!-- Icons -->
+  <!-- 图标 -->
   <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="mask-icon" href="assets/icon.svg" color="#0a84ff" />
 
-  <!-- Styles -->
+  <!-- 样式 -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- App shell -->
+  <!-- 应用外壳 -->
   <div id="app" class="app">
 
-    <!-- ===== Header ===== -->
+    <!-- ===== 顶栏 ===== -->
     <header class="app-header">
       <div class="header-left">
         <div class="app-logo" aria-hidden="true">
@@ -42,90 +42,90 @@
           </svg>
         </div>
         <div class="app-title-group">
-          <h1 class="app-title">Altimeter</h1>
-          <span id="live-indicator" class="live-indicator" title="GPS live status">
-            <span class="live-dot"></span><span class="live-text">Idle</span>
+          <h1 class="app-title">海拔仪</h1>
+          <span id="live-indicator" class="live-indicator" title="GPS 实时状态">
+            <span class="live-dot"></span><span class="live-text">空闲</span>
           </span>
         </div>
       </div>
       <div class="header-right">
-        <button id="theme-toggle" class="icon-btn" aria-label="Toggle light / dark mode" title="Toggle theme">
+        <button id="theme-toggle" class="icon-btn" aria-label="切换浅色 / 深色模式" title="切换主题">
           <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
           <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="23"/><line x1="1" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="23" y2="12"/><line x1="4.2" y1="4.2" x2="6.3" y2="6.3"/><line x1="17.7" y1="17.7" x2="19.8" y2="19.8"/><line x1="4.2" y1="19.8" x2="6.3" y2="17.7"/><line x1="17.7" y1="6.3" x2="19.8" y2="4.2"/></g></svg>
         </button>
       </div>
     </header>
 
-    <!-- ===== Status pill ===== -->
+    <!-- ===== 状态胶囊 ===== -->
     <div class="status-bar">
       <span id="status-pill" class="status-pill status-waiting">
         <span class="status-spinner"></span>
-        <span id="status-text">Waiting for GPS…</span>
+        <span id="status-text">等待 GPS…</span>
       </span>
     </div>
 
     <main class="app-main">
 
-      <!-- ===== Hero altitude card ===== -->
-      <section class="card hero-card" aria-label="Current altitude">
+      <!-- ===== 海拔主卡片 ===== -->
+      <section class="card hero-card" aria-label="当前海拔">
         <div class="hero-glow" aria-hidden="true"></div>
-        <p class="hero-label">Current Altitude</p>
+        <p class="hero-label">当前海拔</p>
         <div class="hero-value-row">
           <span id="altitude-value" class="hero-value">--</span>
-          <span class="hero-unit" id="altitude-unit">m</span>
+          <span class="hero-unit" id="altitude-unit">米</span>
         </div>
-        <p id="altitude-feet" class="hero-subvalue">-- ft</p>
+        <p id="altitude-feet" class="hero-subvalue">-- 英尺</p>
         <p id="altitude-message" class="hero-message"></p>
 
-        <!-- Accuracy indicator -->
+        <!-- 精度指示 -->
         <div class="accuracy-indicator">
           <span id="accuracy-dot" class="accuracy-dot"></span>
-          <span id="accuracy-label" class="accuracy-label">Accuracy: —</span>
+          <span id="accuracy-label" class="accuracy-label">精度：—</span>
         </div>
       </section>
 
-      <!-- ===== Chart card ===== -->
-      <section class="card chart-card" aria-label="Altitude chart">
+      <!-- ===== 图表卡片 ===== -->
+      <section class="card chart-card" aria-label="海拔图表">
         <div class="card-head">
-          <h2 class="card-title">Altitude Trend</h2>
-          <span id="trend-badge" class="trend-badge trend-flat">— Steady</span>
+          <h2 class="card-title">海拔趋势</h2>
+          <span id="trend-badge" class="trend-badge trend-flat">— 平稳</span>
         </div>
         <canvas id="altitude-chart" class="altitude-chart" width="600" height="220"></canvas>
       </section>
 
-      <!-- ===== Stats grid ===== -->
-      <section class="stats-grid" aria-label="Altitude statistics">
+      <!-- ===== 统计网格 ===== -->
+      <section class="stats-grid" aria-label="海拔统计">
         <div class="card stat-card">
-          <p class="stat-label">Highest</p>
+          <p class="stat-label">最高</p>
           <p id="stat-high" class="stat-value">--</p>
         </div>
         <div class="card stat-card">
-          <p class="stat-label">Lowest</p>
+          <p class="stat-label">最低</p>
           <p id="stat-low" class="stat-value">--</p>
         </div>
         <div class="card stat-card">
-          <p class="stat-label">Average</p>
+          <p class="stat-label">平均</p>
           <p id="stat-avg" class="stat-value">--</p>
         </div>
         <div class="card stat-card">
-          <p class="stat-label">Samples</p>
+          <p class="stat-label">采样数</p>
           <p id="stat-count" class="stat-value">0</p>
         </div>
       </section>
 
-      <!-- ===== Compass card ===== -->
-      <section class="card compass-card" aria-label="Compass">
+      <!-- ===== 指南针卡片 ===== -->
+      <section class="card compass-card" aria-label="指南针">
         <div class="card-head">
-          <h2 class="card-title">Compass</h2>
-          <button id="compass-enable" class="text-btn" hidden>Enable</button>
+          <h2 class="card-title">指南针</h2>
+          <button id="compass-enable" class="text-btn" hidden>启用</button>
         </div>
         <div class="compass-wrap">
           <div class="compass" id="compass">
             <div class="compass-rose" id="compass-rose">
-              <span class="compass-dir compass-n">N</span>
-              <span class="compass-dir compass-e">E</span>
-              <span class="compass-dir compass-s">S</span>
-              <span class="compass-dir compass-w">W</span>
+              <span class="compass-dir compass-n">北</span>
+              <span class="compass-dir compass-e">东</span>
+              <span class="compass-dir compass-s">南</span>
+              <span class="compass-dir compass-w">西</span>
               <div class="compass-needle"></div>
             </div>
             <div class="compass-center"></div>
@@ -137,90 +137,90 @@
         </div>
       </section>
 
-      <!-- ===== GPS info card ===== -->
-      <section class="card info-card" aria-label="GPS information">
+      <!-- ===== GPS 信息卡片 ===== -->
+      <section class="card info-card" aria-label="GPS 信息">
         <div class="card-head">
-          <h2 class="card-title">GPS Information</h2>
+          <h2 class="card-title">GPS 信息</h2>
         </div>
         <ul class="info-list">
-          <li><span class="info-key">Latitude</span><span id="info-lat" class="info-val">—</span></li>
-          <li><span class="info-key">Longitude</span><span id="info-lng" class="info-val">—</span></li>
-          <li><span class="info-key">Horizontal Accuracy</span><span id="info-hacc" class="info-val">—</span></li>
-          <li><span class="info-key">Altitude Accuracy</span><span id="info-vacc" class="info-val">—</span></li>
-          <li><span class="info-key">Speed</span><span id="info-speed" class="info-val">—</span></li>
-          <li><span class="info-key">Heading</span><span id="info-heading" class="info-val">—</span></li>
-          <li><span class="info-key">Timestamp</span><span id="info-time" class="info-val">—</span></li>
+          <li><span class="info-key">纬度</span><span id="info-lat" class="info-val">—</span></li>
+          <li><span class="info-key">经度</span><span id="info-lng" class="info-val">—</span></li>
+          <li><span class="info-key">水平精度</span><span id="info-hacc" class="info-val">—</span></li>
+          <li><span class="info-key">海拔精度</span><span id="info-vacc" class="info-val">—</span></li>
+          <li><span class="info-key">速度</span><span id="info-speed" class="info-val">—</span></li>
+          <li><span class="info-key">方向</span><span id="info-heading" class="info-val">—</span></li>
+          <li><span class="info-key">时间戳</span><span id="info-time" class="info-val">—</span></li>
         </ul>
         <div class="info-actions">
-          <button id="copy-coords" class="pill-btn">Copy Coordinates</button>
-          <button id="share-loc" class="pill-btn">Share Location</button>
+          <button id="copy-coords" class="pill-btn">复制坐标</button>
+          <button id="share-loc" class="pill-btn">分享位置</button>
         </div>
       </section>
 
-      <!-- ===== Map buttons ===== -->
-      <section class="map-actions" aria-label="Open in maps">
+      <!-- ===== 地图按钮 ===== -->
+      <section class="map-actions" aria-label="在地图中打开">
         <a id="apple-maps" class="map-btn map-btn-apple" href="#" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="currentColor"/></svg>
-          Open Current Location
+          打开当前位置
         </a>
         <a id="google-maps" class="map-btn map-btn-google" href="#" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="currentColor"/></svg>
-          Open in Google Maps
+          在谷歌地图打开
         </a>
       </section>
 
-      <!-- ===== Export card ===== -->
-      <section class="card export-card" aria-label="Export data">
+      <!-- ===== 导出卡片 ===== -->
+      <section class="card export-card" aria-label="导出数据">
         <div class="card-head">
-          <h2 class="card-title">Export History</h2>
+          <h2 class="card-title">导出历史</h2>
         </div>
         <div class="export-actions">
-          <button id="export-json" class="pill-btn">Export JSON</button>
-          <button id="export-csv" class="pill-btn">Export CSV</button>
-          <button id="clear-history" class="pill-btn pill-btn-danger">Clear</button>
+          <button id="export-json" class="pill-btn">导出 JSON</button>
+          <button id="export-csv" class="pill-btn">导出 CSV</button>
+          <button id="clear-history" class="pill-btn pill-btn-danger">清空</button>
         </div>
       </section>
 
-      <!-- ===== Device / system card (bonus) ===== -->
-      <section class="card device-card" aria-label="Device information">
+      <!-- ===== 设备 / 系统卡片（附加） ===== -->
+      <section class="card device-card" aria-label="设备信息">
         <div class="card-head">
-          <h2 class="card-title">Device &amp; System</h2>
-          <button id="more-toggle" class="text-btn" aria-expanded="false">Show</button>
+          <h2 class="card-title">设备与系统</h2>
+          <button id="more-toggle" class="text-btn" aria-expanded="false">展开</button>
         </div>
         <ul class="info-list device-list" id="device-list" hidden>
-          <li><span class="info-key">Network</span><span id="dev-network" class="info-val">—</span></li>
-          <li><span class="info-key">Battery</span><span id="dev-battery" class="info-val">—</span></li>
-          <li><span class="info-key">Wake Lock</span><span id="dev-wakelock" class="info-val">—</span></li>
-          <li><span class="info-key">FPS</span><span id="dev-fps" class="info-val">—</span></li>
-          <li><span class="info-key">Platform</span><span id="dev-platform" class="info-val">—</span></li>
-          <li><span class="info-key">Screen</span><span id="dev-screen" class="info-val">—</span></li>
+          <li><span class="info-key">网络</span><span id="dev-network" class="info-val">—</span></li>
+          <li><span class="info-key">电池</span><span id="dev-battery" class="info-val">—</span></li>
+          <li><span class="info-key">屏幕常亮</span><span id="dev-wakelock" class="info-val">—</span></li>
+          <li><span class="info-key">帧率</span><span id="dev-fps" class="info-val">—</span></li>
+          <li><span class="info-key">平台</span><span id="dev-platform" class="info-val">—</span></li>
+          <li><span class="info-key">屏幕</span><span id="dev-screen" class="info-val">—</span></li>
         </ul>
         <div class="device-actions">
-          <button id="toggle-wakelock" class="pill-btn">Keep Screen On</button>
-          <button id="toggle-fullscreen" class="pill-btn">Fullscreen</button>
+          <button id="toggle-wakelock" class="pill-btn">保持屏幕常亮</button>
+          <button id="toggle-fullscreen" class="pill-btn">全屏</button>
         </div>
       </section>
 
-      <!-- ===== Install banner ===== -->
+      <!-- ===== 安装提示条 ===== -->
       <div id="install-banner" class="install-banner" hidden>
-        <span>Install Altimeter for the full native experience.</span>
-        <button id="install-btn" class="pill-btn pill-btn-accent">Install</button>
+        <span>安装海拔仪，获得完整原生体验。</span>
+        <button id="install-btn" class="pill-btn pill-btn-accent">安装</button>
       </div>
 
     </main>
 
-    <!-- ===== Footer ===== -->
+    <!-- ===== 页脚 ===== -->
     <footer class="app-footer">
-      <span>Altimeter <span id="app-version">v1.0.0</span></span>
+      <span>海拔仪 <span id="app-version">v1.0.0</span></span>
       <span class="footer-sep">·</span>
-      <span>Static PWA · No tracking</span>
+      <span>静态 PWA · 无追踪</span>
     </footer>
   </div>
 
-  <!-- Toast container -->
+  <!-- 提示浮层 -->
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
-  <!-- App logic -->
+  <!-- 应用逻辑 -->
   <script src="script.js" defer></script>
 </body>
 </html>

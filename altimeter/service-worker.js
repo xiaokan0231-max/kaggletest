@@ -4,7 +4,7 @@
    ============================================================ */
 'use strict';
 
-const CACHE_NAME = 'altimeter-v1.0.0';
+const CACHE_NAME = 'altimeter-v1.0.1';
 const ASSETS = [
   './',
   './index.html',

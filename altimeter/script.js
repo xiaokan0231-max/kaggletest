@@ -84,7 +84,7 @@
     // kind: 'on' | 'error' | 'idle'
     el.live.className = 'live-indicator' + (kind === 'on' ? ' live-on' : kind === 'error' ? ' live-error' : '');
     el.live.querySelector('.live-text').textContent =
-      kind === 'on' ? 'Live' : kind === 'error' ? 'Error' : 'Idle';
+      kind === 'on' ? '实时' : kind === 'error' ? '错误' : '空闲';
   }
 
   /* ============================================================
@@ -116,8 +116,8 @@
   function metersToFeet(m) { return m * 3.28084; }
 
   function cardinal(deg) {
-    const dirs = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE',
-                  'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'];
+    const dirs = ['北', '北东北', '东北', '东东北', '东', '东东南', '东南', '南东南',
+                  '南', '南西南', '西南', '西西南', '西', '西西北', '西北', '北西北'];
     return dirs[Math.round(((deg % 360) / 22.5)) % 16];
   }
 
@@ -155,9 +155,9 @@
     const high = Math.max(...alts);
     const low = Math.min(...alts);
     const avg = alts.reduce((a, b) => a + b, 0) / alts.length;
-    el.statHigh.textContent = fmt(high) + ' m';
-    el.statLow.textContent = fmt(low) + ' m';
-    el.statAvg.textContent = fmt(avg) + ' m';
+    el.statHigh.textContent = fmt(high) + ' 米';
+    el.statLow.textContent = fmt(low) + ' 米';
+    el.statAvg.textContent = fmt(avg) + ' 米';
 
     // Trend: compare mean of last 3 vs previous window
     if (alts.length >= 4) {
@@ -172,13 +172,13 @@
   function setTrend(delta) {
     if (delta > 0.8) {
       el.trendBadge.className = 'trend-badge trend-up';
-      el.trendBadge.textContent = '▲ Ascending';
+      el.trendBadge.textContent = '▲ 上升';
     } else if (delta < -0.8) {
       el.trendBadge.className = 'trend-badge trend-down';
-      el.trendBadge.textContent = '▼ Descending';
+      el.trendBadge.textContent = '▼ 下降';
     } else {
       el.trendBadge.className = 'trend-badge trend-flat';
-      el.trendBadge.textContent = '— Steady';
+      el.trendBadge.textContent = '— 平稳';
     }
   }
 
@@ -216,7 +216,7 @@
       ctx.fillStyle = textColor;
       ctx.font = '13px ' + getFontStack();
       ctx.textAlign = 'center';
-      ctx.fillText('Collecting altitude samples…', W / 2, H / 2);
+      ctx.fillText('正在采集海拔数据…', W / 2, H / 2);
       return;
     }
 
@@ -332,15 +332,15 @@
   function updateAccuracy(acc) {
     if (acc === null || acc === undefined || isNaN(acc)) {
       el.accDot.className = 'accuracy-dot';
-      el.accLabel.textContent = 'Accuracy: —';
+      el.accLabel.textContent = '精度：—';
       return;
     }
     let cls, label;
-    if (acc <= 10) { cls = 'acc-green'; label = 'Excellent'; }
-    else if (acc <= 30) { cls = 'acc-yellow'; label = 'Moderate'; }
-    else { cls = 'acc-red'; label = 'Low'; }
+    if (acc <= 10) { cls = 'acc-green'; label = '极佳'; }
+    else if (acc <= 30) { cls = 'acc-yellow'; label = '一般'; }
+    else { cls = 'acc-red'; label = '较差'; }
     el.accDot.className = 'accuracy-dot ' + cls;
-    el.accLabel.textContent = `Accuracy: ${label} (±${acc.toFixed(0)} m)`;
+    el.accLabel.textContent = `精度：${label}（±${acc.toFixed(0)} 米）`;
   }
 
   /* ============================================================
@@ -348,22 +348,22 @@
      ============================================================ */
   function startGeolocation() {
     if (!('geolocation' in navigator)) {
-      setStatus('Browser unsupported', 'error');
+      setStatus('浏览器不支持', 'error');
       setLive('error');
-      el.altMessage.textContent = 'Geolocation is not supported by this browser.';
+      el.altMessage.textContent = '此浏览器不支持地理定位功能。';
       return;
     }
-    // HTTPS requirement (except localhost)
+    // HTTPS 要求（localhost 除外）
     if (location.protocol !== 'https:' &&
         location.hostname !== 'localhost' &&
         location.hostname !== '127.0.0.1') {
-      setStatus('HTTPS required', 'error');
+      setStatus('需要 HTTPS', 'error');
       setLive('error');
-      el.altMessage.textContent = 'Location access requires a secure (HTTPS) connection.';
+      el.altMessage.textContent = '定位功能需要安全连接（HTTPS）。';
       return;
     }
 
-    setStatus('Locating…', 'waiting');
+    setStatus('定位中…', 'waiting');
     const opts = { enableHighAccuracy: true, maximumAge: 1000, timeout: 27000 };
     state.watchId = navigator.geolocation.watchPosition(onPosition, onError, opts);
   }
@@ -371,26 +371,26 @@
   function onPosition(pos) {
     const c = pos.coords;
     state.lastPosition = pos;
-    setStatus('GPS Ready', 'ready');
+    setStatus('GPS 就绪', 'ready');
     setLive('on');
 
-    // Altitude
+    // 海拔
     if (c.altitude !== null && c.altitude !== undefined && !isNaN(c.altitude)) {
       animateAltitude(c.altitude);
       el.altMessage.textContent = '';
     } else {
       el.altValue.textContent = '--';
-      el.altFeet.textContent = '-- ft';
-      el.altMessage.textContent = 'Altitude unavailable on this device or region.';
-      setStatus('Altitude Not Supported', 'warn');
+      el.altFeet.textContent = '-- 英尺';
+      el.altMessage.textContent = '此设备或所在地区无法提供海拔信息。';
+      setStatus('不支持海拔', 'warn');
     }
 
     // GPS info
     el.lat.textContent = fmt(c.latitude, 6) + '°';
     el.lng.textContent = fmt(c.longitude, 6) + '°';
-    el.hacc.textContent = c.accuracy != null ? '±' + fmt(c.accuracy, 0) + ' m' : '—';
-    el.vacc.textContent = c.altitudeAccuracy != null ? '±' + fmt(c.altitudeAccuracy, 0) + ' m' : '—';
-    el.speed.textContent = c.speed != null && !isNaN(c.speed) ? fmt(c.speed * 3.6, 1) + ' km/h' : '—';
+    el.hacc.textContent = c.accuracy != null ? '±' + fmt(c.accuracy, 0) + ' 米' : '—';
+    el.vacc.textContent = c.altitudeAccuracy != null ? '±' + fmt(c.altitudeAccuracy, 0) + ' 米' : '—';
+    el.speed.textContent = c.speed != null && !isNaN(c.speed) ? fmt(c.speed * 3.6, 1) + ' 公里/时' : '—';
     el.heading.textContent = c.heading != null && !isNaN(c.heading) ? fmt(c.heading, 0) + '°' : '—';
     el.time.textContent = new Date(pos.timestamp).toLocaleTimeString();
 
@@ -423,20 +423,20 @@
     setLive('error');
     switch (err.code) {
       case err.PERMISSION_DENIED:
-        setStatus('Permission Denied', 'denied');
-        el.altMessage.textContent = 'Location permission was denied. Enable it in your browser settings.';
+        setStatus('权限被拒绝', 'denied');
+        el.altMessage.textContent = '定位权限已被拒绝，请在浏览器设置中开启。';
         break;
       case err.POSITION_UNAVAILABLE:
-        setStatus('Location Error', 'error');
-        el.altMessage.textContent = 'GPS position is unavailable. Move to an open area and try again.';
+        setStatus('定位错误', 'error');
+        el.altMessage.textContent = '无法获取 GPS 位置，请移动到开阔区域后重试。';
         break;
       case err.TIMEOUT:
-        setStatus('Location Error', 'warn');
-        el.altMessage.textContent = 'Location request timed out. Retrying…';
+        setStatus('定位错误', 'warn');
+        el.altMessage.textContent = '定位请求超时，正在重试…';
         break;
       default:
-        setStatus('Location Error', 'error');
-        el.altMessage.textContent = 'An unknown location error occurred.';
+        setStatus('定位错误', 'error');
+        el.altMessage.textContent = '发生未知的定位错误。';
     }
   }
 
@@ -445,7 +445,7 @@
      ============================================================ */
   function updateMapLinks(lat, lng) {
     if (lat == null || lng == null) return;
-    el.appleMaps.href = `https://maps.apple.com/?ll=${lat},${lng}&q=Current+Location`;
+    el.appleMaps.href = `https://maps.apple.com/?ll=${lat},${lng}&q=${encodeURIComponent('当前位置')}`;
     el.googleMaps.href = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
     el.appleMaps.removeAttribute('aria-disabled');
     el.googleMaps.removeAttribute('aria-disabled');
@@ -475,8 +475,8 @@
   }
   function initCompass() {
     if (!('DeviceOrientationEvent' in window)) {
-      el.compassDeg.textContent = 'N/A';
-      el.compassCard.textContent = 'Unsupported';
+      el.compassDeg.textContent = '不可用';
+      el.compassCard.textContent = '不支持';
       return;
     }
     // iOS 13+ requires explicit permission via a user gesture
@@ -490,10 +490,10 @@
             el.compassEnable.hidden = true;
             vibrate(10);
           } else {
-            toast('Compass permission denied');
+            toast('指南针权限被拒绝');
           }
         } catch (err) {
-          toast('Compass unavailable');
+          toast('指南针不可用');
         }
       });
     } else {
@@ -517,7 +517,7 @@
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
   function exportJSON() {
-    if (!state.history.length) return toast('No data to export');
+    if (!state.history.length) return toast('暂无数据可导出');
     const rows = state.history.map((h) => ({
       time: new Date(h.t).toISOString(),
       latitude: h.lat,
@@ -526,49 +526,49 @@
       accuracy: h.acc,
     }));
     download('altimeter-history.json', JSON.stringify(rows, null, 2), 'application/json');
-    toast('Exported JSON');
+    toast('已导出 JSON');
   }
   function exportCSV() {
-    if (!state.history.length) return toast('No data to export');
+    if (!state.history.length) return toast('暂无数据可导出');
     const header = 'time,latitude,longitude,altitude,accuracy';
     const lines = state.history.map((h) =>
       [new Date(h.t).toISOString(), h.lat, h.lng, h.alt == null ? '' : h.alt, h.acc == null ? '' : h.acc].join(',')
     );
     download('altimeter-history.csv', [header, ...lines].join('\n'), 'text/csv');
-    toast('Exported CSV');
+    toast('已导出 CSV');
   }
 
   /* ============================================================
      COPY / SHARE
      ============================================================ */
   async function copyCoords() {
-    if (!state.lastPosition) return toast('No location yet');
+    if (!state.lastPosition) return toast('尚未获取位置');
     const c = state.lastPosition.coords;
     const text = `${c.latitude.toFixed(6)}, ${c.longitude.toFixed(6)}`;
     try {
       await navigator.clipboard.writeText(text);
-      toast('Coordinates copied');
+      toast('坐标已复制');
       vibrate(10);
     } catch (e) {
       toast(text);
     }
   }
   async function shareLocation() {
-    if (!state.lastPosition) return toast('No location yet');
+    if (!state.lastPosition) return toast('尚未获取位置');
     const c = state.lastPosition.coords;
     const url = `https://maps.apple.com/?ll=${c.latitude},${c.longitude}`;
-    const altText = (c.altitude != null && !isNaN(c.altitude)) ? ` at ${c.altitude.toFixed(1)} m altitude` : '';
+    const altText = (c.altitude != null && !isNaN(c.altitude)) ? `，海拔 ${c.altitude.toFixed(1)} 米` : '';
     const shareData = {
-      title: 'My Location',
-      text: `I'm at ${c.latitude.toFixed(5)}, ${c.longitude.toFixed(5)}${altText}.`,
+      title: '我的位置',
+      text: `我在 ${c.latitude.toFixed(5)}, ${c.longitude.toFixed(5)}${altText}。`,
       url,
     };
     if (navigator.share) {
       try { await navigator.share(shareData); vibrate(10); }
-      catch (e) { /* user cancelled */ }
+      catch (e) { /* 用户取消 */ }
     } else {
-      try { await navigator.clipboard.writeText(`${shareData.text} ${url}`); toast('Location link copied'); }
-      catch (e) { toast('Share not supported'); }
+      try { await navigator.clipboard.writeText(`${shareData.text} ${url}`); toast('位置链接已复制'); }
+      catch (e) { toast('当前环境不支持分享'); }
     }
   }
 
@@ -592,27 +592,27 @@
      WAKE LOCK
      ============================================================ */
   async function toggleWakeLock() {
-    if (!('wakeLock' in navigator)) return toast('Wake Lock not supported');
+    if (!('wakeLock' in navigator)) return toast('当前环境不支持屏幕常亮');
     try {
       if (state.wakeLock) {
         await state.wakeLock.release();
         state.wakeLock = null;
-        el.devWakelock.textContent = 'Off';
-        el.toggleWakelock.textContent = 'Keep Screen On';
-        toast('Screen may sleep');
+        el.devWakelock.textContent = '关闭';
+        el.toggleWakelock.textContent = '保持屏幕常亮';
+        toast('屏幕可正常休眠');
       } else {
         state.wakeLock = await navigator.wakeLock.request('screen');
-        el.devWakelock.textContent = 'On';
-        el.toggleWakelock.textContent = 'Allow Sleep';
-        toast('Screen will stay on');
+        el.devWakelock.textContent = '开启';
+        el.toggleWakelock.textContent = '允许休眠';
+        toast('屏幕将保持常亮');
         state.wakeLock.addEventListener('release', () => {
-          el.devWakelock.textContent = 'Off';
-          el.toggleWakelock.textContent = 'Keep Screen On';
+          el.devWakelock.textContent = '关闭';
+          el.toggleWakelock.textContent = '保持屏幕常亮';
           state.wakeLock = null;
         });
       }
     } catch (e) {
-      toast('Wake Lock failed');
+      toast('屏幕常亮设置失败');
     }
   }
   // Re-acquire wake lock when returning to the tab
@@ -630,7 +630,7 @@
     if (!d.fullscreenElement && !d.webkitFullscreenElement) {
       const root = d.documentElement;
       const req = root.requestFullscreen || root.webkitRequestFullscreen;
-      if (req) req.call(root); else toast('Fullscreen not supported');
+      if (req) req.call(root); else toast('当前环境不支持全屏');
     } else {
       const exit = d.exitFullscreen || d.webkitExitFullscreen;
       if (exit) exit.call(d);
@@ -648,14 +648,14 @@
     // Network status
     function updateNetwork() {
       const online = navigator.onLine;
-      let label = online ? 'Online' : 'Offline';
+      let label = online ? '在线' : '离线';
       const conn = navigator.connection || navigator.webkitConnection;
       if (online && conn && conn.effectiveType) label += ` · ${conn.effectiveType}`;
       el.devNetwork.textContent = label;
     }
     updateNetwork();
-    window.addEventListener('online', () => { updateNetwork(); toast('Back online'); });
-    window.addEventListener('offline', () => { updateNetwork(); toast('You are offline'); });
+    window.addEventListener('online', () => { updateNetwork(); toast('已恢复联网'); });
+    window.addEventListener('offline', () => { updateNetwork(); toast('网络已断开'); });
     const conn = navigator.connection || navigator.webkitConnection;
     if (conn && conn.addEventListener) conn.addEventListener('change', updateNetwork);
 
@@ -668,20 +668,20 @@
         upd();
         b.addEventListener('levelchange', upd);
         b.addEventListener('chargingchange', upd);
-      }).catch(() => { el.devBattery.textContent = 'N/A'; });
+      }).catch(() => { el.devBattery.textContent = '不可用'; });
     } else {
-      el.devBattery.textContent = 'N/A';
+      el.devBattery.textContent = '不可用';
     }
 
-    // Wake lock support label
-    el.devWakelock.textContent = ('wakeLock' in navigator) ? 'Off' : 'N/A';
+    // 屏幕常亮支持标签
+    el.devWakelock.textContent = ('wakeLock' in navigator) ? '关闭' : '不可用';
 
     // FPS monitor
     let frames = 0, lastFps = performance.now();
     function fpsLoop(now) {
       frames++;
       if (now - lastFps >= 1000) {
-        el.devFps.textContent = frames + ' fps';
+        el.devFps.textContent = frames + ' 帧/秒';
         frames = 0;
         lastFps = now;
       }
@@ -693,7 +693,7 @@
     el.moreToggle.addEventListener('click', () => {
       const hidden = el.deviceList.hidden;
       el.deviceList.hidden = !hidden;
-      el.moreToggle.textContent = hidden ? 'Hide' : 'Show';
+      el.moreToggle.textContent = hidden ? '收起' : '展开';
       el.moreToggle.setAttribute('aria-expanded', String(hidden));
     });
   }
@@ -717,13 +717,13 @@
       if (!deferredPrompt) return;
       deferredPrompt.prompt();
       const { outcome } = await deferredPrompt.userChoice;
-      if (outcome === 'accepted') toast('Installing…');
+      if (outcome === 'accepted') toast('正在安装…');
       deferredPrompt = null;
       el.installBanner.hidden = true;
     });
     window.addEventListener('appinstalled', () => {
       el.installBanner.hidden = true;
-      toast('Altimeter installed');
+      toast('海拔仪已安装');
     });
   }
 
@@ -732,7 +732,7 @@
      ============================================================ */
   function init() {
     el.version.textContent = APP_VERSION;
-    setStatus('Waiting for GPS…', 'waiting');
+    setStatus('等待 GPS…', 'waiting');
     setLive('idle');
 
     loadHistory();
@@ -752,7 +752,7 @@
       saveHistory();
       updateStats();
       drawChart();
-      toast('History cleared');
+      toast('历史已清空');
       vibrate(10);
     });
     el.copyCoords.addEventListener('click', copyCoords);
