@@ -1,7 +1,8 @@
 {
-  "name": "Altimeter — GPS Altitude",
-  "short_name": "Altimeter",
-  "description": "A professional, native-feeling altimeter PWA that measures your altitude using GPS.",
+  "name": "海拔仪 — GPS 海拔",
+  "short_name": "海拔仪",
+  "description": "一款专业、媲美原生体验的海拔仪 PWA，使用 GPS 测量你的当前海拔。",
+  "lang": "zh-CN",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
