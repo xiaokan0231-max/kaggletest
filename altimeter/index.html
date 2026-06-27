@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Responsive + safe-area (notch / Dynamic Island) support -->
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f2f2f7" media="(prefers-color-scheme: light)" />
+  <meta name="description" content="A professional, native-feeling altimeter PWA that measures your altitude using GPS." />
+
+  <!-- iOS Web App / Home Screen support -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Altimeter" />
+
+  <title>Altimeter — GPS Altitude</title>
+
+  <!-- PWA manifest -->
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="mask-icon" href="assets/icon.svg" color="#0a84ff" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- App shell -->
+  <div id="app" class="app">
+
+    <!-- ===== Header ===== -->
+    <header class="app-header">
+      <div class="header-left">
+        <div class="app-logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22">
+            <path d="M12 2L4 20h16L12 2z" fill="currentColor" opacity="0.9"/>
+            <path d="M12 7l-4 9h8l-4-9z" fill="#fff" opacity="0.85"/>
+          </svg>
+        </div>
+        <div class="app-title-group">
+          <h1 class="app-title">Altimeter</h1>
+          <span id="live-indicator" class="live-indicator" title="GPS live status">
+            <span class="live-dot"></span><span class="live-text">Idle</span>
+          </span>
+        </div>
+      </div>
+      <div class="header-right">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle light / dark mode" title="Toggle theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="23"/><line x1="1" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="23" y2="12"/><line x1="4.2" y1="4.2" x2="6.3" y2="6.3"/><line x1="17.7" y1="17.7" x2="19.8" y2="19.8"/><line x1="4.2" y1="19.8" x2="6.3" y2="17.7"/><line x1="17.7" y1="6.3" x2="19.8" y2="4.2"/></g></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- ===== Status pill ===== -->
+    <div class="status-bar">
+      <span id="status-pill" class="status-pill status-waiting">
+        <span class="status-spinner"></span>
+        <span id="status-text">Waiting for GPS…</span>
+      </span>
+    </div>
+
+    <main class="app-main">
+
+      <!-- ===== Hero altitude card ===== -->
+      <section class="card hero-card" aria-label="Current altitude">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <p class="hero-label">Current Altitude</p>
+        <div class="hero-value-row">
+          <span id="altitude-value" class="hero-value">--</span>
+          <span class="hero-unit" id="altitude-unit">m</span>
+        </div>
+        <p id="altitude-feet" class="hero-subvalue">-- ft</p>
+        <p id="altitude-message" class="hero-message"></p>
+
+        <!-- Accuracy indicator -->
+        <div class="accuracy-indicator">
+          <span id="accuracy-dot" class="accuracy-dot"></span>
+          <span id="accuracy-label" class="accuracy-label">Accuracy: —</span>
+        </div>
+      </section>
+
+      <!-- ===== Chart card ===== -->
+      <section class="card chart-card" aria-label="Altitude chart">
+        <div class="card-head">
+          <h2 class="card-title">Altitude Trend</h2>
+          <span id="trend-badge" class="trend-badge trend-flat">— Steady</span>
+        </div>
+        <canvas id="altitude-chart" class="altitude-chart" width="600" height="220"></canvas>
+      </section>
+
+      <!-- ===== Stats grid ===== -->
+      <section class="stats-grid" aria-label="Altitude statistics">
+        <div class="card stat-card">
+          <p class="stat-label">Highest</p>
+          <p id="stat-high" class="stat-value">--</p>
+        </div>
+        <div class="card stat-card">
+          <p class="stat-label">Lowest</p>
+          <p id="stat-low" class="stat-value">--</p>
+        </div>
+        <div class="card stat-card">
+          <p class="stat-label">Average</p>
+          <p id="stat-avg" class="stat-value">--</p>
+        </div>
+        <div class="card stat-card">
+          <p class="stat-label">Samples</p>
+          <p id="stat-count" class="stat-value">0</p>
+        </div>
+      </section>
+
+      <!-- ===== Compass card ===== -->
+      <section class="card compass-card" aria-label="Compass">
+        <div class="card-head">
+          <h2 class="card-title">Compass</h2>
+          <button id="compass-enable" class="text-btn" hidden>Enable</button>
+        </div>
+        <div class="compass-wrap">
+          <div class="compass" id="compass">
+            <div class="compass-rose" id="compass-rose">
+              <span class="compass-dir compass-n">N</span>
+              <span class="compass-dir compass-e">E</span>
+              <span class="compass-dir compass-s">S</span>
+              <span class="compass-dir compass-w">W</span>
+              <div class="compass-needle"></div>
+            </div>
+            <div class="compass-center"></div>
+          </div>
+          <div class="compass-readout">
+            <span id="compass-deg" class="compass-deg">--°</span>
+            <span id="compass-card" class="compass-card-dir">—</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== GPS info card ===== -->
+      <section class="card info-card" aria-label="GPS information">
+        <div class="card-head">
+          <h2 class="card-title">GPS Information</h2>
+        </div>
+        <ul class="info-list">
+          <li><span class="info-key">Latitude</span><span id="info-lat" class="info-val">—</span></li>
+          <li><span class="info-key">Longitude</span><span id="info-lng" class="info-val">—</span></li>
+          <li><span class="info-key">Horizontal Accuracy</span><span id="info-hacc" class="info-val">—</span></li>
+          <li><span class="info-key">Altitude Accuracy</span><span id="info-vacc" class="info-val">—</span></li>
+          <li><span class="info-key">Speed</span><span id="info-speed" class="info-val">—</span></li>
+          <li><span class="info-key">Heading</span><span id="info-heading" class="info-val">—</span></li>
+          <li><span class="info-key">Timestamp</span><span id="info-time" class="info-val">—</span></li>
+        </ul>
+        <div class="info-actions">
+          <button id="copy-coords" class="pill-btn">Copy Coordinates</button>
+          <button id="share-loc" class="pill-btn">Share Location</button>
+        </div>
+      </section>
+
+      <!-- ===== Map buttons ===== -->
+      <section class="map-actions" aria-label="Open in maps">
+        <a id="apple-maps" class="map-btn map-btn-apple" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="currentColor"/></svg>
+          Open Current Location
+        </a>
+        <a id="google-maps" class="map-btn map-btn-google" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="currentColor"/></svg>
+          Open in Google Maps
+        </a>
+      </section>
+
+      <!-- ===== Export card ===== -->
+      <section class="card export-card" aria-label="Export data">
+        <div class="card-head">
+          <h2 class="card-title">Export History</h2>
+        </div>
+        <div class="export-actions">
+          <button id="export-json" class="pill-btn">Export JSON</button>
+          <button id="export-csv" class="pill-btn">Export CSV</button>
+          <button id="clear-history" class="pill-btn pill-btn-danger">Clear</button>
+        </div>
+      </section>
+
+      <!-- ===== Device / system card (bonus) ===== -->
+      <section class="card device-card" aria-label="Device information">
+        <div class="card-head">
+          <h2 class="card-title">Device &amp; System</h2>
+          <button id="more-toggle" class="text-btn" aria-expanded="false">Show</button>
+        </div>
+        <ul class="info-list device-list" id="device-list" hidden>
+          <li><span class="info-key">Network</span><span id="dev-network" class="info-val">—</span></li>
+          <li><span class="info-key">Battery</span><span id="dev-battery" class="info-val">—</span></li>
+          <li><span class="info-key">Wake Lock</span><span id="dev-wakelock" class="info-val">—</span></li>
+          <li><span class="info-key">FPS</span><span id="dev-fps" class="info-val">—</span></li>
+          <li><span class="info-key">Platform</span><span id="dev-platform" class="info-val">—</span></li>
+          <li><span class="info-key">Screen</span><span id="dev-screen" class="info-val">—</span></li>
+        </ul>
+        <div class="device-actions">
+          <button id="toggle-wakelock" class="pill-btn">Keep Screen On</button>
+          <button id="toggle-fullscreen" class="pill-btn">Fullscreen</button>
+        </div>
+      </section>
+
+      <!-- ===== Install banner ===== -->
+      <div id="install-banner" class="install-banner" hidden>
+        <span>Install Altimeter for the full native experience.</span>
+        <button id="install-btn" class="pill-btn pill-btn-accent">Install</button>
+      </div>
+
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="app-footer">
+      <span>Altimeter <span id="app-version">v1.0.0</span></span>
+      <span class="footer-sep">·</span>
+      <span>Static PWA · No tracking</span>
+    </footer>
+  </div>
+
+  <!-- Toast container -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- App logic -->
+  <script src="script.js" defer></script>
+</body>
+</html>
