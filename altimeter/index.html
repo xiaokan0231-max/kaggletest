@@ -217,6 +217,66 @@
     </footer>
   </div>
 
+  <!-- iOS 安装引导弹窗 -->
+  <div id="ios-sheet" class="sheet-overlay" hidden aria-hidden="true">
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+      <div class="sheet-grabber" aria-hidden="true"></div>
+      <button id="sheet-close" class="sheet-close" aria-label="关闭">&times;</button>
+
+      <div class="sheet-app">
+        <div class="sheet-app-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="30" height="30">
+            <path d="M12 3L4 19h16L12 3z" fill="#fff" opacity="0.95"/>
+            <path d="M12 3l3.5 7-1.5 1.6L12 9.5 10 11.6 8.5 10 12 3z" fill="#0a84ff"/>
+          </svg>
+        </div>
+        <div>
+          <p id="sheet-title" class="sheet-title">添加到主屏幕</p>
+          <p class="sheet-subtitle">像原生 App 一样使用海拔仪</p>
+        </div>
+      </div>
+
+      <ol class="sheet-steps">
+        <li class="sheet-step">
+          <span class="sheet-step-num">1</span>
+          <span class="sheet-step-text">点按 Safari 底部的<b>「分享」</b>按钮</span>
+          <span class="sheet-step-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <path d="M12 3l4 4-1.4 1.4L13 6.8V15h-2V6.8L9.4 8.4 8 7l4-4z" fill="currentColor"/>
+              <path d="M5 11h3v2H6v6h12v-6h-2v-2h3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1z" fill="currentColor"/>
+            </svg>
+          </span>
+        </li>
+        <li class="sheet-step">
+          <span class="sheet-step-num">2</span>
+          <span class="sheet-step-text">下滑选择<b>「添加到主屏幕」</b></span>
+          <span class="sheet-step-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </li>
+        <li class="sheet-step">
+          <span class="sheet-step-num">3</span>
+          <span class="sheet-step-text">点右上角<b>「添加」</b>完成</span>
+          <span class="sheet-step-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </li>
+      </ol>
+
+      <button id="sheet-ok" class="pill-btn pill-btn-accent sheet-ok">我知道了</button>
+
+      <!-- 指向底部分享按钮的弹跳箭头 -->
+      <div class="sheet-arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 4v13M6 11l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+    </div>
+  </div>
+
   <!-- 提示浮层 -->
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 

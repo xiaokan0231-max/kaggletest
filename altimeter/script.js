@@ -62,6 +62,9 @@
     toggleFullscreen: $('toggle-fullscreen'),
     installBanner: $('install-banner'),
     installBtn: $('install-btn'),
+    iosSheet: $('ios-sheet'),
+    sheetClose: $('sheet-close'),
+    sheetOk: $('sheet-ok'),
   };
 
   /* ---------- App state ---------- */
@@ -714,6 +717,28 @@
     return window.matchMedia('(display-mode: standalone)').matches ||
            navigator.standalone === true;
   }
+  // 打开 / 关闭 iOS 安装引导弹窗
+  function openInstallSheet() {
+    el.iosSheet.hidden = false;
+    el.iosSheet.setAttribute('aria-hidden', 'false');
+    vibrate(10);
+  }
+  function closeInstallSheet() {
+    el.iosSheet.hidden = true;
+    el.iosSheet.setAttribute('aria-hidden', 'true');
+  }
+  function initInstallSheet() {
+    el.sheetClose.addEventListener('click', closeInstallSheet);
+    el.sheetOk.addEventListener('click', closeInstallSheet);
+    // 点击遮罩空白处关闭
+    el.iosSheet.addEventListener('click', (e) => {
+      if (e.target === el.iosSheet) closeInstallSheet();
+    });
+    // Esc 关闭
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !el.iosSheet.hidden) closeInstallSheet();
+    });
+  }
   function initPWA() {
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
@@ -751,8 +776,7 @@
       if (isStandalone()) {
         toast('应用已安装');
       } else if (isIOS()) {
-        toast('请点按 Safari 底部「分享」→「添加到主屏幕」');
-        vibrate(10);
+        openInstallSheet(); // iOS：弹出图文安装引导
       } else {
         toast('请用浏览器菜单选择「安装应用 / 添加到主屏幕」');
       }
@@ -782,6 +806,7 @@
     initTheme();
     initCompass();
     initDeviceInfo();
+    initInstallSheet();
     initPWA();
 
     // Wire up buttons

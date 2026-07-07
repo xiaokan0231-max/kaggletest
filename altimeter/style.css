@@ -49,6 +49,8 @@
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
+/* Ensure the [hidden] attribute always wins over display rules from classes */
+[hidden] { display: none !important; }
 html, body { margin: 0; padding: 0; }
 body {
   font-family: var(--font);
@@ -327,6 +329,74 @@ button { font-family: inherit; cursor: pointer; }
   z-index: 100; max-width: 90vw; text-align: center;
 }
 .toast.show { opacity: 1; translate: -50% 0; }
+
+/* ---------- iOS install sheet ---------- */
+.sheet-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  display: flex; align-items: flex-end; justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+  animation: fade 0.25s ease both;
+}
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+.sheet {
+  position: relative;
+  width: 100%; max-width: 460px;
+  background: var(--bg-card-solid);
+  border: 1px solid var(--stroke-strong);
+  border-bottom: none;
+  border-radius: 26px 26px 0 0;
+  padding: 12px 22px calc(var(--safe-bottom) + 84px);
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.4);
+  animation: sheet-up 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes sheet-up { from { transform: translateY(100%); } to { transform: none; } }
+.sheet-grabber {
+  width: 38px; height: 5px; border-radius: 3px;
+  background: var(--text-tertiary);
+  margin: 4px auto 14px;
+}
+.sheet-close {
+  position: absolute; top: 14px; right: 16px;
+  width: 30px; height: 30px; border-radius: 50%;
+  border: none; background: var(--bg-elevated); color: var(--text-secondary);
+  font-size: 20px; line-height: 1; display: grid; place-items: center;
+}
+.sheet-app { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+.sheet-app-icon {
+  width: 54px; height: 54px; flex: 0 0 auto;
+  border-radius: 14px; display: grid; place-items: center;
+  background: linear-gradient(180deg, #0a84ff, #0a3a8f);
+  box-shadow: var(--shadow);
+}
+.sheet-title { font-size: 19px; font-weight: 700; margin: 0; letter-spacing: -0.01em; }
+.sheet-subtitle { font-size: 13px; color: var(--text-secondary); margin: 2px 0 0; }
+.sheet-steps { list-style: none; margin: 0 0 20px; padding: 0; }
+.sheet-step {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 0; border-bottom: 1px solid var(--stroke);
+}
+.sheet-step:last-child { border-bottom: none; }
+.sheet-step-num {
+  flex: 0 0 auto;
+  width: 26px; height: 26px; border-radius: 50%;
+  background: var(--accent-soft); color: var(--accent);
+  font-size: 14px; font-weight: 700;
+  display: grid; place-items: center;
+}
+.sheet-step-text { flex: 1; font-size: 15px; line-height: 1.4; }
+.sheet-step-text b { font-weight: 700; }
+.sheet-step-icon { flex: 0 0 auto; color: var(--accent); display: grid; place-items: center; }
+.sheet-ok { width: 100%; margin: 0; }
+.sheet-arrow {
+  position: absolute; left: 50%; bottom: 10px; transform: translateX(-50%);
+  color: var(--accent);
+  animation: arrow-bounce 1.4s ease-in-out infinite;
+}
+@keyframes arrow-bounce {
+  0%, 100% { transform: translate(-50%, 0); opacity: 0.9; }
+  50% { transform: translate(-50%, 8px); opacity: 0.4; }
+}
 
 /* ---------- Responsive ---------- */
 @media (min-width: 700px) {
